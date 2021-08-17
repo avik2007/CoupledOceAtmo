@@ -1,0 +1,25 @@
+How to install python virtual environments
+
+1) create a folder to place python environment
+   Example:
+   cd /nobackup/htorresg/
+   mkdir .conda/envs
+   
+2) Load modules related to miniconda
+   module use -a /swbuild/analytix/tools/modulefiles
+   module load miniconda3/v4
+   export CONDA_ENVS_PATH=/nobackup/htorresg/.conda/envs
+
+3) create python env
+   option 1:
+   conda create --NAME xmitgcm3.yml
+
+   option 2:
+   conda env create -f xmitgcm3.yml
+
+   NAME := some name for your environment
+
+4) Activate the virtual environment
+   source activate NAME
+
+

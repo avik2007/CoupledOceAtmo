@@ -1,0 +1,27 @@
+1) qsub -I -q devel -l select=1:ncpus=6:model=has
+
+2) 
+   module use -a /swbuild/analytix/tools/modulefiles
+   module load miniconda3/v4
+   export CONDA_ENVS_PATH=/nobackup/htorresg/.conda/envs
+   source activate NAME
+
+3)
+
+   python MIT_xr_coas_with_tides.py
+
+Notes from Avik Mondal, 6/22/2021
+
+1) for new users to Pleiades and Hector's xmitgcm3 environment, there are a few details that are 
+important to note for getting Mit_xr_coas_with_tides.py to work properly. First, the code seems to
+not work with the most up to date version of pyresample and pyproj. Downgrade your pyresample to 
+v1.16.0 and downgrade your pyproj to v1.9.6.
+
+2) Note, when I tried to use this code, I had added some extra libraries to Hector's xmitgcm3.yml environment.
+ These libraries include zarr, holoviews, hdf5, bokeh, and pyviz. These are the only libraries I can remember
+adding and I'm not sure if they would have any conflicts with pyproj or pyresample - but here they are just in case. 
+
+3) the exact order of how you do this might matter. I downgraded pyproj first to v1.9.6 ("conda remove pyproj",
+then "conda install -c conda-forge pyproj==1.9.6". Alternatively, "pip install pyproj==1.9.6" make work for you).
+After that, I repeated the same process but for pyresample. Then I repeated the step "conda install -c 
+conda-forge pyproj." This seemed to get the script working. 

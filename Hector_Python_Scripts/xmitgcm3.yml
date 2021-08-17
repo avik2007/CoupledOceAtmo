@@ -1,0 +1,21 @@
+name: xmitgcm3
+dependencies:
+  - python
+  - numpy
+  - scipy
+  - netCDF4
+  - dask
+  - distributed
+  - xarray
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - basemap
+  - bottleneck
+  - pip:
+    - pytest
+    - xmitgcm
+    - dask-ndfilters
+    - pyresample
+    - xgcm
+    - dask-jobqueue
