@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -l select=1:ncpus=24:model=has
+#PBS -l walltime=0:30:00
+#PBS -q devel
+
+module load mpi-hpcx/2.4.0
+
+#IR
+
+mpiexec -np 24 python script8_firstspectra.py
+#end of script

@@ -1,0 +1,11 @@
+!/bin/bash
+#PBS -l select=1:ncpus=30:model=has
+#PBS -l walltime=03:00:00
+
+cd $PBS_O_WORKDIR
+
+source /nobackup/amondal/activate_pyenv.sh
+
+python script10_GSData.py
+
+#end of script
