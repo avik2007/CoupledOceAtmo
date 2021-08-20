@@ -63,7 +63,13 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
   #all_iters = iter0 + delta*np.arange(nfiles)
 
   #### don't change this part
-  diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/'+VAR+'/'
+  if (VAR == 'DxTheta'):
+    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
+  elif (VAR == 'DyTheta'):
+    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
+  else:
+    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/'+VAR+'/'
+  
   ####
   print('Directory of files')
   print(diro)
@@ -206,6 +212,22 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
       x=ds[VAR]
     elif VAR == 'oceQsw':
       x=ds[VAR]
+    elif VAR == 'DyTheta':
+      dgrid = xgcm.Grid(ds)
+      DxTheta = dgrid.diff(ds['Theta'].isel(k=level),axis='X',boundary='fill') / ds.dxC
+      DyTheta = dgrid.diff(ds['Theta'].isel(k=level),axis='Y',boundary='fill') / ds.dyC
+      ds1 = open_mdsdataset(GRIDDIR, iters=1, ignore_unknown_vars=True,geometry='llc', nx=nx)
+      AngleCS=ds1['CS'];AngleSN=ds1['SN'];
+      UV=grid.interp_2d_vector({'X':DxTheta, 'Y':DyTheta},boundary='fill')
+      x=(UV['X']*AngleSN+UV['Y']*AngleCS)
+    elif VAR =='DxTheta':
+      dgrid = xgcm.Grid(ds)
+      DxTheta = dgrid.diff(ds['Theta'].isel(k=level),axis='X',boundary='fill') / ds.dxC
+      DyTheta = dgrid.diff(ds['Theta'].isel(k=level),axis='Y',boundary='fill') / ds.dyC
+      ds1 = open_mdsdataset(GRIDDIR, iters=1, ignore_unknown_vars=True,geometry='llc', nx=nx)
+      AngleCS=ds1['CS'];AngleSN=ds1['SN'];
+      UV=grid.interp_2d_vector({'X':DxTheta, 'Y':DyTheta},boundary='fill')
+      x=(UV['X']*AngleCS-UV['Y']*AngleSN)
     else:
       print('not yet implemented')
 
