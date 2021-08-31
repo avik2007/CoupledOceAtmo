@@ -1,9 +1,3 @@
-'''
-This is ultimately the same as MIT_xr_date_location but now we can choose the folder as well as the
-date and location using explicit parameters (is that the right term? god it's been forever since I 
-took a computer science class.
-'''
-
 import numpy as np
 import xarray as xr
 import dask.array as da
@@ -67,9 +61,13 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
     diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
   elif (VAR == 'DyTheta'):
     diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
+  elif (VAR == 'Zeta'):
+    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUX'
+  elif (VAR == 'HAdv'):
+    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
   else:
     diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/'+VAR+'/'
-  
+   
   ####
   print('Directory of files')
   print(diro)
@@ -181,7 +179,6 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
       print('== done interp 2d ===')
       print('=== x interpolated  ==')
       print(np.nanmean(x))
-    
     elif VAR == 'oceTAUY':
 	###### change this part
       dirou='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUX/'
@@ -198,6 +195,21 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
       print('== done interp 2d ===')
       print('=== x interpolated  ==')
       print(np.nanmean(x))
+    elif VAR == 'Zeta':
+      ### change this part
+      dirov='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUY/'
+      ###
+      dsv = open_mdsdataset(dirov,
+                      grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
+                            iters=all_iters[i],geometry='llc',read_grid=True,
+                            default_dtype=np.dtype('>f4'),delta_t=delta_t,
+                            ignore_unknown_vars=True,nx=nx)
+      grid = xgcm.Grid(ds)
+      zeta = (-grid.diff(ds['oceTAUX']*ds.dxC,'Y') + grid.diff(dsv['oceTAUY']*ds.dyC,'X')) / ds.rAz
+      x = grid.interp(grid.interp(zeta,axis='X', to='center'), axis='Y',to='center')
+      print('=== x interpolated  ==')
+      print(np.nanmean(x))
+  
     elif VAR == 'W':
       x=grid.interp(ds['W'],'Z',to='center',boundary='fill').isel(k=level)
     elif VAR == 'Eta':
@@ -228,6 +240,29 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
       AngleCS=ds1['CS'];AngleSN=ds1['SN'];
       UV=grid.interp_2d_vector({'X':DxTheta, 'Y':DyTheta},boundary='fill')
       x=(UV['X']*AngleCS-UV['Y']*AngleSN)
+    elif VAR =='HAdv':
+      dirou='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/U/'
+      ####
+      dsu = open_mdsdataset(dirou,
+                      grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
+                            iters=all_iters[i],geometry='llc',read_grid=True,
+                            default_dtype=np.dtype('>f4'),delta_t=delta_t,
+                            ignore_unknown_vars=True,nx=nx)
+      dirov='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/V/'
+      ###
+      dsv = open_mdsdataset(dirov,
+                      grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
+                            iters=all_iters[i],geometry='llc',read_grid=True,
+                            default_dtype=np.dtype('>f4'),delta_t=delta_t,
+                            ignore_unknown_vars=True,nx=nx)
+      dgrid = xgcm.Grid(ds)
+      DxTheta = dgrid.diff(ds['Theta'].isel(k=level),axis='X',boundary='fill') / ds.dxC
+      DyTheta = dgrid.diff(ds['Theta'].isel(k=level),axis='Y',boundary='fill') / ds.dyC
+      xadv = dsu['U'].isel(k=level)*DxTheta
+      yadv = dsv['V'].isel(k=level)*DyTheta
+      xadv_interp = dgrid.interp(xadv,axis='X',to='center')
+      yadv_interp = dgrid.interp(yadv,axis='Y',to='center')
+      x = xadv_interp + yadv_interp
     else:
       print('not yet implemented')
 
