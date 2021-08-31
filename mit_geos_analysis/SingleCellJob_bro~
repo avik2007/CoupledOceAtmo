@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -l select=5:ncpus=15:model=bro
+#PBS -l walltime=6:00:00
+
+cd $PBS_O_WORKDIR
+
+source /nobackup/amondal/activate_pyenv.sh
+
+python script10_SingleCellTest.py
+
+#end of script

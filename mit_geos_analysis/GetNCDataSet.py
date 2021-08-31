@@ -13,7 +13,7 @@ def getNCDataSet(fol, VAR, firstlevel, finallevel):
     for subindex in range(0,len(vfiles)):
         vdirfiles.append(vardir+vfiles[subindex])
     vdirset = xr.open_mfdataset(vdirfiles,chunks={'latitude':1, 'longitude':1}, concat_dim='time', parallel=True, combine='nested')
-    print('Time combined dataset has been opend.')
+    print('Time combined dataset has been opened.')
     vfullset = vdirset
     print('I concatenated the first Z-layer')
     for index in range(1,finallevel):
@@ -23,7 +23,7 @@ def getNCDataSet(fol, VAR, firstlevel, finallevel):
         for subindex in range(0,len(vfiles)):
             vdirfiles.append(vardir + vfiles[subindex])
         vdirset = xr.open_mfdataset(vdirfiles,chunks={'latitude':1, 'longitude':1}, concat_dim='time', parallel=True, combine='nested')
-        print('Time combined dataset hass been opened')
+        print('Time combined dataset has been opened')
         vfullset = xr.concat([vfullset, vdirset], dim='Zlayers')
         print('I concatenated another Z-layer')
     return vfullset

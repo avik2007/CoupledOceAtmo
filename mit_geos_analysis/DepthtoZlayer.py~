@@ -1,0 +1,8 @@
+import os, glob, sys
+sys.path.append("//nobackup//amondal//Python//Hector_Python_Scripts")
+import numpy as np
+import xarray as xr
+import dask.array as da
+import netCDF4
+
+def depthToZlayer():
