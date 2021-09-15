@@ -66,7 +66,7 @@ def getThickWeightedVector(depth):
         zdim = zdim + 1
     weightedthickvector = np.empty(depth.shape+(zdim+1,))
     for di in range(0,len(depth)):
-        zlayer = np.max(np.nonzero(np.where(d<depth,d,0)))
+        zlayer = np.max(np.nonzero(np.where(d<depth[di],d,0)))
         if ((d[zlayer]+t[zlayer]/2) < depth[di]):
             zlayer = zlayer+1
         firstbit = t[0:zlayer]/depth[di]
