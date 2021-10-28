@@ -40,6 +40,6 @@ if __name__ == "__main__":
     pdirout='/nobackup/amondal/NCData/20210928_GEOS_tend_test'
     
     from GEOS_coll_date_loc_fol import GEOS_xr_coll_date_location_fol
-    GEOS_xr_coll_date_location_fol('SURF', VAR, ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2, pdirout)
+    GEOS_xr_coll_date_location_fol('SURF', VAR, ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
     #MIT_xr needs parameter levels, but GEOS files have levels built into them
 

@@ -300,7 +300,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
     print(end - start)
 
     
-def loadMITData(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,d2,h2,M2, lat1, lat2, latinc, lon1,lon2,loninc, pdirout):
+def loadMITData(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,d2,h2,M2, lat1, lat2, latinc, lon1,lon2,loninc):
   print('Entering MIT_xr_date_location')
   ########################################################
   # Same as MIT_xr but date and location are parameters
@@ -385,28 +385,25 @@ def loadMITData(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,d2,h2,M2, lat
 
   ### change this part
   #prntout = '/nobackup/htorresg/air_sea/ocean-atmos/NCFILES/geosgcm_surf_tides_4km/'
-  prntout = pdirout #'/nobackup/amondal/NCData/20210629_TempHeterogeneity/'
+  #prntout = pdirout #'/nobackup/amondal/NCData/20210629_TempHeterogeneity/'
   #####
-  dirout=prntout+VAR+"_"+str(level)
-  print('==== Folder to be created =======')
-  print(dirout)
-  if not os.path.exists(dirout):
-      os.makedirs(dirout)
+  #dirout=prntout+VAR+"_"+str(level)
+  #print('==== Folder to be created =======')
+  #print(dirout)
+  #if not os.path.exists(dirout):
+      #os.makedirs(dirout)
 
     
   #################################
   # MIT iterations
   ################################
-  output=xr.DataArray(np.zeros((1,lat_out.shape[0],lon_out.shape[0])),
+  output=xr.DataArray(np.zeros((nfiles,lat_out.shape[0],lon_out.shape[0])),
                       dims=("time","lat","lon"),
                       coords={'lat':lat_out,'lon':lon_out})
   output = output.rename(VAR)
-  full_output = xr.DataArray(np.empty(1, lat_out.shape[0], lon_out.shape[0])), 
-                        dims=("time","lat","lon"),
-                        coords={'lat':lat_out,'lon':lon_out}
-  full_output = full_output.rename(VAR)
 
-  for i in range(0,(nfiles)-1):
+  for i in range(0,(nfiles)):
+    print(i)
     start = tm.time()
     print('open files')
     print(all_iters[i])
@@ -562,34 +559,22 @@ def loadMITData(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,d2,h2,M2, lat
 
     if ffilter==1:
       print('apply filter')
-      output = TMP - dask_ndfilters.generic_filter(da.from_array(TMP, \
+      output[i] = TMP - dask_ndfilters.generic_filter(da.from_array(TMP, \
                chunks=[131,960]), \
                function=np.nanmean, \
                size=fsize, \
                mode='wrap', \
                origin=0).compute()
     else:
-      output[0] = TMP
+      output[i] = TMP
     
     del TMP
     
 
-    ##################################
-    # Write output
-    ##################################
-
-    print('save output')
-
-    #output.rename(VAR).to_netcdf(dirout+'/'+VAR+'_'+date[i].strftime("%Y%m%d%H")+'.nc')
-
     print('finished day %02d'%i)
     end = tm.time()
-    print(end - start)
-  if (i==0):
-    full_output = output
-  else:
-    full_output = xr.concat([full_output, output],time)
-  return full_output
+    
+  return output
 #################################################################################
 #################################################################################
 #################################################################################

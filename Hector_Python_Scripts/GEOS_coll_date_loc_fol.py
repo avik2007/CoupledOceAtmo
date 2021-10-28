@@ -1,4 +1,4 @@
-Bimport numpy as np
+import numpy as np
 import xarray as xr
 from xmitgcm import open_mdsdataset
 import os,glob,sys
@@ -102,9 +102,9 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
 
   print(ds0)
 
-  lat_out=np.arange(-90,90+0.0625,0.0625)
-  #lat_out = np.arange(lat1, lat2 + 0.0625, 0.0625)
-  lon_out=np.arange(-180,180,0.0625)
+  #lat_out=np.arange(-90,90+0.0625,0.0625)
+  lat_out = np.arange(lat1, lat2 + 0.0625, 0.0625)
+  #lon_out=np.arange(-180,180,0.0625)
   #lon_out = np.arange(lon1, lon2 + 0.0625, 0.0625)
   
   """
