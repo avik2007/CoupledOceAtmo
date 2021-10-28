@@ -1,4 +1,4 @@
-Bimport numpy as np
+import numpy as np
 import xarray as xr
 from xmitgcm import open_mdsdataset
 import os,glob,sys
@@ -106,10 +106,6 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   #lat_out = np.arange(lat1, lat2 + 0.0625, 0.0625)
   lon_out=np.arange(-180,180,0.0625)
   #lon_out = np.arange(lon1, lon2 + 0.0625, 0.0625)
-  
-  """
-  Here, you need to add a lev_out. Keep in mind that they did a cutoff on the lev's so it only goes from something like 21-52. 
-  """
 
   output=xr.DataArray(np.zeros((lat_out.shape[0],lon_out.shape[0])), \
                       coords=[ lat_out,lon_out], \

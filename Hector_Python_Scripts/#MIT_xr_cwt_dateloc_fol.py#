@@ -23,7 +23,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
   # in a future update, this will require some errorhandling, especially when
   # you share this!
   ########################################################
-  # date = np.arange(datetime(y1,m1,d1,h1,M1),datetime(y2,m2,d2,h2,M2),
+8u8uuuuuuuuuuuu  # date = np.arange(datetime(y1,m1,d1,h1,M1),datetime(y2,m2,d2,h2,M2),
   #                 timedelta(hours=1)).astype(datetime)
   # timedelta(hours=1) - pretty sure this means that there are 1 hour increments?
   initial_time = (str(y1) + '%02d' + '%02d' + '%02d' + '%02d') % (m1, d1,h1, M1)
@@ -90,8 +90,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
   XC=coords.XC*msk
   YC=coords.YC*msk
   print('initialize mapping to GEOS grid')
-  mapper = LLCMap_nea_spl
-it(YC.values, XC.values,lat_out,
+  mapper = LLCMap_nea_split(YC.values, XC.values,lat_out,
                             lon_out,radius=10e3)
 
 
