@@ -34,13 +34,13 @@ if __name__ == "__main__":
     d2 = 3
     h2 = 9
     M2 = 30
-    lat1 = 0
-    lat2 = 45
-    lon1 = 45
-    lon2 = 90
+    lat1 = 34
+    lat2 = 35
+    lon1 = -65
+    lon2 = -64
     lev1 = 50
     lev2 = 55
-    pdirout='/nobackup/amondal/NCData/20210928_GEOS_tend_test_LEV_LAND/'
+    pdirout='/nobackup/amondal/NCData/20210928_GEOS_tend_test_LEV/'
     
     from GEOS_coll_date_loc_fol import GEOS_xr_coll_date_location_fol
     GEOS_xr_coll_date_location_fol('CONST', 'FRLAND', ffilter, fsize, y1, m1, d2, h1, M1, y2, m2, d2, h2 ,M2, 0, 45, 45, 90, lev1, lev2, pdirout)

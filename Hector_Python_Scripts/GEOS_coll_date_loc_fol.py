@@ -9,6 +9,7 @@ from datetime import datetime,timedelta
 from scipy import signal
 import dask.array as da
 from llcmap_bi_split import LLCMap_bi_split
+from llcmap_nea_split import LLCMap_nea_split
 
 
 def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y2, m2, d2,h2, M2, lat1, lat2,  lon1, lon2, lev1, lev2, pdirout ):
@@ -57,18 +58,19 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   collection3 = 'const_2d_asm_Mx'
 
   if (coll == 'SURF'):
-    collection = 'geosgcm_surf'
+    collection = collection1
     M1 = 30
     M2 = 30
     deltatime = timedelta(hours=1)
   elif (coll == 'TEND'):
-    collection = 'geosgcm_tend'
+    collection = collection2
     h1 = 9
     h2 = 9
     M1 = 0
     M2 = 0
     deltatime = timedelta(days=1)
   elif (coll == 'CONST'):
+    collection = collection3
     y1 = 2020
     y2 = 2020
     m1 = 1
@@ -98,31 +100,38 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   print('=====================')
   print(flist[0])
   print('=====================')
-  ds0 = xr.open_mfdataset(flist[0],parallel=True)
+  #ds0 = xr.open_mfdataset(flist[0],parallel=True)
 
-  print(ds0)
+  #print(ds0)
 
   #lat_out=np.arange(-90,90+0.0625,0.0625)
   lat_out = np.arange(lat1, lat2 + 0.0625, 0.0625)
   #lon_out=np.arange(-180,180,0.0625)
-  #lon_out = np.arange(lon1, lon2 + 0.0625, 0.0625)
+  lon_out = np.arange(lon1, lon2 + 0.0625, 0.0625)
   
   """
   Here, you need to add a lev_out. Keep in mind that they did a cutoff on the lev's so it only goes from something like 21-52. 
   """
-
-  output=xr.DataArray(np.zeros((lat_out.shape[0],lon_out.shape[0])), \
+  if (coll == 'TEND'):
+    lev_out = np.arange(lev1, lev2+1, 1)
+    output=xr.DataArray(np.zeros((lat_out.shape[0], lon_out.shape[0], lev_out.shape[0])), coords=[lat_out, lon_out, lev_out], dims = ['lats','lons','levs'])
+  else:
+    output=xr.DataArray(np.zeros((lat_out.shape[0],lon_out.shape[0])), \
                       coords=[ lat_out,lon_out], \
                       dims=[ 'lat', 'lon'])
 
-  coords = ds0.coords.to_dataset().reset_coords()
-  print((coords.lon).shape)
-  print((coords.lat).shape)
+  #coords = ds0.coords.to_dataset().reset_coords()
+  #print((coords.lon).shape)
+  #print((coords.lat).shape)
   #msk=ds0.FROCEAN[0]
   #msk=np.where(msk>0,1,np.nan) 
   #XC=xr.where(coords.lons>=180,coords.lons*msk-360,coords.lons*msk)
-  XC = xr.where(coords.lon>=180,coords.lon-360,coords.lon)
-  YC=coords.lat#*msk
+  #YC=coords.lat#*msk
+  GEOS_gridfile = "/nobackup/amondal/NCData/geos_c1440_lats_lons_2D.nc"
+  gridds = xr.open_dataset(GEOS_gridfile)
+  XC = gridds.lons
+  XC = xr.where(XC>=180, XC- 360, XC)
+  YC = gridds.lats
   print(XC.shape)
   print(YC.shape)
   mapper = LLCMap_nea_split(YC.values, XC.values,lat_out,lon_out,radius=15e3)
@@ -157,9 +166,15 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
     else:
       TMP=ds1[VAR]
     print('mapping')
-    output[:]=mapper(TMP.mean('time').values)
-    # there's something that has to go here that has to do with lev - maybe it's that this needs to be carried ouindividually for all lev's?
-
+    
+    if (coll == 'TEND'):
+      for levI in range(lev1, lev2+1):  
+        output[:, :, levI-lev1]=mapper(TMP.mean('time').sel(lev = levI, method = 'nearest').values)
+        print('Level ' + str(levI) + ' completed.')  
+    else:
+      output[:] = mapper(TMP.mean('time').values)
+    # there's something that has to go here that has to do with lev - maybe it's that this needs to be carried out individually for all lev's?
+    # I want to make output take in each 'lev' - how can I do that correctly
 
     #dirout='/nobackup/htorresg/air_sea/ocean-atmos/NCFILES/geosgcm_surf/'
     print(pdirout)

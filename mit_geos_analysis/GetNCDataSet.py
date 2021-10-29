@@ -5,7 +5,7 @@ import xarray as xr
 import dask.array as da
 import netCDF4
 
-def getNCDataSet(fol, VAR, firstlevel, finallevel):
+def getMITNCDataSet(fol, VAR, firstlevel, finallevel):
     firstVAR = VAR+"_"+str(firstlevel)
     vardir = fol+firstVAR+'/'
     vfiles = sorted(os.listdir(vardir))
