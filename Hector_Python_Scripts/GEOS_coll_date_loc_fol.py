@@ -56,13 +56,18 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   collection2='geosgcm_tend'
   # tendency quantities collection. This contains everyhing needed for a potential temperature balance and an analysis of change in specific humidity in time (which will be necessary for virtual temperature) as well as dudt and dvdt
   collection3 = 'const_2d_asm_Mx'
+  # constant repository - stores constants like FRLAND, FRLANDICE, FROCEAN, etc
+  collection4 = 'inst_15mn_2d_asm_Mx'
+  # contains zpbl which is necessary for picking mixed layer height
+  collection5 = 'geosgcm_pressure'
+  # contains pressure coordinates as a function of time, lat, and lon
 
   if (coll == 'SURF'):
     collection = collection1
     M1 = 30
     M2 = 30
     deltatime = timedelta(hours=1)
-  elif (coll == 'TEND'):
+  elif (coll == 'TEND' or coll == 'PRESSURE'):
     collection = collection2
     h1 = 9
     h2 = 9
@@ -82,7 +87,11 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
     h1 = 0
     h2 = 1
     deltatime = timedelta(hours=1)
-  
+  elif (coll == 'INST15')
+    deltatime = timedelta(minutes=15)
+    # it's harder to code this in, but the options for minutes are at 0, 15,30, or 45.
+    # if I have time/ need to, I can try to figure this out!
+
     
 
   expdir='/nobackupp11/dmenemen/DYAMOND/'
@@ -110,7 +119,7 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   lon_out = np.arange(lon1, lon2 + 0.0625, 0.0625)
   
   """
-  Here, you need to add a lev_out. Keep in mind that they did a cutoff on the lev's so it only goes from something like 21-52. 
+  Here, you need to add a lev_out. Keep in mind that they did a cutoff on the lev's so it only goes from something like 21-72. 
   """
   if (coll == 'TEND'):
     lev_out = np.arange(lev1, lev2+1, 1)
@@ -167,7 +176,7 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
       TMP=ds1[VAR]
     print('mapping')
     
-    if (coll == 'TEND'):
+    if ((coll == 'TEND' or coll == 'PRESSURE')::
       for levI in range(lev1, lev2+1):  
         output[:, :, levI-lev1]=mapper(TMP.mean('time').sel(lev = levI, method = 'nearest').values)
         print('Level ' + str(levI) + ' completed.')  
