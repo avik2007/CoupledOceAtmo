@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "script16_GEOS_test_load.py", line 46, in <module>
+    from GEOS_coll_date_loc_fol_NOINTERP import GEOS_xr_no_interp
+  File "/nobackup/amondal/Python/Hector_Python_Scripts/GEOS_coll_date_loc_fol_NOINTERP.py", line 90
+    elif (coll == 'INST15')
+                          ^
+SyntaxError: invalid syntax
