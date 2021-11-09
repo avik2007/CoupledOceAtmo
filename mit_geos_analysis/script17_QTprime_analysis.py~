@@ -33,7 +33,7 @@ if __name__ == "__main__":
     print('as a script')
     from dask.distributed import Client
     #client = Client(memory_limit='20GB',n_workers = 5, threads_per_worker=1)
-    client = Client(memory_limit='100GB',n_workers = 50, threads_per_worker=1)
+    client = Client(memory_limit='30GB',n_workers = 25, threads_per_worker=1)
     #client
     print('Hola, dask has been set up!!!')
 
@@ -61,11 +61,11 @@ if __name__ == "__main__":
     """
     Pick out Kuroshio and or Gulf Stream for this once Patrice gets back to you
     """
-    lat1 = 35
-    lat2 = 50
+    lat1 = 34
+    lat2 = 35
     latinc =0.04
-    lon1 = -60 
-    lon2 = -45
+    lon1 = -65
+    lon2 = -64
     loninc = 0.04
     ##############################################################################
     print('Date and location has been set')
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     levels=0  #### <<<<<<<====== vertical levels
     ffilter=0 ## <<== don't move
     fsize=0   ## <<==== don't mode
-    fol = '/nobackup/amondal/NCData/20211103_multicoretest_3month/'
+    fol = '/nobackup/amondal/NCData/20210830_RegBal_5day/'
     #MIT_xr_date_location_fol('KPPhbl',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
     #MIT_xr_date_location_fol('oceQnet',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
     #MIT_xr_date_location_fol('oceQsw',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)

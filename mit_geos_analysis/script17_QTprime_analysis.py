@@ -33,7 +33,7 @@ if __name__ == "__main__":
     print('as a script')
     from dask.distributed import Client
     #client = Client(memory_limit='20GB',n_workers = 5, threads_per_worker=1)
-    client = Client(memory_limit='100GB',n_workers = 50, threads_per_worker=1)
+    client = Client(memory_limit='50GB',n_workers = 25, threads_per_worker=1)
     #client
     print('Hola, dask has been set up!!!')
 
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     y2 = 2020
     # This is a real big view of the map for not too many times just for verification
     m1 = 3
-    m2 = 6
+    m2 = 4
     d1 = 1
     d2 = 1
     h1 = 0
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     lat1 = 35
     lat2 = 50
     latinc =0.04
-    lon1 = -60 
+    lon1 = -60
     lon2 = -45
     loninc = 0.04
     ##############################################################################
@@ -73,17 +73,10 @@ if __name__ == "__main__":
     levels=0  #### <<<<<<<====== vertical levels
     ffilter=0 ## <<== don't move
     fsize=0   ## <<==== don't mode
-    fol = '/nobackup/amondal/NCData/20211103_multicoretest_3month/'
-    #MIT_xr_date_location_fol('KPPhbl',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    #MIT_xr_date_location_fol('oceQnet',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    #MIT_xr_date_location_fol('oceQsw',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    #MIT_xr_date_location_fol('Zeta',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    for level in range(0, 35):
+    fol = '/nobackup/amondal/NCData/20211109_QTprime/'
+    for level in range(0, 35,5):
         MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-        MIT_xr_date_location_fol('HAdv',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-        #MIT_xr_date_location_fol('U',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-        #MIT_xr_date_location_fol('V',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-        #MIT_xr_date_location_fol('DxTheta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-        #MIT_xr_date_location_fol('DyTheta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+        MIT_xr_date_location_fol('W',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+        
     
 

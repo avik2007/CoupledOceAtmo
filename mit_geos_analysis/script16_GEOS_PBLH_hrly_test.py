@@ -32,7 +32,7 @@ if __name__ == "__main__":
     M1 = 0
     y2 = 2020
     m2 = 3
-    d2 = 3
+    d2 = 4
     h2 = 9
     M2 = 0
     lat1 = 34
@@ -45,8 +45,8 @@ if __name__ == "__main__":
     
     from GEOS_coll_date_loc_fol import GEOS_xr_coll_date_location_fol
     #GEOS_xr_coll_date_location_fol('TAVG15MIN', 'PBLH', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
-    #GEOS_xr_coll_date_location_fol('TEMP', 'T', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
-    GEOS_xr_coll_date_location_fol('INSTPRESS', 'P', ffilter, fsize, y1, m1, 2, 15, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
+    GEOS_xr_coll_date_location_fol('TEMP', 'T', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
+    GEOS_xr_coll_date_location_fol('INSTPRESS', 'P', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
     GEOS_xr_coll_date_location_fol('QV', 'QV', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
     #MIT_xr needs parameter levels, but GEOS files have levels built into them
 

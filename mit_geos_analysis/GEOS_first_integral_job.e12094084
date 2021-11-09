@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "script16_GEOS_test_load.py", line 11, in <module>
-    from llcmap_bi_split import LLCMap_bi_split
-ModuleNotFoundError: No module named 'llcmap_bi_split'
