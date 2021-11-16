@@ -1,0 +1,28 @@
+Job 12171433.pbspl1.nas.nasa.gov started on Tue Nov 16 10:11:38 PST 2021
+The job requested the following resources:
+    ncpus=25
+    place=scatter:excl
+    walltime=60:00:00
+
+PBS set the following environment variables:
+        FORT_BUFFERED = 1
+                   TZ = PST8PDT
+
+On r141i5n25:
+
+____________________________________________________________________
+Job Resource Usage Summary for 12171433.pbspl1.nas.nasa.gov
+
+    CPU Time Used            : 00:00:02
+    Real Memory Used         : 2284kb
+    Walltime Used            : 00:00:04
+    Exit Status              : 1
+
+    Number of CPUs Requested : 25
+    Walltime Requested       : 60:00:00
+
+    Execution Queue          : long
+    Charged To               : s1353
+
+    Job Stopped              : Tue Nov 16 10:11:49 2021
+____________________________________________________________________

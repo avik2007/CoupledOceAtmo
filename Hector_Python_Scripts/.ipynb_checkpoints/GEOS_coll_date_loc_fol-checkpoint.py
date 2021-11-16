@@ -67,6 +67,7 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   # contains hourly specific humidity
   collection8 = 'inst_01hr_3d_P_Mv'
   # contains hourly pressures
+  collection9 = 'tavg_15mn_2d_flx_Mx'
 
   if (coll == 'SURF'):
     collection = collection1
@@ -106,7 +107,6 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
     # if I have time/ need to, I can try to figure this out!
   elif (coll == 'TEMP'):
     collection = collection6
-    col
     M1 = 0
     M2 = 0
     deltatime = timedelta(hours=1)
@@ -120,6 +120,14 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
     M1 = 0
     M2 = 0
     deltatime = timedelta(hours=1)
+  elif (coll == 'TAVG15MIN'):
+    collection = collection9
+    deltatime = timedelta(minutes=15)
+    M1 = 7
+    M2 = 7
+    # this one is tricky because it's the average of data taken at the hour,  15minute, 30min, and 45 min mark of the hour
+    # so this gives options of M = 7, 22, 37, or 52
+    
 
   expdir='/nobackupp11/dmenemen/DYAMOND/'
   #expdir='/nobackupp2/estrobac/geos5/'
@@ -137,8 +145,9 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   print(flist[0])
   print('=====================')
   #ds0 = xr.open_mfdataset(flist[0],parallel=True)
-
   #print(ds0)
+
+  #I'm testing out the grid code here so that I can ignore interpolation
 
   #lat_out=np.arange(-90,90+0.0625,0.0625)
   lat_out = np.arange(lat1, lat2 + 0.0625, 0.0625)
@@ -163,6 +172,8 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   #msk=np.where(msk>0,1,np.nan) 
   #XC=xr.where(coords.lons>=180,coords.lons*msk-360,coords.lons*msk)
   #YC=coords.lat#*msk
+  # This is where the grid selection code originally lived 
+  
   GEOS_gridfile = "/nobackup/amondal/NCData/geos_c1440_lats_lons_2D.nc"
   gridds = xr.open_dataset(GEOS_gridfile)
   XC = gridds.lons
@@ -171,7 +182,7 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   print(XC.shape)
   print(YC.shape)
   mapper = LLCMap_nea_split(YC.values, XC.values,lat_out,lon_out,radius=15e3)
-
+  
   for i in range(0,nfiles):
 
     print('open files '+str(i))
@@ -349,8 +360,11 @@ def GEOS_xr_no_interp(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y2, m2, d2,h2,
   print(flist[0])
   print('=====================')
   #ds0 = xr.open_mfdataset(flist[0],parallel=True)
-
   #print(ds0)
+
+  
+  
+  
 
   #lat_out=np.arange(-90,90+0.0625,0.0625)
   lat_out = np.arange(lat1, lat2 + 0.0625, 0.0625)
@@ -378,14 +392,6 @@ def GEOS_xr_no_interp(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y2, m2, d2,h2,
   """
   Below is the interpolation section - I'm commenting this out for this function
   """
-  #GEOS_gridfile = "/nobackup/amondal/NCData/geos_c1440_lats_lons_2D.nc"
-  #gridds = xr.open_dataset(GEOS_gridfile)
-  #XC = gridds.lons
-  #XC = xr.where(XC>=180, XC- 360, XC)
-  #YC = gridds.lats
-  #print(XC.shape)
-  #print(YC.shape)
-  #mapper = LLCMap_nea_split(YC.values, XC.values,lat_out,lon_out,radius=15e3)
 
   for i in range(0,nfiles):
 
@@ -445,5 +451,21 @@ def GEOS_xr_no_interp(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y2, m2, d2,h2,
 
     output.rename(VAR).to_netcdf(pdirout+VAR+'/'+VAR+filter_str+fsize_str+'_'+date[i].strftime("%Y%m%d%H")+'.nc')
 
-
-
+"""
+LLCtoCS - this won't work in it's current form (11/8 11:42)
+"""
+def LLCtoCS(lat1,lat2,lon1, lon2):
+  GEOS_gridfile = "/nobackup/amondal/NCData/geos_c1440_lats_lons_2D.nc"
+  gridds = xr.open_dataset(GEOS_gridfile)
+  XC = gridds.lons
+  XC = xr.where(XC>=180, XC- 360, XC)
+  YC = gridds.lats
+  npxc_sort = np.sort(XC.values)
+  npyc_sort = np.sort(YC.values)
+  CSlat1 = np.max(np.nonzero(np.where((npyc_sort > lat1), 0, 1)))
+  CSlat2 = np.min(np.nonzero(np.where((npyc_sort < lat2), 0, 1)))
+  CSlon1 = np.max(np.nonzero(np.where((npxc_sort > lon1), 0, 1)))
+  CSlon2 = np.min(np.nonzero(np.where((npxc_sort < lon2), 0, 1)))
+  lat_out = npyc_sort[CSlat1:CSlat2]
+  lon_out = npxc_sort[CSlon1:CSlon2]
+  return lat_out, lon_out

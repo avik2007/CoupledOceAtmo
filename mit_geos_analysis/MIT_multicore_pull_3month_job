@@ -1,11 +1,33 @@
 #!/bin/bash
-#PBS -l select=10:ncpus=50:model=sky_ele
-#PBS -l walltime=36:00:00
+#PBS -q devel -l select=16:ncpus=10:model=sky_ele
+#PBS -l walltime=2:00:00
+#PBS -j oe
+#PBS -N dask_test_d
+
+#set environment
+module use /swbuild/analytix/tools/modulefiles
+module load miniconda3/v4
+source activate tf1_14
 
 cd $PBS_O_WORKDIR
 
 source /nobackup/amondal/activate_pyenv.sh
 
-python script15_multicore_3month_test.py
+
+#clear and create directory for dask scheduler
+if [ -d dask_sch ]
+then
+    echo "removing old scheduler directory"
+    rm -r dask_sch
+    echo "creating new scheduler directory"
+    mkdir dask_sch
+else
+    echo "creating scheduler directory"
+    mkdir dask_sch
+fi
+
+mpirun -np 100 dask-mpi --no-nanny --local-directory /dask_sch \
+--scheduler-file /sched.json & python script15_multicore_3month_test.py
+
 
 #end of script

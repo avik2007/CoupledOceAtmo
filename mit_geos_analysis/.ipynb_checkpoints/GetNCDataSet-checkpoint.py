@@ -16,16 +16,17 @@ def getMITNCDataSet(fol, VAR, firstlevel, finallevel):
     print('Time combined dataset has been opened.')
     vfullset = vdirset
     print('I concatenated the first Z-layer')
-    for index in range(1,finallevel):
-        vi = VAR+"_" + str(index)
-        vardir = fol + vi + '/'
-        vdirfiles = []
-        for subindex in range(0,len(vfiles)):
-            vdirfiles.append(vardir + vfiles[subindex])
-        vdirset = xr.open_mfdataset(vdirfiles,chunks={'latitude':1, 'longitude':1}, concat_dim='time', parallel=True, combine='nested')
-        print('Time combined dataset has been opened')
-        vfullset = xr.concat([vfullset, vdirset], dim='Zlayers')
-        print('I concatenated another Z-layer')
+    if (firstlevel < finallevel):
+        for index in range(firstlevel+1,finallevel+1):
+            vi = VAR+"_" + str(index)
+            vardir = fol + vi + '/'
+            vdirfiles = []
+            for subindex in range(0,len(vfiles)):
+                vdirfiles.append(vardir + vfiles[subindex])
+            vdirset = xr.open_mfdataset(vdirfiles,chunks={'latitude':1, 'longitude':1}, concat_dim='time', parallel=True, combine='nested')
+            print('Time combined dataset has been opened')
+            vfullset = xr.concat([vfullset, vdirset], dim='Zlayers')
+            print('I concatenated another Z-layer')
     return vfullset
 
 def getGEOSNCDataSet(fol, VAR):

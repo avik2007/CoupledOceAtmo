@@ -1,4 +1,4 @@
-import numpy as np
+Bimport numpy as np
 import xarray as xr
 from xmitgcm import open_mdsdataset
 import os,glob,sys
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     lon1 = -65
     lon2 = -64
     lev1 = 21
-    lev2 = 75
+    lev2 = 72
     pdirout='/nobackup/amondal/NCData/20211102_GEOS_first_integral/'
     
     from GEOS_coll_date_loc_fol import GEOS_xr_coll_date_location_fol

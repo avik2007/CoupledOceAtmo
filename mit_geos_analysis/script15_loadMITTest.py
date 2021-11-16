@@ -16,6 +16,8 @@ from face_connections import face_connections
 from llcmap_nea_split import LLCMap_nea_split
 from netCDF4 import Dataset
 import pylab as plt
+from dask.distributed import Client
+client = Client(scheduler_file='/sched/json')
 
 
 #################################################################################

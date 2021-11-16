@@ -31,12 +31,19 @@ import pylab as plt
 if __name__ == "__main__":
     # execute only if run as a script
     print('as a script')
+    from dask_jobqueue import PBSCluster
     from dask.distributed import Client
     #client = Client(memory_limit='20GB',n_workers = 5, threads_per_worker=1)
-    client = Client(memory_limit='100GB',n_workers = 50, threads_per_worker=1)
     #client
     print('Hola, dask has been set up!!!')
-
+   # cluster = PBSCluster(cores=16, processes=16, memory='150GB', queue='devel',\
+   #                      resource_spec='select=16:ncpus=10:model=sky_ele',
+    #                     walltime='2:00:00')
+    #cluster.scale(1)
+                         
+    # you can use the schedule_file as suggested in HECC support
+    #client = Client(cluster)
+    client = Client(scheduler_file='/sched.json')
     from MIT_xr_cwt_dateloc_fol import MIT_xr_date_location_fol
     print('Hector script has been loaded')
     print('Output directory is going to be an input parameter')

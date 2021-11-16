@@ -1,4 +1,4 @@
-import numpy as np
+Bimport numpy as np
 import xarray as xr
 from xmitgcm import open_mdsdataset
 import os,glob,sys
