@@ -375,6 +375,10 @@ def GEOS_xr_no_interp(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y2, m2, d2,h2,
   Here, you need to add a lev_out. Keep in mind that they did a cutoff on the lev's so it only goes from something like 21-72. 
   """
   if (coll == 'TEND' or coll == 'PRESSURE' or coll == 'TEMP' or coll == 'QV' or coll == 'INSTPRESS'):
+    if (lev1 < 21):
+      lev1 = 21
+    if (lev2 > 72):
+      lev2 = 72
     lev_out = np.arange(lev1, lev2+1, 1)
     output=xr.DataArray(np.zeros((lat_out.shape[0], lon_out.shape[0], lev_out.shape[0])), coords=[lat_out, lon_out, lev_out], dims = ['lats','lons','levs'])
   else:
@@ -428,7 +432,7 @@ def GEOS_xr_no_interp(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y2, m2, d2,h2,
     # Another interpolating section
     if ((coll == 'TEND' or coll == 'PRESSURE')::
       for levI in range(lev1, lev2+1):  
-        output[:, :, levI-lev1]=mapper(TMP.mean('time').sel(lev = levI, method = 'nearest').values)
+        output[:, :, levI-lev1]=mapper(TMP.mean('time').sel(lev = levI, method = 'neare3st').values)
         print('Level ' + str(levI) + ' completed.')  
     else:
       output[:] = mapper(TMP.mean('time').values)

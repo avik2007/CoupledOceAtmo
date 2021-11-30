@@ -78,7 +78,11 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
   ds = open_mdsdataset(diro, grid_dir=GRIDDIR, iters=all_iters[0], 
                        geometry='llc', read_grid=True, 
                        default_dtype=np.dtype('>f4'),
-                       delta_t=delta_t, ignore_unknown_vars=True, nx=nx)
+                       delta_t=delta_t, ignore_unknown_vars=True, nx=nx,chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                       "face": 1, "k": 1},)
 
   grid = xgcm.Grid(ds, periodic=False, face_connections=face_connections)
   print('grid xgcm.Grid')
@@ -124,7 +128,11 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
     print('open files')
     print(all_iters[i])
 
-    ds = open_mdsdataset(diro, grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/', iters=all_iters[i], geometry='llc', read_grid=True, default_dtype=np.dtype('>f4'), delta_t=delta_t, ignore_unknown_vars=True, nx=nx)
+    ds = open_mdsdataset(diro, grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/', iters=all_iters[i], geometry='llc', read_grid=True, default_dtype=np.dtype('>f4'), delta_t=delta_t, ignore_unknown_vars=True, nx=nx,chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                       "face": 1, "k": 1}, )
     
 
     if VAR == 'V':
@@ -135,8 +143,16 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                       grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
                             iters=all_iters[i],geometry='llc',read_grid=True,
                             default_dtype=np.dtype('>f4'),delta_t=delta_t,
-                            ignore_unknown_vars=True,nx=nx)
-      ds1 = open_mdsdataset(GRIDDIR, iters=1, ignore_unknown_vars=True, geometry='llc', nx=nx)
+                            ignore_unknown_vars=True,nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                       "face": 1, "k": 1},)
+      ds1 = open_mdsdataset(GRIDDIR, iters=1, ignore_unknown_vars=True, geometry='llc', nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                       "face": 1, "k": 1},)
 
       AngleCS=ds1['CS'];AngleSN=ds1['SN'];
       print('=== interp 2d ====')
@@ -153,7 +169,11 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                       grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
                             iters=all_iters[i],geometry='llc',read_grid=True,
                             default_dtype=np.dtype('>f4'),delta_t=delta_t,
-                            ignore_unknown_vars=True,nx=nx)
+                            ignore_unknown_vars=True,nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                       "face": 1, "k": 1},)
       ds1 = open_mdsdataset(GRIDDIR, iters=1, ignore_unknown_vars=True, geometry='llc', nx=nx)  
       AngleCS=ds1['CS'];AngleSN=ds1['SN'];
       print('=== interp 2d ====')
@@ -171,7 +191,11 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                       grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
                             iters=all_iters[i],geometry='llc',read_grid=True,
                             default_dtype=np.dtype('>f4'),delta_t=delta_t,
-                            ignore_unknown_vars=True,nx=nx)
+                            ignore_unknown_vars=True,nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                       "face": 1, "k": 1},)
       AngleCS=dsv['CS'];AngleSN=dsv['SN'];
       print('=== interp 2d ====')
       UV=grid.interp_2d_vector({'X': ds['oceTAUX'], 'Y': dsv['oceTAUY']},boundary='fill')
@@ -187,7 +211,11 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                       grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
                             iters=all_iters[i],geometry='llc',read_grid=True,
                             default_dtype=np.dtype('>f4'),delta_t=delta_t,
-                            ignore_unknown_vars=True,nx=nx)
+                            ignore_unknown_vars=True,nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                       "face": 1, "k": 1},)
       AngleCS=dsu['CS'];AngleSN=dsu['SN'];
       print('=== interp 2d ====')
       UV=grid.interp_2d_vector({'X': dsu['oceTAUX'], 'Y': ds['oceTAUY']},boundary='fill')
@@ -203,7 +231,11 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                       grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
                             iters=all_iters[i],geometry='llc',read_grid=True,
                             default_dtype=np.dtype('>f4'),delta_t=delta_t,
-                            ignore_unknown_vars=True,nx=nx)
+                            ignore_unknown_vars=True,nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                       "face": 1, "k": 1},)
       grid = xgcm.Grid(ds)
       zeta = (-grid.diff(ds['oceTAUX']*ds.dxC,'Y') + grid.diff(dsv['oceTAUY']*ds.dyC,'X')) / ds.rAz
       x = grid.interp(grid.interp(zeta,axis='X', to='center'), axis='Y',to='center')
