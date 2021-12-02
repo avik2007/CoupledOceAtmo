@@ -1,0 +1,10836 @@
+Job 12277723.pbspl1.nas.nasa.gov started on Thu Dec 02 12:16:08 PST 2021
+The job requested the following resources:
+    ncpus=16
+    place=scatter:excl
+    walltime=02:00:00
+
+PBS set the following environment variables:
+        FORT_BUFFERED = 1
+                   TZ = PST8PDT
+
+On r603i3n5:
+removing old scheduler directory
+creating new scheduler directory
+as a script
+Hola, dask has been set up!!!
+Hector script has been loaded
+Output directory is going to be an input parameter
+Date and location has been set
+Entering MIT_xr_date_location
+date
+[datetime.datetime(2020, 3, 1, 0, 0) datetime.datetime(2020, 3, 1, 1, 0)
+ datetime.datetime(2020, 3, 1, 2, 0) ...
+ datetime.datetime(2020, 5, 31, 22, 0)
+ datetime.datetime(2020, 5, 31, 23, 0) datetime.datetime(2020, 6, 1, 0, 0)]
+
+[ 78880.  78960.  79040. ... 255360. 255440. 255520.]
+
+setting location
+location
+Directory of files
+/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta/
+before mds
+grid xgcm.Grid
+initialize mapping to GEOS grid
+==== Folder to be created =======
+/nobackup/amondal/NCData/20211103_multicoretest_3month/Theta_6
+open files
+78880.0
+map field
+mapped
+save output
+finished day 00
+3.5936391353607178
+open files
+78960.0
+map field
+mapped
+save output
+finished day 01
+3.4553043842315674
+open files
+79040.0
+map field
+mapped
+save output
+finished day 02
+4.017190456390381
+open files
+79120.0
+map field
+mapped
+save output
+finished day 03
+2.5872931480407715
+open files
+79200.0
+map field
+mapped
+save output
+finished day 04
+2.6458849906921387
+open files
+79280.0
+map field
+mapped
+save output
+finished day 05
+2.38643741607666
+open files
+79360.0
+map field
+mapped
+save output
+finished day 06
+4.060259580612183
+open files
+79440.0
+map field
+mapped
+save output
+finished day 07
+6.961771726608276
+open files
+79520.0
+map field
+mapped
+save output
+finished day 08
+3.2070112228393555
+open files
+79600.0
+map field
+mapped
+save output
+finished day 09
+3.5284337997436523
+open files
+79680.0
+map field
+mapped
+save output
+finished day 10
+5.186490774154663
+open files
+79760.0
+map field
+mapped
+save output
+finished day 11
+3.4953770637512207
+open files
+79840.0
+map field
+mapped
+save output
+finished day 12
+2.154653549194336
+open files
+79920.0
+map field
+mapped
+save output
+finished day 13
+3.4948883056640625
+open files
+80000.0
+map field
+mapped
+save output
+finished day 14
+3.4686496257781982
+open files
+80080.0
+map field
+mapped
+save output
+finished day 15
+3.4643218517303467
+open files
+80160.0
+map field
+mapped
+save output
+finished day 16
+2.4608001708984375
+open files
+80240.0
+map field
+mapped
+save output
+finished day 17
+3.0947885513305664
+open files
+80320.0
+map field
+mapped
+save output
+finished day 18
+2.8991470336914062
+open files
+80400.0
+map field
+mapped
+save output
+finished day 19
+2.2188193798065186
+open files
+80480.0
+map field
+mapped
+save output
+finished day 20
+2.2088921070098877
+open files
+80560.0
+map field
+mapped
+save output
+finished day 21
+2.3149001598358154
+open files
+80640.0
+map field
+mapped
+save output
+finished day 22
+2.911975860595703
+open files
+80720.0
+map field
+mapped
+save output
+finished day 23
+2.278888463973999
+open files
+80800.0
+map field
+mapped
+save output
+finished day 24
+2.344198226928711
+open files
+80880.0
+map field
+mapped
+save output
+finished day 25
+2.3523380756378174
+open files
+80960.0
+map field
+mapped
+save output
+finished day 26
+2.057844877243042
+open files
+81040.0
+map field
+mapped
+save output
+finished day 27
+2.6994338035583496
+open files
+81120.0
+map field
+mapped
+save output
+finished day 28
+2.7233774662017822
+open files
+81200.0
+map field
+mapped
+save output
+finished day 29
+2.518984317779541
+open files
+81280.0
+map field
+mapped
+save output
+finished day 30
+2.818608283996582
+open files
+81360.0
+map field
+mapped
+save output
+finished day 31
+2.6765856742858887
+open files
+81440.0
+map field
+mapped
+save output
+finished day 32
+5.076899528503418
+open files
+81520.0
+map field
+mapped
+save output
+finished day 33
+3.9608259201049805
+open files
+81600.0
+map field
+mapped
+save output
+finished day 34
+3.6268675327301025
+open files
+81680.0
+map field
+mapped
+save output
+finished day 35
+4.475042343139648
+open files
+81760.0
+map field
+mapped
+save output
+finished day 36
+3.612520456314087
+open files
+81840.0
+map field
+mapped
+save output
+finished day 37
+2.0872550010681152
+open files
+81920.0
+map field
+mapped
+save output
+finished day 38
+2.7114150524139404
+open files
+82000.0
+map field
+mapped
+save output
+finished day 39
+12.51317811012268
+open files
+82080.0
+map field
+mapped
+save output
+finished day 40
+2.934948682785034
+open files
+82160.0
+map field
+mapped
+save output
+finished day 41
+3.3036365509033203
+open files
+82240.0
+map field
+mapped
+save output
+finished day 42
+2.3553919792175293
+open files
+82320.0
+map field
+mapped
+save output
+finished day 43
+2.3123860359191895
+open files
+82400.0
+map field
+mapped
+save output
+finished day 44
+2.5071828365325928
+open files
+82480.0
+map field
+mapped
+save output
+finished day 45
+2.4348397254943848
+open files
+82560.0
+map field
+mapped
+save output
+finished day 46
+2.5146591663360596
+open files
+82640.0
+map field
+mapped
+save output
+finished day 47
+3.7436296939849854
+open files
+82720.0
+map field
+mapped
+save output
+finished day 48
+2.232198476791382
+open files
+82800.0
+map field
+mapped
+save output
+finished day 49
+4.132838726043701
+open files
+82880.0
+map field
+mapped
+save output
+finished day 50
+10.053430795669556
+open files
+82960.0
+map field
+mapped
+save output
+finished day 51
+2.1424944400787354
+open files
+83040.0
+map field
+mapped
+save output
+finished day 52
+2.7663683891296387
+open files
+83120.0
+map field
+mapped
+save output
+finished day 53
+3.1159400939941406
+open files
+83200.0
+map field
+mapped
+save output
+finished day 54
+2.4095373153686523
+open files
+83280.0
+map field
+mapped
+save output
+finished day 55
+2.466932773590088
+open files
+83360.0
+map field
+mapped
+save output
+finished day 56
+2.002877950668335
+open files
+83440.0
+map field
+mapped
+save output
+finished day 57
+3.060809850692749
+open files
+83520.0
+map field
+mapped
+save output
+finished day 58
+2.0548791885375977
+open files
+83600.0
+map field
+mapped
+save output
+finished day 59
+3.465926170349121
+open files
+83680.0
+map field
+mapped
+save output
+finished day 60
+2.6407055854797363
+open files
+83760.0
+map field
+mapped
+save output
+finished day 61
+2.2373251914978027
+open files
+83840.0
+map field
+mapped
+save output
+finished day 62
+2.401306629180908
+open files
+83920.0
+map field
+mapped
+save output
+finished day 63
+3.0793261528015137
+open files
+84000.0
+map field
+mapped
+save output
+finished day 64
+2.7356514930725098
+open files
+84080.0
+map field
+mapped
+save output
+finished day 65
+2.1866345405578613
+open files
+84160.0
+map field
+mapped
+save output
+finished day 66
+3.4101855754852295
+open files
+84240.0
+map field
+mapped
+save output
+finished day 67
+3.529806137084961
+open files
+84320.0
+map field
+mapped
+save output
+finished day 68
+2.3375837802886963
+open files
+84400.0
+map field
+mapped
+save output
+finished day 69
+2.533055305480957
+open files
+84480.0
+map field
+mapped
+save output
+finished day 70
+2.4579951763153076
+open files
+84560.0
+map field
+mapped
+save output
+finished day 71
+3.0599451065063477
+open files
+84640.0
+map field
+mapped
+save output
+finished day 72
+2.5128374099731445
+open files
+84720.0
+map field
+mapped
+save output
+finished day 73
+2.571089506149292
+open files
+84800.0
+map field
+mapped
+save output
+finished day 74
+2.7427594661712646
+open files
+84880.0
+map field
+mapped
+save output
+finished day 75
+3.0559449195861816
+open files
+84960.0
+map field
+mapped
+save output
+finished day 76
+5.700190782546997
+open files
+85040.0
+map field
+mapped
+save output
+finished day 77
+3.189124345779419
+open files
+85120.0
+map field
+mapped
+save output
+finished day 78
+16.307507753372192
+open files
+85200.0
+map field
+mapped
+save output
+finished day 79
+4.345934867858887
+open files
+85280.0
+map field
+mapped
+save output
+finished day 80
+5.078541278839111
+open files
+85360.0
+map field
+mapped
+save output
+finished day 81
+2.8299405574798584
+open files
+85440.0
+map field
+mapped
+save output
+finished day 82
+4.4496095180511475
+open files
+85520.0
+map field
+mapped
+save output
+finished day 83
+2.429133415222168
+open files
+85600.0
+map field
+mapped
+save output
+finished day 84
+2.3852620124816895
+open files
+85680.0
+map field
+mapped
+save output
+finished day 85
+2.09130859375
+open files
+85760.0
+map field
+mapped
+save output
+finished day 86
+2.1105105876922607
+open files
+85840.0
+map field
+mapped
+save output
+finished day 87
+2.083211898803711
+open files
+85920.0
+map field
+mapped
+save output
+finished day 88
+2.1600563526153564
+open files
+86000.0
+map field
+mapped
+save output
+finished day 89
+2.0895237922668457
+open files
+86080.0
+map field
+mapped
+save output
+finished day 90
+2.4646778106689453
+open files
+86160.0
+map field
+mapped
+save output
+finished day 91
+2.1665356159210205
+open files
+86240.0
+map field
+mapped
+save output
+finished day 92
+2.5977981090545654
+open files
+86320.0
+map field
+mapped
+save output
+finished day 93
+2.200047254562378
+open files
+86400.0
+map field
+mapped
+save output
+finished day 94
+2.286817789077759
+open files
+86480.0
+map field
+mapped
+save output
+finished day 95
+3.694913387298584
+open files
+86560.0
+map field
+mapped
+save output
+finished day 96
+2.0104477405548096
+open files
+86640.0
+map field
+mapped
+save output
+finished day 97
+2.9133355617523193
+open files
+86720.0
+map field
+mapped
+save output
+finished day 98
+2.053511619567871
+open files
+86800.0
+map field
+mapped
+save output
+finished day 99
+4.069380044937134
+open files
+86880.0
+map field
+mapped
+save output
+finished day 100
+2.285754442214966
+open files
+86960.0
+map field
+mapped
+save output
+finished day 101
+2.649550199508667
+open files
+87040.0
+map field
+mapped
+save output
+finished day 102
+2.3525116443634033
+open files
+87120.0
+map field
+mapped
+save output
+finished day 103
+3.789623498916626
+open files
+87200.0
+map field
+mapped
+save output
+finished day 104
+3.2524075508117676
+open files
+87280.0
+map field
+mapped
+save output
+finished day 105
+2.9207756519317627
+open files
+87360.0
+map field
+mapped
+save output
+finished day 106
+2.887702465057373
+open files
+87440.0
+map field
+mapped
+save output
+finished day 107
+2.878329277038574
+open files
+87520.0
+map field
+mapped
+save output
+finished day 108
+2.6808600425720215
+open files
+87600.0
+map field
+mapped
+save output
+finished day 109
+2.777963161468506
+open files
+87680.0
+map field
+mapped
+save output
+finished day 110
+2.0563154220581055
+open files
+87760.0
+map field
+mapped
+save output
+finished day 111
+2.5443549156188965
+open files
+87840.0
+map field
+mapped
+save output
+finished day 112
+3.318101167678833
+open files
+87920.0
+map field
+mapped
+save output
+finished day 113
+2.4364898204803467
+open files
+88000.0
+map field
+mapped
+save output
+finished day 114
+3.3409981727600098
+open files
+88080.0
+map field
+mapped
+save output
+finished day 115
+2.97953200340271
+open files
+88160.0
+map field
+mapped
+save output
+finished day 116
+3.161602735519409
+open files
+88240.0
+map field
+mapped
+save output
+finished day 117
+2.6061906814575195
+open files
+88320.0
+map field
+mapped
+save output
+finished day 118
+3.538580894470215
+open files
+88400.0
+map field
+mapped
+save output
+finished day 119
+3.2446935176849365
+open files
+88480.0
+map field
+mapped
+save output
+finished day 120
+2.9266836643218994
+open files
+88560.0
+map field
+mapped
+save output
+finished day 121
+2.8863351345062256
+open files
+88640.0
+map field
+mapped
+save output
+finished day 122
+2.258985996246338
+open files
+88720.0
+map field
+mapped
+save output
+finished day 123
+2.4158918857574463
+open files
+88800.0
+map field
+mapped
+save output
+finished day 124
+2.4235758781433105
+open files
+88880.0
+map field
+mapped
+save output
+finished day 125
+3.2625885009765625
+open files
+88960.0
+map field
+mapped
+save output
+finished day 126
+3.0099453926086426
+open files
+89040.0
+map field
+mapped
+save output
+finished day 127
+6.2940967082977295
+open files
+89120.0
+map field
+mapped
+save output
+finished day 128
+3.391627550125122
+open files
+89200.0
+map field
+mapped
+save output
+finished day 129
+2.058079957962036
+open files
+89280.0
+map field
+mapped
+save output
+finished day 130
+2.2301478385925293
+open files
+89360.0
+map field
+mapped
+save output
+finished day 131
+2.2561707496643066
+open files
+89440.0
+map field
+mapped
+save output
+finished day 132
+2.0663578510284424
+open files
+89520.0
+map field
+mapped
+save output
+finished day 133
+3.039472818374634
+open files
+89600.0
+map field
+mapped
+save output
+finished day 134
+2.8476483821868896
+open files
+89680.0
+map field
+mapped
+save output
+finished day 135
+2.3825337886810303
+open files
+89760.0
+map field
+mapped
+save output
+finished day 136
+2.732255697250366
+open files
+89840.0
+map field
+mapped
+save output
+finished day 137
+2.7258989810943604
+open files
+89920.0
+map field
+mapped
+save output
+finished day 138
+2.9915239810943604
+open files
+90000.0
+map field
+mapped
+save output
+finished day 139
+3.3884496688842773
+open files
+90080.0
+map field
+mapped
+save output
+finished day 140
+3.9795618057250977
+open files
+90160.0
+map field
+mapped
+save output
+finished day 141
+2.1653902530670166
+open files
+90240.0
+map field
+mapped
+save output
+finished day 142
+2.136943817138672
+open files
+90320.0
+map field
+mapped
+save output
+finished day 143
+2.306627035140991
+open files
+90400.0
+map field
+mapped
+save output
+finished day 144
+2.9976232051849365
+open files
+90480.0
+map field
+mapped
+save output
+finished day 145
+2.5314502716064453
+open files
+90560.0
+map field
+mapped
+save output
+finished day 146
+3.572517156600952
+open files
+90640.0
+map field
+mapped
+save output
+finished day 147
+2.2916390895843506
+open files
+90720.0
+map field
+mapped
+save output
+finished day 148
+2.291623592376709
+open files
+90800.0
+map field
+mapped
+save output
+finished day 149
+2.2140045166015625
+open files
+90880.0
+map field
+mapped
+save output
+finished day 150
+2.8613646030426025
+open files
+90960.0
+map field
+mapped
+save output
+finished day 151
+2.208195209503174
+open files
+91040.0
+map field
+mapped
+save output
+finished day 152
+2.2157015800476074
+open files
+91120.0
+map field
+mapped
+save output
+finished day 153
+1.9507899284362793
+open files
+91200.0
+map field
+mapped
+save output
+finished day 154
+2.0758819580078125
+open files
+91280.0
+map field
+mapped
+save output
+finished day 155
+2.704103469848633
+open files
+91360.0
+map field
+mapped
+save output
+finished day 156
+2.7237329483032227
+open files
+91440.0
+map field
+mapped
+save output
+finished day 157
+2.640350580215454
+open files
+91520.0
+map field
+mapped
+save output
+finished day 158
+2.0298118591308594
+open files
+91600.0
+map field
+mapped
+save output
+finished day 159
+2.790888786315918
+open files
+91680.0
+map field
+mapped
+save output
+finished day 160
+2.72851824760437
+open files
+91760.0
+map field
+mapped
+save output
+finished day 161
+2.1830012798309326
+open files
+91840.0
+map field
+mapped
+save output
+finished day 162
+2.6967875957489014
+open files
+91920.0
+map field
+mapped
+save output
+finished day 163
+2.5634303092956543
+open files
+92000.0
+map field
+mapped
+save output
+finished day 164
+2.593383312225342
+open files
+92080.0
+map field
+mapped
+save output
+finished day 165
+2.582307815551758
+open files
+92160.0
+map field
+mapped
+save output
+finished day 166
+2.391627311706543
+open files
+92240.0
+map field
+mapped
+save output
+finished day 167
+2.6622631549835205
+open files
+92320.0
+map field
+mapped
+save output
+finished day 168
+3.1151719093322754
+open files
+92400.0
+map field
+mapped
+save output
+finished day 169
+3.400409698486328
+open files
+92480.0
+map field
+mapped
+save output
+finished day 170
+3.3540172576904297
+open files
+92560.0
+map field
+mapped
+save output
+finished day 171
+2.4361393451690674
+open files
+92640.0
+map field
+mapped
+save output
+finished day 172
+2.1040422916412354
+open files
+92720.0
+map field
+mapped
+save output
+finished day 173
+2.196046829223633
+open files
+92800.0
+map field
+mapped
+save output
+finished day 174
+1.9744296073913574
+open files
+92880.0
+map field
+mapped
+save output
+finished day 175
+3.3927879333496094
+open files
+92960.0
+map field
+mapped
+save output
+finished day 176
+2.4138197898864746
+open files
+93040.0
+map field
+mapped
+save output
+finished day 177
+2.324082851409912
+open files
+93120.0
+map field
+mapped
+save output
+finished day 178
+4.392154932022095
+open files
+93200.0
+map field
+mapped
+save output
+finished day 179
+2.1859283447265625
+open files
+93280.0
+map field
+mapped
+save output
+finished day 180
+2.253361940383911
+open files
+93360.0
+map field
+mapped
+save output
+finished day 181
+2.4703123569488525
+open files
+93440.0
+map field
+mapped
+save output
+finished day 182
+2.2557358741760254
+open files
+93520.0
+map field
+mapped
+save output
+finished day 183
+2.3858046531677246
+open files
+93600.0
+map field
+mapped
+save output
+finished day 184
+2.3743934631347656
+open files
+93680.0
+map field
+mapped
+save output
+finished day 185
+2.369382858276367
+open files
+93760.0
+map field
+mapped
+save output
+finished day 186
+2.1955158710479736
+open files
+93840.0
+map field
+mapped
+save output
+finished day 187
+2.3953909873962402
+open files
+93920.0
+map field
+mapped
+save output
+finished day 188
+3.0796477794647217
+open files
+94000.0
+map field
+mapped
+save output
+finished day 189
+1.9648592472076416
+open files
+94080.0
+map field
+mapped
+save output
+finished day 190
+1.9940476417541504
+open files
+94160.0
+map field
+mapped
+save output
+finished day 191
+3.6305763721466064
+open files
+94240.0
+map field
+mapped
+save output
+finished day 192
+2.7662346363067627
+open files
+94320.0
+map field
+mapped
+save output
+finished day 193
+2.8305041790008545
+open files
+94400.0
+map field
+mapped
+save output
+finished day 194
+2.1036744117736816
+open files
+94480.0
+map field
+mapped
+save output
+finished day 195
+1.9139907360076904
+open files
+94560.0
+map field
+mapped
+save output
+finished day 196
+2.1050021648406982
+open files
+94640.0
+map field
+mapped
+save output
+finished day 197
+2.0391814708709717
+open files
+94720.0
+map field
+mapped
+save output
+finished day 198
+2.245286226272583
+open files
+94800.0
+map field
+mapped
+save output
+finished day 199
+2.048032283782959
+open files
+94880.0
+map field
+mapped
+save output
+finished day 200
+2.024057149887085
+open files
+94960.0
+map field
+mapped
+save output
+finished day 201
+2.4075803756713867
+open files
+95040.0
+map field
+mapped
+save output
+finished day 202
+2.066892623901367
+open files
+95120.0
+map field
+mapped
+save output
+finished day 203
+2.389871120452881
+open files
+95200.0
+map field
+mapped
+save output
+finished day 204
+2.1434664726257324
+open files
+95280.0
+map field
+mapped
+save output
+finished day 205
+2.19559383392334
+open files
+95360.0
+map field
+mapped
+save output
+finished day 206
+2.1571061611175537
+open files
+95440.0
+map field
+mapped
+save output
+finished day 207
+2.68745756149292
+open files
+95520.0
+map field
+mapped
+save output
+finished day 208
+1.9126436710357666
+open files
+95600.0
+map field
+mapped
+save output
+finished day 209
+3.6060729026794434
+open files
+95680.0
+map field
+mapped
+save output
+finished day 210
+2.757045269012451
+open files
+95760.0
+map field
+mapped
+save output
+finished day 211
+2.2714641094207764
+open files
+95840.0
+map field
+mapped
+save output
+finished day 212
+8.602238178253174
+open files
+95920.0
+map field
+mapped
+save output
+finished day 213
+3.351109504699707
+open files
+96000.0
+map field
+mapped
+save output
+finished day 214
+3.773979663848877
+open files
+96080.0
+map field
+mapped
+save output
+finished day 215
+2.398616075515747
+open files
+96160.0
+map field
+mapped
+save output
+finished day 216
+2.4620583057403564
+open files
+96240.0
+map field
+mapped
+save output
+finished day 217
+9.78404951095581
+open files
+96320.0
+map field
+mapped
+save output
+finished day 218
+3.646021604537964
+open files
+96400.0
+map field
+mapped
+save output
+finished day 219
+2.798032522201538
+open files
+96480.0
+map field
+mapped
+save output
+finished day 220
+2.7640233039855957
+open files
+96560.0
+map field
+mapped
+save output
+finished day 221
+2.5230207443237305
+open files
+96640.0
+map field
+mapped
+save output
+finished day 222
+2.3999500274658203
+open files
+96720.0
+map field
+mapped
+save output
+finished day 223
+2.5248019695281982
+open files
+96800.0
+map field
+mapped
+save output
+finished day 224
+4.182973623275757
+open files
+96880.0
+map field
+mapped
+save output
+finished day 225
+3.465261220932007
+open files
+96960.0
+map field
+mapped
+save output
+finished day 226
+2.9376845359802246
+open files
+97040.0
+map field
+mapped
+save output
+finished day 227
+2.359614372253418
+open files
+97120.0
+map field
+mapped
+save output
+finished day 228
+2.186589241027832
+open files
+97200.0
+map field
+mapped
+save output
+finished day 229
+2.7214889526367188
+open files
+97280.0
+map field
+mapped
+save output
+finished day 230
+2.7324814796447754
+open files
+97360.0
+map field
+mapped
+save output
+finished day 231
+2.308272361755371
+open files
+97440.0
+map field
+mapped
+save output
+finished day 232
+2.113477945327759
+open files
+97520.0
+map field
+mapped
+save output
+finished day 233
+3.1694939136505127
+open files
+97600.0
+map field
+mapped
+save output
+finished day 234
+2.4679555892944336
+open files
+97680.0
+map field
+mapped
+save output
+finished day 235
+2.2967875003814697
+open files
+97760.0
+map field
+mapped
+save output
+finished day 236
+1.9784727096557617
+open files
+97840.0
+map field
+mapped
+save output
+finished day 237
+4.172907114028931
+open files
+97920.0
+map field
+mapped
+save output
+finished day 238
+1.9947586059570312
+open files
+98000.0
+map field
+mapped
+save output
+finished day 239
+2.057893753051758
+open files
+98080.0
+map field
+mapped
+save output
+finished day 240
+10.242998361587524
+open files
+98160.0
+map field
+mapped
+save output
+finished day 241
+2.6760261058807373
+open files
+98240.0
+map field
+mapped
+save output
+finished day 242
+2.9504003524780273
+open files
+98320.0
+map field
+mapped
+save output
+finished day 243
+2.969265937805176
+open files
+98400.0
+map field
+mapped
+save output
+finished day 244
+2.1228678226470947
+open files
+98480.0
+map field
+mapped
+save output
+finished day 245
+3.5449140071868896
+open files
+98560.0
+map field
+mapped
+save output
+finished day 246
+2.2809386253356934
+open files
+98640.0
+map field
+mapped
+save output
+finished day 247
+3.355447769165039
+open files
+98720.0
+map field
+mapped
+save output
+finished day 248
+2.319932222366333
+open files
+98800.0
+map field
+mapped
+save output
+finished day 249
+2.090287685394287
+open files
+98880.0
+map field
+mapped
+save output
+finished day 250
+2.168212890625
+open files
+98960.0
+map field
+mapped
+save output
+finished day 251
+2.5157501697540283
+open files
+99040.0
+map field
+mapped
+save output
+finished day 252
+3.3793299198150635
+open files
+99120.0
+map field
+mapped
+save output
+finished day 253
+2.1369357109069824
+open files
+99200.0
+map field
+mapped
+save output
+finished day 254
+3.6735730171203613
+open files
+99280.0
+map field
+mapped
+save output
+finished day 255
+2.719029426574707
+open files
+99360.0
+map field
+mapped
+save output
+finished day 256
+2.056795120239258
+open files
+99440.0
+map field
+mapped
+save output
+finished day 257
+2.2103703022003174
+open files
+99520.0
+map field
+mapped
+save output
+finished day 258
+6.4289679527282715
+open files
+99600.0
+map field
+mapped
+save output
+finished day 259
+2.286081552505493
+open files
+99680.0
+map field
+mapped
+save output
+finished day 260
+2.40215802192688
+open files
+99760.0
+map field
+mapped
+save output
+finished day 261
+2.206819534301758
+open files
+99840.0
+map field
+mapped
+save output
+finished day 262
+5.92772102355957
+open files
+99920.0
+map field
+mapped
+save output
+finished day 263
+5.750035285949707
+open files
+100000.0
+map field
+mapped
+save output
+finished day 264
+5.512059211730957
+open files
+100080.0
+map field
+mapped
+save output
+finished day 265
+2.26583194732666
+open files
+100160.0
+map field
+mapped
+save output
+finished day 266
+1.937727928161621
+open files
+100240.0
+map field
+mapped
+save output
+finished day 267
+3.1159048080444336
+open files
+100320.0
+map field
+mapped
+save output
+finished day 268
+2.259713888168335
+open files
+100400.0
+map field
+mapped
+save output
+finished day 269
+2.527559995651245
+open files
+100480.0
+map field
+mapped
+save output
+finished day 270
+2.6293649673461914
+open files
+100560.0
+map field
+mapped
+save output
+finished day 271
+2.501079797744751
+open files
+100640.0
+map field
+mapped
+save output
+finished day 272
+2.9561407566070557
+open files
+100720.0
+map field
+mapped
+save output
+finished day 273
+3.0829317569732666
+open files
+100800.0
+map field
+mapped
+save output
+finished day 274
+4.027059078216553
+open files
+100880.0
+map field
+mapped
+save output
+finished day 275
+2.365194320678711
+open files
+100960.0
+map field
+mapped
+save output
+finished day 276
+2.2997491359710693
+open files
+101040.0
+map field
+mapped
+save output
+finished day 277
+2.34977650642395
+open files
+101120.0
+map field
+mapped
+save output
+finished day 278
+2.2789480686187744
+open files
+101200.0
+map field
+mapped
+save output
+finished day 279
+2.4187731742858887
+open files
+101280.0
+map field
+mapped
+save output
+finished day 280
+3.2033259868621826
+open files
+101360.0
+map field
+mapped
+save output
+finished day 281
+2.5227553844451904
+open files
+101440.0
+map field
+mapped
+save output
+finished day 282
+3.6049344539642334
+open files
+101520.0
+map field
+mapped
+save output
+finished day 283
+2.105628252029419
+open files
+101600.0
+map field
+mapped
+save output
+finished day 284
+2.1017346382141113
+open files
+101680.0
+map field
+mapped
+save output
+finished day 285
+4.888227224349976
+open files
+101760.0
+map field
+mapped
+save output
+finished day 286
+4.497631549835205
+open files
+101840.0
+map field
+mapped
+save output
+finished day 287
+3.2278263568878174
+open files
+101920.0
+map field
+mapped
+save output
+finished day 288
+2.6953651905059814
+open files
+102000.0
+map field
+mapped
+save output
+finished day 289
+2.7660491466522217
+open files
+102080.0
+map field
+mapped
+save output
+finished day 290
+2.220147132873535
+open files
+102160.0
+map field
+mapped
+save output
+finished day 291
+3.2535109519958496
+open files
+102240.0
+map field
+mapped
+save output
+finished day 292
+2.7899487018585205
+open files
+102320.0
+map field
+mapped
+save output
+finished day 293
+2.385251998901367
+open files
+102400.0
+map field
+mapped
+save output
+finished day 294
+1.9997246265411377
+open files
+102480.0
+map field
+mapped
+save output
+finished day 295
+2.1825246810913086
+open files
+102560.0
+map field
+mapped
+save output
+finished day 296
+2.1268606185913086
+open files
+102640.0
+map field
+mapped
+save output
+finished day 297
+2.120978832244873
+open files
+102720.0
+map field
+mapped
+save output
+finished day 298
+2.5624828338623047
+open files
+102800.0
+map field
+mapped
+save output
+finished day 299
+2.239915132522583
+open files
+102880.0
+map field
+mapped
+save output
+finished day 300
+2.810206413269043
+open files
+102960.0
+map field
+mapped
+save output
+finished day 301
+1.9781196117401123
+open files
+103040.0
+map field
+mapped
+save output
+finished day 302
+2.46366024017334
+open files
+103120.0
+map field
+mapped
+save output
+finished day 303
+2.2324094772338867
+open files
+103200.0
+map field
+mapped
+save output
+finished day 304
+2.3961172103881836
+open files
+103280.0
+map field
+mapped
+save output
+finished day 305
+2.5933709144592285
+open files
+103360.0
+map field
+mapped
+save output
+finished day 306
+2.1418817043304443
+open files
+103440.0
+map field
+mapped
+save output
+finished day 307
+62.24628567695618
+open files
+103520.0
+map field
+mapped
+save output
+finished day 308
+2.327650547027588
+open files
+103600.0
+map field
+mapped
+save output
+finished day 309
+2.7610411643981934
+open files
+103680.0
+map field
+mapped
+save output
+finished day 310
+2.323956251144409
+open files
+103760.0
+map field
+mapped
+save output
+finished day 311
+2.0242106914520264
+open files
+103840.0
+map field
+mapped
+save output
+finished day 312
+2.2016537189483643
+open files
+103920.0
+map field
+mapped
+save output
+finished day 313
+2.0245490074157715
+open files
+104000.0
+map field
+mapped
+save output
+finished day 314
+2.1690430641174316
+open files
+104080.0
+map field
+mapped
+save output
+finished day 315
+3.188857078552246
+open files
+104160.0
+map field
+mapped
+save output
+finished day 316
+3.799751043319702
+open files
+104240.0
+map field
+mapped
+save output
+finished day 317
+2.373363971710205
+open files
+104320.0
+map field
+mapped
+save output
+finished day 318
+2.480212450027466
+open files
+104400.0
+map field
+mapped
+save output
+finished day 319
+3.0241079330444336
+open files
+104480.0
+map field
+mapped
+save output
+finished day 320
+2.8307909965515137
+open files
+104560.0
+map field
+mapped
+save output
+finished day 321
+2.5765390396118164
+open files
+104640.0
+map field
+mapped
+save output
+finished day 322
+2.573249101638794
+open files
+104720.0
+map field
+mapped
+save output
+finished day 323
+2.255645990371704
+open files
+104800.0
+map field
+mapped
+save output
+finished day 324
+3.103381633758545
+open files
+104880.0
+map field
+mapped
+save output
+finished day 325
+2.940595865249634
+open files
+104960.0
+map field
+mapped
+save output
+finished day 326
+2.391345739364624
+open files
+105040.0
+map field
+mapped
+save output
+finished day 327
+2.5223872661590576
+open files
+105120.0
+map field
+mapped
+save output
+finished day 328
+2.478599786758423
+open files
+105200.0
+map field
+mapped
+save output
+finished day 329
+2.4661130905151367
+open files
+105280.0
+map field
+mapped
+save output
+finished day 330
+2.693476438522339
+open files
+105360.0
+map field
+mapped
+save output
+finished day 331
+2.4537456035614014
+open files
+105440.0
+map field
+mapped
+save output
+finished day 332
+2.4890527725219727
+open files
+105520.0
+map field
+mapped
+save output
+finished day 333
+2.4117419719696045
+open files
+105600.0
+map field
+mapped
+save output
+finished day 334
+2.456441640853882
+open files
+105680.0
+map field
+mapped
+save output
+finished day 335
+2.549330711364746
+open files
+105760.0
+map field
+mapped
+save output
+finished day 336
+2.0704314708709717
+open files
+105840.0
+map field
+mapped
+save output
+finished day 337
+2.785039186477661
+open files
+105920.0
+map field
+mapped
+save output
+finished day 338
+2.387850046157837
+open files
+106000.0
+map field
+mapped
+save output
+finished day 339
+2.7876992225646973
+open files
+106080.0
+map field
+mapped
+save output
+finished day 340
+2.6145222187042236
+open files
+106160.0
+map field
+mapped
+save output
+finished day 341
+2.4338088035583496
+open files
+106240.0
+map field
+mapped
+save output
+finished day 342
+2.207566261291504
+open files
+106320.0
+map field
+mapped
+save output
+finished day 343
+3.52219820022583
+open files
+106400.0
+map field
+mapped
+save output
+finished day 344
+2.4006848335266113
+open files
+106480.0
+map field
+mapped
+save output
+finished day 345
+2.3486757278442383
+open files
+106560.0
+map field
+mapped
+save output
+finished day 346
+2.528286933898926
+open files
+106640.0
+map field
+mapped
+save output
+finished day 347
+3.332756757736206
+open files
+106720.0
+map field
+mapped
+save output
+finished day 348
+2.6437041759490967
+open files
+106800.0
+map field
+mapped
+save output
+finished day 349
+2.4636449813842773
+open files
+106880.0
+map field
+mapped
+save output
+finished day 350
+2.4308416843414307
+open files
+106960.0
+map field
+mapped
+save output
+finished day 351
+2.3589119911193848
+open files
+107040.0
+map field
+mapped
+save output
+finished day 352
+2.1424965858459473
+open files
+107120.0
+map field
+mapped
+save output
+finished day 353
+2.106011390686035
+open files
+107200.0
+map field
+mapped
+save output
+finished day 354
+2.3292152881622314
+open files
+107280.0
+map field
+mapped
+save output
+finished day 355
+2.1006410121917725
+open files
+107360.0
+map field
+mapped
+save output
+finished day 356
+2.396174430847168
+open files
+107440.0
+map field
+mapped
+save output
+finished day 357
+2.760002374649048
+open files
+107520.0
+map field
+mapped
+save output
+finished day 358
+2.6710448265075684
+open files
+107600.0
+map field
+mapped
+save output
+finished day 359
+2.241583824157715
+open files
+107680.0
+map field
+mapped
+save output
+finished day 360
+3.504927396774292
+open files
+107760.0
+map field
+mapped
+save output
+finished day 361
+4.014316558837891
+open files
+107840.0
+map field
+mapped
+save output
+finished day 362
+2.719153642654419
+open files
+107920.0
+map field
+mapped
+save output
+finished day 363
+3.345231056213379
+open files
+108000.0
+map field
+mapped
+save output
+finished day 364
+3.8795361518859863
+open files
+108080.0
+map field
+mapped
+save output
+finished day 365
+3.1236023902893066
+open files
+108160.0
+map field
+mapped
+save output
+finished day 366
+2.188819408416748
+open files
+108240.0
+map field
+mapped
+save output
+finished day 367
+3.335845470428467
+open files
+108320.0
+map field
+mapped
+save output
+finished day 368
+2.8040685653686523
+open files
+108400.0
+map field
+mapped
+save output
+finished day 369
+2.15608811378479
+open files
+108480.0
+map field
+mapped
+save output
+finished day 370
+2.2089571952819824
+open files
+108560.0
+map field
+mapped
+save output
+finished day 371
+2.4502947330474854
+open files
+108640.0
+map field
+mapped
+save output
+finished day 372
+4.5806052684783936
+open files
+108720.0
+map field
+mapped
+save output
+finished day 373
+2.8387699127197266
+open files
+108800.0
+map field
+mapped
+save output
+finished day 374
+2.1915194988250732
+open files
+108880.0
+map field
+mapped
+save output
+finished day 375
+2.897672176361084
+open files
+108960.0
+map field
+mapped
+save output
+finished day 376
+2.5777804851531982
+open files
+109040.0
+map field
+mapped
+save output
+finished day 377
+2.6458892822265625
+open files
+109120.0
+map field
+mapped
+save output
+finished day 378
+2.42856502532959
+open files
+109200.0
+map field
+mapped
+save output
+finished day 379
+2.712419271469116
+open files
+109280.0
+map field
+mapped
+save output
+finished day 380
+2.14613938331604
+open files
+109360.0
+map field
+mapped
+save output
+finished day 381
+3.683260440826416
+open files
+109440.0
+map field
+mapped
+save output
+finished day 382
+2.508193254470825
+open files
+109520.0
+map field
+mapped
+save output
+finished day 383
+2.1353280544281006
+open files
+109600.0
+map field
+mapped
+save output
+finished day 384
+2.6896862983703613
+open files
+109680.0
+map field
+mapped
+save output
+finished day 385
+2.276607036590576
+open files
+109760.0
+map field
+mapped
+save output
+finished day 386
+2.4146065711975098
+open files
+109840.0
+map field
+mapped
+save output
+finished day 387
+2.5536835193634033
+open files
+109920.0
+map field
+mapped
+save output
+finished day 388
+2.9846761226654053
+open files
+110000.0
+map field
+mapped
+save output
+finished day 389
+2.379707098007202
+open files
+110080.0
+map field
+mapped
+save output
+finished day 390
+3.4317831993103027
+open files
+110160.0
+map field
+mapped
+save output
+finished day 391
+2.8551411628723145
+open files
+110240.0
+map field
+mapped
+save output
+finished day 392
+2.3753297328948975
+open files
+110320.0
+map field
+mapped
+save output
+finished day 393
+2.537003517150879
+open files
+110400.0
+map field
+mapped
+save output
+finished day 394
+2.0036582946777344
+open files
+110480.0
+map field
+mapped
+save output
+finished day 395
+2.163511276245117
+open files
+110560.0
+map field
+mapped
+save output
+finished day 396
+2.176593542098999
+open files
+110640.0
+map field
+mapped
+save output
+finished day 397
+2.029414176940918
+open files
+110720.0
+map field
+mapped
+save output
+finished day 398
+2.0533053874969482
+open files
+110800.0
+map field
+mapped
+save output
+finished day 399
+2.8600363731384277
+open files
+110880.0
+map field
+mapped
+save output
+finished day 400
+3.088341474533081
+open files
+110960.0
+map field
+mapped
+save output
+finished day 401
+2.8846349716186523
+open files
+111040.0
+map field
+mapped
+save output
+finished day 402
+2.32031512260437
+open files
+111120.0
+map field
+mapped
+save output
+finished day 403
+2.2152464389801025
+open files
+111200.0
+map field
+mapped
+save output
+finished day 404
+2.2402877807617188
+open files
+111280.0
+map field
+mapped
+save output
+finished day 405
+2.0948312282562256
+open files
+111360.0
+map field
+mapped
+save output
+finished day 406
+2.4669718742370605
+open files
+111440.0
+map field
+mapped
+save output
+finished day 407
+3.539368152618408
+open files
+111520.0
+map field
+mapped
+save output
+finished day 408
+2.533525228500366
+open files
+111600.0
+map field
+mapped
+save output
+finished day 409
+2.3495516777038574
+open files
+111680.0
+map field
+mapped
+save output
+finished day 410
+2.1225759983062744
+open files
+111760.0
+map field
+mapped
+save output
+finished day 411
+2.1130940914154053
+open files
+111840.0
+map field
+mapped
+save output
+finished day 412
+1.9986612796783447
+open files
+111920.0
+map field
+mapped
+save output
+finished day 413
+2.541282892227173
+open files
+112000.0
+map field
+mapped
+save output
+finished day 414
+3.755838394165039
+open files
+112080.0
+map field
+mapped
+save output
+finished day 415
+2.3420822620391846
+open files
+112160.0
+map field
+mapped
+save output
+finished day 416
+2.4779322147369385
+open files
+112240.0
+map field
+mapped
+save output
+finished day 417
+5.0319504737854
+open files
+112320.0
+map field
+mapped
+save output
+finished day 418
+2.7497029304504395
+open files
+112400.0
+map field
+mapped
+save output
+finished day 419
+2.586937665939331
+open files
+112480.0
+map field
+mapped
+save output
+finished day 420
+2.595139741897583
+open files
+112560.0
+map field
+mapped
+save output
+finished day 421
+2.633345603942871
+open files
+112640.0
+map field
+mapped
+save output
+finished day 422
+2.879962921142578
+open files
+112720.0
+map field
+mapped
+save output
+finished day 423
+2.3669416904449463
+open files
+112800.0
+map field
+mapped
+save output
+finished day 424
+2.5268161296844482
+open files
+112880.0
+map field
+mapped
+save output
+finished day 425
+3.990710496902466
+open files
+112960.0
+map field
+mapped
+save output
+finished day 426
+2.5897130966186523
+open files
+113040.0
+map field
+mapped
+save output
+finished day 427
+2.4756739139556885
+open files
+113120.0
+map field
+mapped
+save output
+finished day 428
+2.5599424839019775
+open files
+113200.0
+map field
+mapped
+save output
+finished day 429
+3.0652339458465576
+open files
+113280.0
+map field
+mapped
+save output
+finished day 430
+2.5431406497955322
+open files
+113360.0
+map field
+mapped
+save output
+finished day 431
+2.248384952545166
+open files
+113440.0
+map field
+mapped
+save output
+finished day 432
+3.041247606277466
+open files
+113520.0
+map field
+mapped
+save output
+finished day 433
+2.093640089035034
+open files
+113600.0
+map field
+mapped
+save output
+finished day 434
+4.445298194885254
+open files
+113680.0
+map field
+mapped
+save output
+finished day 435
+2.2475829124450684
+open files
+113760.0
+map field
+mapped
+save output
+finished day 436
+2.6215386390686035
+open files
+113840.0
+map field
+mapped
+save output
+finished day 437
+3.2207207679748535
+open files
+113920.0
+map field
+mapped
+save output
+finished day 438
+2.1517114639282227
+open files
+114000.0
+map field
+mapped
+save output
+finished day 439
+3.79836106300354
+open files
+114080.0
+map field
+mapped
+save output
+finished day 440
+2.332681655883789
+open files
+114160.0
+map field
+mapped
+save output
+finished day 441
+2.673712730407715
+open files
+114240.0
+map field
+mapped
+save output
+finished day 442
+2.0620126724243164
+open files
+114320.0
+map field
+mapped
+save output
+finished day 443
+4.530634164810181
+open files
+114400.0
+map field
+mapped
+save output
+finished day 444
+2.6536612510681152
+open files
+114480.0
+map field
+mapped
+save output
+finished day 445
+3.04563045501709
+open files
+114560.0
+map field
+mapped
+save output
+finished day 446
+5.26869010925293
+open files
+114640.0
+map field
+mapped
+save output
+finished day 447
+2.464998960494995
+open files
+114720.0
+map field
+mapped
+save output
+finished day 448
+2.236830711364746
+open files
+114800.0
+map field
+mapped
+save output
+finished day 449
+2.0699880123138428
+open files
+114880.0
+map field
+mapped
+save output
+finished day 450
+2.8143646717071533
+open files
+114960.0
+map field
+mapped
+save output
+finished day 451
+2.4912917613983154
+open files
+115040.0
+map field
+mapped
+save output
+finished day 452
+2.207202911376953
+open files
+115120.0
+map field
+mapped
+save output
+finished day 453
+2.7966253757476807
+open files
+115200.0
+map field
+mapped
+save output
+finished day 454
+2.3681447505950928
+open files
+115280.0
+map field
+mapped
+save output
+finished day 455
+23.3978750705719
+open files
+115360.0
+map field
+mapped
+save output
+finished day 456
+2.339963436126709
+open files
+115440.0
+map field
+mapped
+save output
+finished day 457
+2.0304083824157715
+open files
+115520.0
+map field
+mapped
+save output
+finished day 458
+2.364445209503174
+open files
+115600.0
+map field
+mapped
+save output
+finished day 459
+2.888392686843872
+open files
+115680.0
+map field
+mapped
+save output
+finished day 460
+2.68837308883667
+open files
+115760.0
+map field
+mapped
+save output
+finished day 461
+2.360058546066284
+open files
+115840.0
+map field
+mapped
+save output
+finished day 462
+2.4507617950439453
+open files
+115920.0
+map field
+mapped
+save output
+finished day 463
+2.1163904666900635
+open files
+116000.0
+map field
+mapped
+save output
+finished day 464
+2.4836137294769287
+open files
+116080.0
+map field
+mapped
+save output
+finished day 465
+2.747560977935791
+open files
+116160.0
+map field
+mapped
+save output
+finished day 466
+2.414977788925171
+open files
+116240.0
+map field
+mapped
+save output
+finished day 467
+2.3325202465057373
+open files
+116320.0
+map field
+mapped
+save output
+finished day 468
+2.082348346710205
+open files
+116400.0
+map field
+mapped
+save output
+finished day 469
+2.041132926940918
+open files
+116480.0
+map field
+mapped
+save output
+finished day 470
+12.163052797317505
+open files
+116560.0
+map field
+mapped
+save output
+finished day 471
+2.504851818084717
+open files
+116640.0
+map field
+mapped
+save output
+finished day 472
+2.0826544761657715
+open files
+116720.0
+map field
+mapped
+save output
+finished day 473
+2.490993022918701
+open files
+116800.0
+map field
+mapped
+save output
+finished day 474
+2.8753933906555176
+open files
+116880.0
+map field
+mapped
+save output
+finished day 475
+2.8561058044433594
+open files
+116960.0
+map field
+mapped
+save output
+finished day 476
+2.147188663482666
+open files
+117040.0
+map field
+mapped
+save output
+finished day 477
+2.530100107192993
+open files
+117120.0
+map field
+mapped
+save output
+finished day 478
+2.0582313537597656
+open files
+117200.0
+map field
+mapped
+save output
+finished day 479
+2.163346767425537
+open files
+117280.0
+map field
+mapped
+save output
+finished day 480
+2.2251193523406982
+open files
+117360.0
+map field
+mapped
+save output
+finished day 481
+2.056324005126953
+open files
+117440.0
+map field
+mapped
+save output
+finished day 482
+2.3537404537200928
+open files
+117520.0
+map field
+mapped
+save output
+finished day 483
+2.077218532562256
+open files
+117600.0
+map field
+mapped
+save output
+finished day 484
+2.0323822498321533
+open files
+117680.0
+map field
+mapped
+save output
+finished day 485
+1.9925966262817383
+open files
+117760.0
+map field
+mapped
+save output
+finished day 486
+3.7725982666015625
+open files
+117840.0
+map field
+mapped
+save output
+finished day 487
+2.533557891845703
+open files
+117920.0
+map field
+mapped
+save output
+finished day 488
+2.309438467025757
+open files
+118000.0
+map field
+mapped
+save output
+finished day 489
+2.475085496902466
+open files
+118080.0
+map field
+mapped
+save output
+finished day 490
+2.170175313949585
+open files
+118160.0
+map field
+mapped
+save output
+finished day 491
+2.605562686920166
+open files
+118240.0
+map field
+mapped
+save output
+finished day 492
+5.468259811401367
+open files
+118320.0
+map field
+mapped
+save output
+finished day 493
+6.02633261680603
+open files
+118400.0
+map field
+mapped
+save output
+finished day 494
+2.8341240882873535
+open files
+118480.0
+map field
+mapped
+save output
+finished day 495
+4.16973876953125
+open files
+118560.0
+map field
+mapped
+save output
+finished day 496
+3.6634044647216797
+open files
+118640.0
+map field
+mapped
+save output
+finished day 497
+3.7770698070526123
+open files
+118720.0
+map field
+mapped
+save output
+finished day 498
+4.098602771759033
+open files
+118800.0
+map field
+mapped
+save output
+finished day 499
+2.269926071166992
+open files
+118880.0
+map field
+mapped
+save output
+finished day 500
+2.157134771347046
+open files
+118960.0
+map field
+mapped
+save output
+finished day 501
+2.13946270942688
+open files
+119040.0
+map field
+mapped
+save output
+finished day 502
+2.609586715698242
+open files
+119120.0
+map field
+mapped
+save output
+finished day 503
+2.1511964797973633
+open files
+119200.0
+map field
+mapped
+save output
+finished day 504
+2.245182752609253
+open files
+119280.0
+map field
+mapped
+save output
+finished day 505
+2.910519599914551
+open files
+119360.0
+map field
+mapped
+save output
+finished day 506
+3.661879539489746
+open files
+119440.0
+map field
+mapped
+save output
+finished day 507
+2.758782386779785
+open files
+119520.0
+map field
+mapped
+save output
+finished day 508
+2.394649028778076
+open files
+119600.0
+map field
+mapped
+save output
+finished day 509
+2.836887836456299
+open files
+119680.0
+map field
+mapped
+save output
+finished day 510
+3.413447856903076
+open files
+119760.0
+map field
+mapped
+save output
+finished day 511
+4.093907594680786
+open files
+119840.0
+map field
+mapped
+save output
+finished day 512
+3.3799350261688232
+open files
+119920.0
+map field
+mapped
+save output
+finished day 513
+2.9572603702545166
+open files
+120000.0
+map field
+mapped
+save output
+finished day 514
+3.943446159362793
+open files
+120080.0
+map field
+mapped
+save output
+finished day 515
+2.3274965286254883
+open files
+120160.0
+map field
+mapped
+save output
+finished day 516
+2.3634824752807617
+open files
+120240.0
+map field
+mapped
+save output
+finished day 517
+2.584277868270874
+open files
+120320.0
+map field
+mapped
+save output
+finished day 518
+2.1367597579956055
+open files
+120400.0
+map field
+mapped
+save output
+finished day 519
+3.448103904724121
+open files
+120480.0
+map field
+mapped
+save output
+finished day 520
+2.3766560554504395
+open files
+120560.0
+map field
+mapped
+save output
+finished day 521
+4.118467330932617
+open files
+120640.0
+map field
+mapped
+save output
+finished day 522
+2.6083900928497314
+open files
+120720.0
+map field
+mapped
+save output
+finished day 523
+2.0778696537017822
+open files
+120800.0
+map field
+mapped
+save output
+finished day 524
+2.7872798442840576
+open files
+120880.0
+map field
+mapped
+save output
+finished day 525
+2.2581937313079834
+open files
+120960.0
+map field
+mapped
+save output
+finished day 526
+2.239583730697632
+open files
+121040.0
+map field
+mapped
+save output
+finished day 527
+2.308504819869995
+open files
+121120.0
+map field
+mapped
+save output
+finished day 528
+2.961458921432495
+open files
+121200.0
+map field
+mapped
+save output
+finished day 529
+5.732479810714722
+open files
+121280.0
+map field
+mapped
+save output
+finished day 530
+2.4876465797424316
+open files
+121360.0
+map field
+mapped
+save output
+finished day 531
+2.138400077819824
+open files
+121440.0
+map field
+mapped
+save output
+finished day 532
+3.1667380332946777
+open files
+121520.0
+map field
+mapped
+save output
+finished day 533
+2.0741326808929443
+open files
+121600.0
+map field
+mapped
+save output
+finished day 534
+2.1251282691955566
+open files
+121680.0
+map field
+mapped
+save output
+finished day 535
+2.193795680999756
+open files
+121760.0
+map field
+mapped
+save output
+finished day 536
+2.5601227283477783
+open files
+121840.0
+map field
+mapped
+save output
+finished day 537
+2.753117322921753
+open files
+121920.0
+map field
+mapped
+save output
+finished day 538
+2.0701804161071777
+open files
+122000.0
+map field
+mapped
+save output
+finished day 539
+3.7650017738342285
+open files
+122080.0
+map field
+mapped
+save output
+finished day 540
+2.6304686069488525
+open files
+122160.0
+map field
+mapped
+save output
+finished day 541
+3.552786111831665
+open files
+122240.0
+map field
+mapped
+save output
+finished day 542
+21.71035885810852
+open files
+122320.0
+map field
+mapped
+save output
+finished day 543
+2.2545247077941895
+open files
+122400.0
+map field
+mapped
+save output
+finished day 544
+38.92203068733215
+open files
+122480.0
+map field
+mapped
+save output
+finished day 545
+2.3556885719299316
+open files
+122560.0
+map field
+mapped
+save output
+finished day 546
+2.1588401794433594
+open files
+122640.0
+map field
+mapped
+save output
+finished day 547
+2.5704331398010254
+open files
+122720.0
+map field
+mapped
+save output
+finished day 548
+2.18534517288208
+open files
+122800.0
+map field
+mapped
+save output
+finished day 549
+2.1199662685394287
+open files
+122880.0
+map field
+mapped
+save output
+finished day 550
+2.4359776973724365
+open files
+122960.0
+map field
+mapped
+save output
+finished day 551
+2.7078726291656494
+open files
+123040.0
+map field
+mapped
+save output
+finished day 552
+2.434196710586548
+open files
+123120.0
+map field
+mapped
+save output
+finished day 553
+3.0152628421783447
+open files
+123200.0
+map field
+mapped
+save output
+finished day 554
+2.6501123905181885
+open files
+123280.0
+map field
+mapped
+save output
+finished day 555
+2.0092198848724365
+open files
+123360.0
+map field
+mapped
+save output
+finished day 556
+2.592817544937134
+open files
+123440.0
+map field
+mapped
+save output
+finished day 557
+3.243374824523926
+open files
+123520.0
+map field
+mapped
+save output
+finished day 558
+2.832056760787964
+open files
+123600.0
+map field
+mapped
+save output
+finished day 559
+3.633026123046875
+open files
+123680.0
+map field
+mapped
+save output
+finished day 560
+2.1580333709716797
+open files
+123760.0
+map field
+mapped
+save output
+finished day 561
+2.3941490650177
+open files
+123840.0
+map field
+mapped
+save output
+finished day 562
+2.1809799671173096
+open files
+123920.0
+map field
+mapped
+save output
+finished day 563
+1.9594147205352783
+open files
+124000.0
+map field
+mapped
+save output
+finished day 564
+2.226137161254883
+open files
+124080.0
+map field
+mapped
+save output
+finished day 565
+2.7192625999450684
+open files
+124160.0
+map field
+mapped
+save output
+finished day 566
+3.4682974815368652
+open files
+124240.0
+map field
+mapped
+save output
+finished day 567
+2.838005304336548
+open files
+124320.0
+map field
+mapped
+save output
+finished day 568
+2.3069889545440674
+open files
+124400.0
+map field
+mapped
+save output
+finished day 569
+2.307093858718872
+open files
+124480.0
+map field
+mapped
+save output
+finished day 570
+2.4096038341522217
+open files
+124560.0
+map field
+mapped
+save output
+finished day 571
+6.441134452819824
+open files
+124640.0
+map field
+mapped
+save output
+finished day 572
+3.0280117988586426
+open files
+124720.0
+map field
+mapped
+save output
+finished day 573
+2.198509454727173
+open files
+124800.0
+map field
+mapped
+save output
+finished day 574
+2.5495941638946533
+open files
+124880.0
+map field
+mapped
+save output
+finished day 575
+2.553210735321045
+open files
+124960.0
+map field
+mapped
+save output
+finished day 576
+3.0258893966674805
+open files
+125040.0
+map field
+mapped
+save output
+finished day 577
+2.184894561767578
+open files
+125120.0
+map field
+mapped
+save output
+finished day 578
+2.3248515129089355
+open files
+125200.0
+map field
+mapped
+save output
+finished day 579
+2.274714469909668
+open files
+125280.0
+map field
+mapped
+save output
+finished day 580
+2.6252293586730957
+open files
+125360.0
+map field
+mapped
+save output
+finished day 581
+2.6965436935424805
+open files
+125440.0
+map field
+mapped
+save output
+finished day 582
+3.9993767738342285
+open files
+125520.0
+map field
+mapped
+save output
+finished day 583
+2.6404869556427
+open files
+125600.0
+map field
+mapped
+save output
+finished day 584
+3.9106485843658447
+open files
+125680.0
+map field
+mapped
+save output
+finished day 585
+2.9613635540008545
+open files
+125760.0
+map field
+mapped
+save output
+finished day 586
+3.0167319774627686
+open files
+125840.0
+map field
+mapped
+save output
+finished day 587
+2.3448946475982666
+open files
+125920.0
+map field
+mapped
+save output
+finished day 588
+16.226016759872437
+open files
+126000.0
+map field
+mapped
+save output
+finished day 589
+2.606621026992798
+open files
+126080.0
+map field
+mapped
+save output
+finished day 590
+2.5370371341705322
+open files
+126160.0
+map field
+mapped
+save output
+finished day 591
+2.2295126914978027
+open files
+126240.0
+map field
+mapped
+save output
+finished day 592
+3.1344947814941406
+open files
+126320.0
+map field
+mapped
+save output
+finished day 593
+3.5069992542266846
+open files
+126400.0
+map field
+mapped
+save output
+finished day 594
+3.063429594039917
+open files
+126480.0
+map field
+mapped
+save output
+finished day 595
+3.0837032794952393
+open files
+126560.0
+map field
+mapped
+save output
+finished day 596
+2.288578987121582
+open files
+126640.0
+map field
+mapped
+save output
+finished day 597
+2.878358840942383
+open files
+126720.0
+map field
+mapped
+save output
+finished day 598
+2.8348774909973145
+open files
+126800.0
+map field
+mapped
+save output
+finished day 599
+3.040041446685791
+open files
+126880.0
+map field
+mapped
+save output
+finished day 600
+2.246826171875
+open files
+126960.0
+map field
+mapped
+save output
+finished day 601
+2.5436789989471436
+open files
+127040.0
+map field
+mapped
+save output
+finished day 602
+2.73022198677063
+open files
+127120.0
+map field
+mapped
+save output
+finished day 603
+2.093579053878784
+open files
+127200.0
+map field
+mapped
+save output
+finished day 604
+2.1524274349212646
+open files
+127280.0
+map field
+mapped
+save output
+finished day 605
+2.527433395385742
+open files
+127360.0
+map field
+mapped
+save output
+finished day 606
+2.1219310760498047
+open files
+127440.0
+map field
+mapped
+save output
+finished day 607
+2.25724458694458
+open files
+127520.0
+map field
+mapped
+save output
+finished day 608
+2.0752506256103516
+open files
+127600.0
+map field
+mapped
+save output
+finished day 609
+2.035019874572754
+open files
+127680.0
+map field
+mapped
+save output
+finished day 610
+2.9866628646850586
+open files
+127760.0
+map field
+mapped
+save output
+finished day 611
+2.1649279594421387
+open files
+127840.0
+map field
+mapped
+save output
+finished day 612
+2.118880033493042
+open files
+127920.0
+map field
+mapped
+save output
+finished day 613
+2.5524356365203857
+open files
+128000.0
+map field
+mapped
+save output
+finished day 614
+4.97812557220459
+open files
+128080.0
+map field
+mapped
+save output
+finished day 615
+2.265730857849121
+open files
+128160.0
+map field
+mapped
+save output
+finished day 616
+2.0517947673797607
+open files
+128240.0
+map field
+mapped
+save output
+finished day 617
+2.573904037475586
+open files
+128320.0
+map field
+mapped
+save output
+finished day 618
+2.3239667415618896
+open files
+128400.0
+map field
+mapped
+save output
+finished day 619
+2.672330617904663
+open files
+128480.0
+map field
+mapped
+save output
+finished day 620
+2.4074487686157227
+open files
+128560.0
+map field
+mapped
+save output
+finished day 621
+2.851886510848999
+open files
+128640.0
+map field
+mapped
+save output
+finished day 622
+2.368271589279175
+open files
+128720.0
+map field
+mapped
+save output
+finished day 623
+2.381237506866455
+open files
+128800.0
+map field
+mapped
+save output
+finished day 624
+2.119530200958252
+open files
+128880.0
+map field
+mapped
+save output
+finished day 625
+2.8189828395843506
+open files
+128960.0
+map field
+mapped
+save output
+finished day 626
+3.272887706756592
+open files
+129040.0
+map field
+mapped
+save output
+finished day 627
+2.530323028564453
+open files
+129120.0
+map field
+mapped
+save output
+finished day 628
+2.237316608428955
+open files
+129200.0
+map field
+mapped
+save output
+finished day 629
+2.2057957649230957
+open files
+129280.0
+map field
+mapped
+save output
+finished day 630
+2.8201069831848145
+open files
+129360.0
+map field
+mapped
+save output
+finished day 631
+1.996626615524292
+open files
+129440.0
+map field
+mapped
+save output
+finished day 632
+2.790874481201172
+open files
+129520.0
+map field
+mapped
+save output
+finished day 633
+2.5262703895568848
+open files
+129600.0
+map field
+mapped
+save output
+finished day 634
+2.2299985885620117
+open files
+129680.0
+map field
+mapped
+save output
+finished day 635
+3.9361770153045654
+open files
+129760.0
+map field
+mapped
+save output
+finished day 636
+3.2239694595336914
+open files
+129840.0
+map field
+mapped
+save output
+finished day 637
+3.0179684162139893
+open files
+129920.0
+map field
+mapped
+save output
+finished day 638
+3.3347742557525635
+open files
+130000.0
+map field
+mapped
+save output
+finished day 639
+3.872236728668213
+open files
+130080.0
+map field
+mapped
+save output
+finished day 640
+5.416126489639282
+open files
+130160.0
+map field
+mapped
+save output
+finished day 641
+2.560460090637207
+open files
+130240.0
+map field
+mapped
+save output
+finished day 642
+2.373767614364624
+open files
+130320.0
+map field
+mapped
+save output
+finished day 643
+2.681023120880127
+open files
+130400.0
+map field
+mapped
+save output
+finished day 644
+2.1792869567871094
+open files
+130480.0
+map field
+mapped
+save output
+finished day 645
+2.0804340839385986
+open files
+130560.0
+map field
+mapped
+save output
+finished day 646
+2.938314437866211
+open files
+130640.0
+map field
+mapped
+save output
+finished day 647
+2.1603803634643555
+open files
+130720.0
+map field
+mapped
+save output
+finished day 648
+2.437739849090576
+open files
+130800.0
+map field
+mapped
+save output
+finished day 649
+2.394782543182373
+open files
+130880.0
+map field
+mapped
+save output
+finished day 650
+3.8298728466033936
+open files
+130960.0
+map field
+mapped
+save output
+finished day 651
+2.5308566093444824
+open files
+131040.0
+map field
+mapped
+save output
+finished day 652
+2.3874363899230957
+open files
+131120.0
+map field
+mapped
+save output
+finished day 653
+21.608914613723755
+open files
+131200.0
+map field
+mapped
+save output
+finished day 654
+2.540592670440674
+open files
+131280.0
+map field
+mapped
+save output
+finished day 655
+2.2377216815948486
+open files
+131360.0
+map field
+mapped
+save output
+finished day 656
+3.039344310760498
+open files
+131440.0
+map field
+mapped
+save output
+finished day 657
+3.0756421089172363
+open files
+131520.0
+map field
+mapped
+save output
+finished day 658
+2.745147705078125
+open files
+131600.0
+map field
+mapped
+save output
+finished day 659
+2.490823745727539
+open files
+131680.0
+map field
+mapped
+save output
+finished day 660
+2.591092348098755
+open files
+131760.0
+map field
+mapped
+save output
+finished day 661
+2.4861185550689697
+open files
+131840.0
+map field
+mapped
+save output
+finished day 662
+3.5679562091827393
+open files
+131920.0
+map field
+mapped
+save output
+finished day 663
+2.4997963905334473
+open files
+132000.0
+map field
+mapped
+save output
+finished day 664
+2.1050729751586914
+open files
+132080.0
+map field
+mapped
+save output
+finished day 665
+2.327070474624634
+open files
+132160.0
+map field
+mapped
+save output
+finished day 666
+2.360183000564575
+open files
+132240.0
+map field
+mapped
+save output
+finished day 667
+2.963639497756958
+open files
+132320.0
+map field
+mapped
+save output
+finished day 668
+2.1998515129089355
+open files
+132400.0
+map field
+mapped
+save output
+finished day 669
+2.078667163848877
+open files
+132480.0
+map field
+mapped
+save output
+finished day 670
+2.422478675842285
+open files
+132560.0
+map field
+mapped
+save output
+finished day 671
+2.0199952125549316
+open files
+132640.0
+map field
+mapped
+save output
+finished day 672
+2.1125521659851074
+open files
+132720.0
+map field
+mapped
+save output
+finished day 673
+3.4679579734802246
+open files
+132800.0
+map field
+mapped
+save output
+finished day 674
+3.042853593826294
+open files
+132880.0
+map field
+mapped
+save output
+finished day 675
+2.299262523651123
+open files
+132960.0
+map field
+mapped
+save output
+finished day 676
+3.819676399230957
+open files
+133040.0
+map field
+mapped
+save output
+finished day 677
+2.582911252975464
+open files
+133120.0
+map field
+mapped
+save output
+finished day 678
+4.026546239852905
+open files
+133200.0
+map field
+mapped
+save output
+finished day 679
+2.4047629833221436
+open files
+133280.0
+map field
+mapped
+save output
+finished day 680
+5.7586469650268555
+open files
+133360.0
+map field
+mapped
+save output
+finished day 681
+3.1190216541290283
+open files
+133440.0
+map field
+mapped
+save output
+finished day 682
+2.389925956726074
+open files
+133520.0
+map field
+mapped
+save output
+finished day 683
+2.284705638885498
+open files
+133600.0
+map field
+mapped
+save output
+finished day 684
+2.0857317447662354
+open files
+133680.0
+map field
+mapped
+save output
+finished day 685
+3.4142415523529053
+open files
+133760.0
+map field
+mapped
+save output
+finished day 686
+2.855055332183838
+open files
+133840.0
+map field
+mapped
+save output
+finished day 687
+2.8046319484710693
+open files
+133920.0
+map field
+mapped
+save output
+finished day 688
+2.7312867641448975
+open files
+134000.0
+map field
+mapped
+save output
+finished day 689
+2.620734930038452
+open files
+134080.0
+map field
+mapped
+save output
+finished day 690
+3.3030149936676025
+open files
+134160.0
+map field
+mapped
+save output
+finished day 691
+3.289844274520874
+open files
+134240.0
+map field
+mapped
+save output
+finished day 692
+2.7682595252990723
+open files
+134320.0
+map field
+mapped
+save output
+finished day 693
+2.2483766078948975
+open files
+134400.0
+map field
+mapped
+save output
+finished day 694
+2.2413361072540283
+open files
+134480.0
+map field
+mapped
+save output
+finished day 695
+2.382056713104248
+open files
+134560.0
+map field
+mapped
+save output
+finished day 696
+4.141484975814819
+open files
+134640.0
+map field
+mapped
+save output
+finished day 697
+8.80635142326355
+open files
+134720.0
+map field
+mapped
+save output
+finished day 698
+6.723976373672485
+open files
+134800.0
+map field
+mapped
+save output
+finished day 699
+2.847543954849243
+open files
+134880.0
+map field
+mapped
+save output
+finished day 700
+2.4967541694641113
+open files
+134960.0
+map field
+mapped
+save output
+finished day 701
+3.2437167167663574
+open files
+135040.0
+map field
+mapped
+save output
+finished day 702
+2.1185686588287354
+open files
+135120.0
+map field
+mapped
+save output
+finished day 703
+2.1527395248413086
+open files
+135200.0
+map field
+mapped
+save output
+finished day 704
+3.178055763244629
+open files
+135280.0
+map field
+mapped
+save output
+finished day 705
+2.0508358478546143
+open files
+135360.0
+map field
+mapped
+save output
+finished day 706
+2.2928285598754883
+open files
+135440.0
+map field
+mapped
+save output
+finished day 707
+2.740769863128662
+open files
+135520.0
+map field
+mapped
+save output
+finished day 708
+2.7199532985687256
+open files
+135600.0
+map field
+mapped
+save output
+finished day 709
+2.3589391708374023
+open files
+135680.0
+map field
+mapped
+save output
+finished day 710
+2.8748767375946045
+open files
+135760.0
+map field
+mapped
+save output
+finished day 711
+2.4309442043304443
+open files
+135840.0
+map field
+mapped
+save output
+finished day 712
+2.8637502193450928
+open files
+135920.0
+map field
+mapped
+save output
+finished day 713
+2.2923905849456787
+open files
+136000.0
+map field
+mapped
+save output
+finished day 714
+2.277833938598633
+open files
+136080.0
+map field
+mapped
+save output
+finished day 715
+2.767204523086548
+open files
+136160.0
+map field
+mapped
+save output
+finished day 716
+4.076327323913574
+open files
+136240.0
+map field
+mapped
+save output
+finished day 717
+4.170706033706665
+open files
+136320.0
+map field
+mapped
+save output
+finished day 718
+6.808618068695068
+open files
+136400.0
+map field
+mapped
+save output
+finished day 719
+4.862766981124878
+open files
+136480.0
+map field
+mapped
+save output
+finished day 720
+3.9384663105010986
+open files
+136560.0
+map field
+mapped
+save output
+finished day 721
+2.4142816066741943
+open files
+136640.0
+map field
+mapped
+save output
+finished day 722
+2.050745725631714
+open files
+136720.0
+map field
+mapped
+save output
+finished day 723
+2.7684876918792725
+open files
+136800.0
+map field
+mapped
+save output
+finished day 724
+2.715423107147217
+open files
+136880.0
+map field
+mapped
+save output
+finished day 725
+2.251918315887451
+open files
+136960.0
+map field
+mapped
+save output
+finished day 726
+3.8313252925872803
+open files
+137040.0
+map field
+mapped
+save output
+finished day 727
+2.372875452041626
+open files
+137120.0
+map field
+mapped
+save output
+finished day 728
+2.1755270957946777
+open files
+137200.0
+map field
+mapped
+save output
+finished day 729
+2.11272931098938
+open files
+137280.0
+map field
+mapped
+save output
+finished day 730
+2.140333414077759
+open files
+137360.0
+map field
+mapped
+save output
+finished day 731
+2.4749691486358643
+open files
+137440.0
+map field
+mapped
+save output
+finished day 732
+2.6972737312316895
+open files
+137520.0
+map field
+mapped
+save output
+finished day 733
+3.09985613822937
+open files
+137600.0
+map field
+mapped
+save output
+finished day 734
+2.3558156490325928
+open files
+137680.0
+map field
+mapped
+save output
+finished day 735
+2.6750235557556152
+open files
+137760.0
+map field
+mapped
+save output
+finished day 736
+2.1167616844177246
+open files
+137840.0
+map field
+mapped
+save output
+finished day 737
+2.4248013496398926
+open files
+137920.0
+map field
+mapped
+save output
+finished day 738
+2.1002495288848877
+open files
+138000.0
+map field
+mapped
+save output
+finished day 739
+3.1282896995544434
+open files
+138080.0
+map field
+mapped
+save output
+finished day 740
+2.976051092147827
+open files
+138160.0
+map field
+mapped
+save output
+finished day 741
+2.3253915309906006
+open files
+138240.0
+map field
+mapped
+save output
+finished day 742
+2.4475536346435547
+open files
+138320.0
+map field
+mapped
+save output
+finished day 743
+2.703158140182495
+open files
+138400.0
+map field
+mapped
+save output
+finished day 744
+9.932328939437866
+open files
+138480.0
+map field
+mapped
+save output
+finished day 745
+3.5055110454559326
+open files
+138560.0
+map field
+mapped
+save output
+finished day 746
+3.261507511138916
+open files
+138640.0
+map field
+mapped
+save output
+finished day 747
+2.112952947616577
+open files
+138720.0
+map field
+mapped
+save output
+finished day 748
+2.6136207580566406
+open files
+138800.0
+map field
+mapped
+save output
+finished day 749
+2.210970878601074
+open files
+138880.0
+map field
+mapped
+save output
+finished day 750
+2.5753002166748047
+open files
+138960.0
+map field
+mapped
+save output
+finished day 751
+2.506089448928833
+open files
+139040.0
+map field
+mapped
+save output
+finished day 752
+3.9867565631866455
+open files
+139120.0
+map field
+mapped
+save output
+finished day 753
+2.1417226791381836
+open files
+139200.0
+map field
+mapped
+save output
+finished day 754
+2.257894277572632
+open files
+139280.0
+map field
+mapped
+save output
+finished day 755
+2.5829291343688965
+open files
+139360.0
+map field
+mapped
+save output
+finished day 756
+12.153602838516235
+open files
+139440.0
+map field
+mapped
+save output
+finished day 757
+6.281938552856445
+open files
+139520.0
+map field
+mapped
+save output
+finished day 758
+2.356693744659424
+open files
+139600.0
+map field
+mapped
+save output
+finished day 759
+2.380720853805542
+open files
+139680.0
+map field
+mapped
+save output
+finished day 760
+2.1586248874664307
+open files
+139760.0
+map field
+mapped
+save output
+finished day 761
+2.4837825298309326
+open files
+139840.0
+map field
+mapped
+save output
+finished day 762
+2.0689585208892822
+open files
+139920.0
+map field
+mapped
+save output
+finished day 763
+2.123739004135132
+open files
+140000.0
+map field
+mapped
+save output
+finished day 764
+1.999307632446289
+open files
+140080.0
+map field
+mapped
+save output
+finished day 765
+3.6459193229675293
+open files
+140160.0
+map field
+mapped
+save output
+finished day 766
+2.52297043800354
+open files
+140240.0
+map field
+mapped
+save output
+finished day 767
+3.6537413597106934
+open files
+140320.0
+map field
+mapped
+save output
+finished day 768
+2.5201516151428223
+open files
+140400.0
+map field
+mapped
+save output
+finished day 769
+2.709052085876465
+open files
+140480.0
+map field
+mapped
+save output
+finished day 770
+2.152125358581543
+open files
+140560.0
+map field
+mapped
+save output
+finished day 771
+2.764052152633667
+open files
+140640.0
+map field
+mapped
+save output
+finished day 772
+2.588524341583252
+open files
+140720.0
+map field
+mapped
+save output
+finished day 773
+2.0225918292999268
+open files
+140800.0
+map field
+mapped
+save output
+finished day 774
+2.5043063163757324
+open files
+140880.0
+map field
+mapped
+save output
+finished day 775
+2.522749185562134
+open files
+140960.0
+map field
+mapped
+save output
+finished day 776
+2.935551404953003
+open files
+141040.0
+map field
+mapped
+save output
+finished day 777
+2.2643415927886963
+open files
+141120.0
+map field
+mapped
+save output
+finished day 778
+2.5052640438079834
+open files
+141200.0
+map field
+mapped
+save output
+finished day 779
+2.0990443229675293
+open files
+141280.0
+map field
+mapped
+save output
+finished day 780
+2.9537832736968994
+open files
+141360.0
+map field
+mapped
+save output
+finished day 781
+7.941802978515625
+open files
+141440.0
+map field
+mapped
+save output
+finished day 782
+6.771388530731201
+open files
+141520.0
+map field
+mapped
+save output
+finished day 783
+2.611656427383423
+open files
+141600.0
+map field
+mapped
+save output
+finished day 784
+2.700918197631836
+open files
+141680.0
+map field
+mapped
+save output
+finished day 785
+2.6402461528778076
+open files
+141760.0
+map field
+mapped
+save output
+finished day 786
+3.092067003250122
+open files
+141840.0
+map field
+mapped
+save output
+finished day 787
+2.207578182220459
+open files
+141920.0
+map field
+mapped
+save output
+finished day 788
+2.1005210876464844
+open files
+142000.0
+map field
+mapped
+save output
+finished day 789
+2.4747910499572754
+open files
+142080.0
+map field
+mapped
+save output
+finished day 790
+2.421752691268921
+open files
+142160.0
+map field
+mapped
+save output
+finished day 791
+2.2183401584625244
+open files
+142240.0
+map field
+mapped
+save output
+finished day 792
+2.0911052227020264
+open files
+142320.0
+map field
+mapped
+save output
+finished day 793
+2.3394813537597656
+open files
+142400.0
+map field
+mapped
+save output
+finished day 794
+3.753661870956421
+open files
+142480.0
+map field
+mapped
+save output
+finished day 795
+5.9520487785339355
+open files
+142560.0
+map field
+mapped
+save output
+finished day 796
+2.333704710006714
+open files
+142640.0
+map field
+mapped
+save output
+finished day 797
+3.343205213546753
+open files
+142720.0
+map field
+mapped
+save output
+finished day 798
+2.093621253967285
+open files
+142800.0
+map field
+mapped
+save output
+finished day 799
+2.859436273574829
+open files
+142880.0
+map field
+mapped
+save output
+finished day 800
+4.096851348876953
+open files
+142960.0
+map field
+mapped
+save output
+finished day 801
+2.30277943611145
+open files
+143040.0
+map field
+mapped
+save output
+finished day 802
+2.8780205249786377
+open files
+143120.0
+map field
+mapped
+save output
+finished day 803
+2.5439717769622803
+open files
+143200.0
+map field
+mapped
+save output
+finished day 804
+2.2739696502685547
+open files
+143280.0
+map field
+mapped
+save output
+finished day 805
+2.3897523880004883
+open files
+143360.0
+map field
+mapped
+save output
+finished day 806
+2.778369188308716
+open files
+143440.0
+map field
+mapped
+save output
+finished day 807
+2.3088221549987793
+open files
+143520.0
+map field
+mapped
+save output
+finished day 808
+3.2301673889160156
+open files
+143600.0
+map field
+mapped
+save output
+finished day 809
+2.553152084350586
+open files
+143680.0
+map field
+mapped
+save output
+finished day 810
+2.6713273525238037
+open files
+143760.0
+map field
+mapped
+save output
+finished day 811
+2.9422607421875
+open files
+143840.0
+map field
+mapped
+save output
+finished day 812
+3.107738971710205
+open files
+143920.0
+map field
+mapped
+save output
+finished day 813
+2.531113862991333
+open files
+144000.0
+map field
+mapped
+save output
+finished day 814
+2.2582433223724365
+open files
+144080.0
+map field
+mapped
+save output
+finished day 815
+2.367835521697998
+open files
+144160.0
+map field
+mapped
+save output
+finished day 816
+2.773174285888672
+open files
+144240.0
+map field
+mapped
+save output
+finished day 817
+2.4467461109161377
+open files
+144320.0
+map field
+mapped
+save output
+finished day 818
+3.5668835639953613
+open files
+144400.0
+map field
+mapped
+save output
+finished day 819
+2.256563663482666
+open files
+144480.0
+map field
+mapped
+save output
+finished day 820
+6.20020055770874
+open files
+144560.0
+map field
+mapped
+save output
+finished day 821
+2.6001136302948
+open files
+144640.0
+map field
+mapped
+save output
+finished day 822
+2.462251663208008
+open files
+144720.0
+map field
+mapped
+save output
+finished day 823
+3.1397509574890137
+open files
+144800.0
+map field
+mapped
+save output
+finished day 824
+2.9847829341888428
+open files
+144880.0
+map field
+mapped
+save output
+finished day 825
+2.17510724067688
+open files
+144960.0
+map field
+mapped
+save output
+finished day 826
+3.6712183952331543
+open files
+145040.0
+map field
+mapped
+save output
+finished day 827
+2.214888572692871
+open files
+145120.0
+map field
+mapped
+save output
+finished day 828
+2.8962197303771973
+open files
+145200.0
+map field
+mapped
+save output
+finished day 829
+4.113609790802002
+open files
+145280.0
+map field
+mapped
+save output
+finished day 830
+3.8456647396087646
+open files
+145360.0
+map field
+mapped
+save output
+finished day 831
+2.9078361988067627
+open files
+145440.0
+map field
+mapped
+save output
+finished day 832
+2.445909023284912
+open files
+145520.0
+map field
+mapped
+save output
+finished day 833
+2.688047170639038
+open files
+145600.0
+map field
+mapped
+save output
+finished day 834
+3.0419788360595703
+open files
+145680.0
+map field
+mapped
+save output
+finished day 835
+3.0942957401275635
+open files
+145760.0
+map field
+mapped
+save output
+finished day 836
+3.7108592987060547
+open files
+145840.0
+map field
+mapped
+save output
+finished day 837
+4.016230583190918
+open files
+145920.0
+map field
+mapped
+save output
+finished day 838
+2.7491965293884277
+open files
+146000.0
+map field
+mapped
+save output
+finished day 839
+2.1278162002563477
+open files
+146080.0
+map field
+mapped
+save output
+finished day 840
+2.2201318740844727
+open files
+146160.0
+map field
+mapped
+save output
+finished day 841
+2.7897467613220215
+open files
+146240.0
+map field
+mapped
+save output
+finished day 842
+2.911607265472412
+open files
+146320.0
+map field
+mapped
+save output
+finished day 843
+2.2219936847686768
+open files
+146400.0
+map field
+mapped
+save output
+finished day 844
+2.292780876159668
+open files
+146480.0
+map field
+mapped
+save output
+finished day 845
+2.435981273651123
+open files
+146560.0
+map field
+mapped
+save output
+finished day 846
+2.879962921142578
+open files
+146640.0
+map field
+mapped
+save output
+finished day 847
+2.8912768363952637
+open files
+146720.0
+map field
+mapped
+save output
+finished day 848
+2.6491894721984863
+open files
+146800.0
+map field
+mapped
+save output
+finished day 849
+2.2178139686584473
+open files
+146880.0
+map field
+mapped
+save output
+finished day 850
+2.4493095874786377
+open files
+146960.0
+map field
+mapped
+save output
+finished day 851
+10.254040479660034
+open files
+147040.0
+map field
+mapped
+save output
+finished day 852
+2.205803871154785
+open files
+147120.0
+map field
+mapped
+save output
+finished day 853
+2.329012870788574
+open files
+147200.0
+map field
+mapped
+save output
+finished day 854
+3.1280624866485596
+open files
+147280.0
+map field
+mapped
+save output
+finished day 855
+2.303684711456299
+open files
+147360.0
+map field
+mapped
+save output
+finished day 856
+6.341296672821045
+open files
+147440.0
+map field
+mapped
+save output
+finished day 857
+2.23708176612854
+open files
+147520.0
+map field
+mapped
+save output
+finished day 858
+2.0993220806121826
+open files
+147600.0
+map field
+mapped
+save output
+finished day 859
+3.0624523162841797
+open files
+147680.0
+map field
+mapped
+save output
+finished day 860
+2.1908347606658936
+open files
+147760.0
+map field
+mapped
+save output
+finished day 861
+2.634643077850342
+open files
+147840.0
+map field
+mapped
+save output
+finished day 862
+3.026322841644287
+open files
+147920.0
+map field
+mapped
+save output
+finished day 863
+2.804926633834839
+open files
+148000.0
+map field
+mapped
+save output
+finished day 864
+3.2363667488098145
+open files
+148080.0
+map field
+mapped
+save output
+finished day 865
+2.3749606609344482
+open files
+148160.0
+map field
+mapped
+save output
+finished day 866
+2.6282193660736084
+open files
+148240.0
+map field
+mapped
+save output
+finished day 867
+2.4092392921447754
+open files
+148320.0
+map field
+mapped
+save output
+finished day 868
+2.504948139190674
+open files
+148400.0
+map field
+mapped
+save output
+finished day 869
+3.5172781944274902
+open files
+148480.0
+map field
+mapped
+save output
+finished day 870
+3.7211055755615234
+open files
+148560.0
+map field
+mapped
+save output
+finished day 871
+2.8303072452545166
+open files
+148640.0
+map field
+mapped
+save output
+finished day 872
+2.6704390048980713
+open files
+148720.0
+map field
+mapped
+save output
+finished day 873
+3.5615615844726562
+open files
+148800.0
+map field
+mapped
+save output
+finished day 874
+2.7112555503845215
+open files
+148880.0
+map field
+mapped
+save output
+finished day 875
+4.95491361618042
+open files
+148960.0
+map field
+mapped
+save output
+finished day 876
+11.932974576950073
+open files
+149040.0
+map field
+mapped
+save output
+finished day 877
+2.2685039043426514
+open files
+149120.0
+map field
+mapped
+save output
+finished day 878
+2.781906843185425
+open files
+149200.0
+map field
+mapped
+save output
+finished day 879
+3.7617716789245605
+open files
+149280.0
+map field
+mapped
+save output
+finished day 880
+2.313753366470337
+open files
+149360.0
+map field
+mapped
+save output
+finished day 881
+2.568239450454712
+open files
+149440.0
+map field
+mapped
+save output
+finished day 882
+2.4563589096069336
+open files
+149520.0
+map field
+mapped
+save output
+finished day 883
+10.386493921279907
+open files
+149600.0
+map field
+mapped
+save output
+finished day 884
+2.128014326095581
+open files
+149680.0
+map field
+mapped
+save output
+finished day 885
+2.8024377822875977
+open files
+149760.0
+map field
+mapped
+save output
+finished day 886
+2.9300365447998047
+open files
+149840.0
+map field
+mapped
+save output
+finished day 887
+2.2579596042633057
+open files
+149920.0
+map field
+mapped
+save output
+finished day 888
+2.0193848609924316
+open files
+150000.0
+map field
+mapped
+save output
+finished day 889
+5.084131956100464
+open files
+150080.0
+map field
+mapped
+save output
+finished day 890
+2.5063905715942383
+open files
+150160.0
+map field
+mapped
+save output
+finished day 891
+2.4964656829833984
+open files
+150240.0
+map field
+mapped
+save output
+finished day 892
+2.681689500808716
+open files
+150320.0
+map field
+mapped
+save output
+finished day 893
+2.210981845855713
+open files
+150400.0
+map field
+mapped
+save output
+finished day 894
+7.695247650146484
+open files
+150480.0
+map field
+mapped
+save output
+finished day 895
+2.8532164096832275
+open files
+150560.0
+map field
+mapped
+save output
+finished day 896
+2.5314929485321045
+open files
+150640.0
+map field
+mapped
+save output
+finished day 897
+3.6833930015563965
+open files
+150720.0
+map field
+mapped
+save output
+finished day 898
+2.681318998336792
+open files
+150800.0
+map field
+mapped
+save output
+finished day 899
+8.262988090515137
+open files
+150880.0
+map field
+mapped
+save output
+finished day 900
+2.2264316082000732
+open files
+150960.0
+map field
+mapped
+save output
+finished day 901
+2.607867479324341
+open files
+151040.0
+map field
+mapped
+save output
+finished day 902
+3.593761444091797
+open files
+151120.0
+map field
+mapped
+save output
+finished day 903
+2.334096670150757
+open files
+151200.0
+map field
+mapped
+save output
+finished day 904
+2.189323663711548
+open files
+151280.0
+map field
+mapped
+save output
+finished day 905
+3.720555067062378
+open files
+151360.0
+map field
+mapped
+save output
+finished day 906
+3.9459304809570312
+open files
+151440.0
+map field
+mapped
+save output
+finished day 907
+3.0534629821777344
+open files
+151520.0
+map field
+mapped
+save output
+finished day 908
+2.4518063068389893
+open files
+151600.0
+map field
+mapped
+save output
+finished day 909
+2.801163673400879
+open files
+151680.0
+map field
+mapped
+save output
+finished day 910
+2.55717134475708
+open files
+151760.0
+map field
+mapped
+save output
+finished day 911
+2.120521068572998
+open files
+151840.0
+map field
+mapped
+save output
+finished day 912
+2.4307918548583984
+open files
+151920.0
+map field
+mapped
+save output
+finished day 913
+2.2832257747650146
+open files
+152000.0
+map field
+mapped
+save output
+finished day 914
+2.308051347732544
+open files
+152080.0
+map field
+mapped
+save output
+finished day 915
+2.147193193435669
+open files
+152160.0
+map field
+mapped
+save output
+finished day 916
+2.3167600631713867
+open files
+152240.0
+map field
+mapped
+save output
+finished day 917
+2.921297073364258
+open files
+152320.0
+map field
+mapped
+save output
+finished day 918
+6.174089431762695
+open files
+152400.0
+map field
+mapped
+save output
+finished day 919
+2.3895866870880127
+open files
+152480.0
+map field
+mapped
+save output
+finished day 920
+2.703122854232788
+open files
+152560.0
+map field
+mapped
+save output
+finished day 921
+3.6131417751312256
+open files
+152640.0
+map field
+mapped
+save output
+finished day 922
+2.285820722579956
+open files
+152720.0
+map field
+mapped
+save output
+finished day 923
+2.495593309402466
+open files
+152800.0
+map field
+mapped
+save output
+finished day 924
+4.087636947631836
+open files
+152880.0
+map field
+mapped
+save output
+finished day 925
+2.066889524459839
+open files
+152960.0
+map field
+mapped
+save output
+finished day 926
+2.5391454696655273
+open files
+153040.0
+map field
+mapped
+save output
+finished day 927
+5.501339912414551
+open files
+153120.0
+map field
+mapped
+save output
+finished day 928
+2.7451183795928955
+open files
+153200.0
+map field
+mapped
+save output
+finished day 929
+4.389042139053345
+open files
+153280.0
+map field
+mapped
+save output
+finished day 930
+3.80301833152771
+open files
+153360.0
+map field
+mapped
+save output
+finished day 931
+4.450640916824341
+open files
+153440.0
+map field
+mapped
+save output
+finished day 932
+2.2694718837738037
+open files
+153520.0
+map field
+mapped
+save output
+finished day 933
+2.6773669719696045
+open files
+153600.0
+map field
+mapped
+save output
+finished day 934
+2.434792995452881
+open files
+153680.0
+map field
+mapped
+save output
+finished day 935
+4.764059066772461
+open files
+153760.0
+map field
+mapped
+save output
+finished day 936
+2.1797711849212646
+open files
+153840.0
+map field
+mapped
+save output
+finished day 937
+5.512134552001953
+open files
+153920.0
+map field
+mapped
+save output
+finished day 938
+2.5543127059936523
+open files
+154000.0
+map field
+mapped
+save output
+finished day 939
+2.541656732559204
+open files
+154080.0
+map field
+mapped
+save output
+finished day 940
+2.1661980152130127
+open files
+154160.0
+map field
+mapped
+save output
+finished day 941
+2.2876574993133545
+open files
+154240.0
+map field
+mapped
+save output
+finished day 942
+3.2600574493408203
+open files
+154320.0
+map field
+mapped
+save output
+finished day 943
+2.4186084270477295
+open files
+154400.0
+map field
+mapped
+save output
+finished day 944
+2.380300998687744
+open files
+154480.0
+map field
+mapped
+save output
+finished day 945
+3.367624044418335
+open files
+154560.0
+map field
+mapped
+save output
+finished day 946
+8.471468210220337
+open files
+154640.0
+map field
+mapped
+save output
+finished day 947
+3.034230947494507
+open files
+154720.0
+map field
+mapped
+save output
+finished day 948
+2.9064414501190186
+open files
+154800.0
+map field
+mapped
+save output
+finished day 949
+2.1918458938598633
+open files
+154880.0
+map field
+mapped
+save output
+finished day 950
+2.9342429637908936
+open files
+154960.0
+map field
+mapped
+save output
+finished day 951
+2.5679309368133545
+open files
+155040.0
+map field
+mapped
+save output
+finished day 952
+3.1360974311828613
+open files
+155120.0
+map field
+mapped
+save output
+finished day 953
+2.1830289363861084
+open files
+155200.0
+map field
+mapped
+save output
+finished day 954
+2.9518229961395264
+open files
+155280.0
+map field
+mapped
+save output
+finished day 955
+2.2607531547546387
+open files
+155360.0
+map field
+mapped
+save output
+finished day 956
+1.999110460281372
+open files
+155440.0
+map field
+mapped
+save output
+finished day 957
+4.785495758056641
+open files
+155520.0
+map field
+mapped
+save output
+finished day 958
+8.419851303100586
+open files
+155600.0
+map field
+mapped
+save output
+finished day 959
+3.493229627609253
+open files
+155680.0
+map field
+mapped
+save output
+finished day 960
+2.44246768951416
+open files
+155760.0
+map field
+mapped
+save output
+finished day 961
+8.182714223861694
+open files
+155840.0
+map field
+mapped
+save output
+finished day 962
+2.66225528717041
+open files
+155920.0
+map field
+mapped
+save output
+finished day 963
+2.768730401992798
+open files
+156000.0
+map field
+mapped
+save output
+finished day 964
+2.601640224456787
+open files
+156080.0
+map field
+mapped
+save output
+finished day 965
+3.806877613067627
+open files
+156160.0
+map field
+mapped
+save output
+finished day 966
+3.4030203819274902
+open files
+156240.0
+map field
+mapped
+save output
+finished day 967
+10.228021621704102
+open files
+156320.0
+map field
+mapped
+save output
+finished day 968
+2.6134512424468994
+open files
+156400.0
+map field
+mapped
+save output
+finished day 969
+2.2635228633880615
+open files
+156480.0
+map field
+mapped
+save output
+finished day 970
+3.105917453765869
+open files
+156560.0
+map field
+mapped
+save output
+finished day 971
+2.620523452758789
+open files
+156640.0
+map field
+mapped
+save output
+finished day 972
+5.647921800613403
+open files
+156720.0
+map field
+mapped
+save output
+finished day 973
+2.0570828914642334
+open files
+156800.0
+map field
+mapped
+save output
+finished day 974
+4.114281177520752
+open files
+156880.0
+map field
+mapped
+save output
+finished day 975
+7.289033651351929
+open files
+156960.0
+map field
+mapped
+save output
+finished day 976
+2.2219271659851074
+open files
+157040.0
+map field
+mapped
+save output
+finished day 977
+13.075006484985352
+open files
+157120.0
+map field
+mapped
+save output
+finished day 978
+2.234837055206299
+open files
+157200.0
+map field
+mapped
+save output
+finished day 979
+3.996326446533203
+open files
+157280.0
+map field
+mapped
+save output
+finished day 980
+3.873201608657837
+open files
+157360.0
+map field
+mapped
+save output
+finished day 981
+2.100536823272705
+open files
+157440.0
+map field
+mapped
+save output
+finished day 982
+9.830681800842285
+open files
+157520.0
+map field
+mapped
+save output
+finished day 983
+4.052384853363037
+open files
+157600.0
+map field
+mapped
+save output
+finished day 984
+2.2416365146636963
+open files
+157680.0
+map field
+mapped
+save output
+finished day 985
+2.6098124980926514
+open files
+157760.0
+map field
+mapped
+save output
+finished day 986
+3.037038564682007
+open files
+157840.0
+map field
+mapped
+save output
+finished day 987
+3.178894519805908
+open files
+157920.0
+map field
+mapped
+save output
+finished day 988
+2.4807612895965576
+open files
+158000.0
+map field
+mapped
+save output
+finished day 989
+6.754729986190796
+open files
+158080.0
+map field
+mapped
+save output
+finished day 990
+3.7225396633148193
+open files
+158160.0
+map field
+mapped
+save output
+finished day 991
+2.0710721015930176
+open files
+158240.0
+map field
+mapped
+save output
+finished day 992
+2.2217118740081787
+open files
+158320.0
+map field
+mapped
+save output
+finished day 993
+4.688519716262817
+open files
+158400.0
+map field
+mapped
+save output
+finished day 994
+4.377060651779175
+open files
+158480.0
+map field
+mapped
+save output
+finished day 995
+3.547070026397705
+open files
+158560.0
+map field
+mapped
+save output
+finished day 996
+3.2433865070343018
+open files
+158640.0
+map field
+mapped
+save output
+finished day 997
+3.5815274715423584
+open files
+158720.0
+map field
+mapped
+save output
+finished day 998
+2.6775553226470947
+open files
+158800.0
+map field
+mapped
+save output
+finished day 999
+4.5339860916137695
+open files
+158880.0
+map field
+mapped
+save output
+finished day 1000
+2.3307008743286133
+open files
+158960.0
+map field
+mapped
+save output
+finished day 1001
+2.2326717376708984
+open files
+159040.0
+map field
+mapped
+save output
+finished day 1002
+2.675429344177246
+open files
+159120.0
+map field
+mapped
+save output
+finished day 1003
+6.148050785064697
+open files
+159200.0
+map field
+mapped
+save output
+finished day 1004
+2.4308650493621826
+open files
+159280.0
+map field
+mapped
+save output
+finished day 1005
+2.618079662322998
+open files
+159360.0
+map field
+mapped
+save output
+finished day 1006
+3.1807265281677246
+open files
+159440.0
+map field
+mapped
+save output
+finished day 1007
+2.1764464378356934
+open files
+159520.0
+map field
+mapped
+save output
+finished day 1008
+2.038325548171997
+open files
+159600.0
+map field
+mapped
+save output
+finished day 1009
+2.6684718132019043
+open files
+159680.0
+map field
+mapped
+save output
+finished day 1010
+2.2048990726470947
+open files
+159760.0
+map field
+mapped
+save output
+finished day 1011
+2.3363614082336426
+open files
+159840.0
+map field
+mapped
+save output
+finished day 1012
+6.285301208496094
+open files
+159920.0
+map field
+mapped
+save output
+finished day 1013
+8.61635971069336
+open files
+160000.0
+map field
+mapped
+save output
+finished day 1014
+2.3449721336364746
+open files
+160080.0
+map field
+mapped
+save output
+finished day 1015
+2.4260928630828857
+open files
+160160.0
+map field
+mapped
+save output
+finished day 1016
+2.063389539718628
+open files
+160240.0
+map field
+mapped
+save output
+finished day 1017
+2.405489683151245
+open files
+160320.0
+map field
+mapped
+save output
+finished day 1018
+2.3855302333831787
+open files
+160400.0
+map field
+mapped
+save output
+finished day 1019
+2.352999448776245
+open files
+160480.0
+map field
+mapped
+save output
+finished day 1020
+2.7600314617156982
+open files
+160560.0
+map field
+mapped
+save output
+finished day 1021
+2.47039532661438
+open files
+160640.0
+map field
+mapped
+save output
+finished day 1022
+3.744277000427246
+open files
+160720.0
+map field
+mapped
+save output
+finished day 1023
+2.5907323360443115
+open files
+160800.0
+map field
+mapped
+save output
+finished day 1024
+2.4689905643463135
+open files
+160880.0
+map field
+mapped
+save output
+finished day 1025
+2.463716983795166
+open files
+160960.0
+map field
+mapped
+save output
+finished day 1026
+2.1514198780059814
+open files
+161040.0
+map field
+mapped
+save output
+finished day 1027
+2.1087021827697754
+open files
+161120.0
+map field
+mapped
+save output
+finished day 1028
+2.9956326484680176
+open files
+161200.0
+map field
+mapped
+save output
+finished day 1029
+3.6338088512420654
+open files
+161280.0
+map field
+mapped
+save output
+finished day 1030
+4.372075796127319
+open files
+161360.0
+map field
+mapped
+save output
+finished day 1031
+2.2503607273101807
+open files
+161440.0
+map field
+mapped
+save output
+finished day 1032
+2.5385076999664307
+open files
+161520.0
+map field
+mapped
+save output
+finished day 1033
+3.5573489665985107
+open files
+161600.0
+map field
+mapped
+save output
+finished day 1034
+2.597614288330078
+open files
+161680.0
+map field
+mapped
+save output
+finished day 1035
+2.253934144973755
+open files
+161760.0
+map field
+mapped
+save output
+finished day 1036
+3.0305068492889404
+open files
+161840.0
+map field
+mapped
+save output
+finished day 1037
+4.1679887771606445
+open files
+161920.0
+map field
+mapped
+save output
+finished day 1038
+2.893212080001831
+open files
+162000.0
+map field
+mapped
+save output
+finished day 1039
+2.3083064556121826
+open files
+162080.0
+map field
+mapped
+save output
+finished day 1040
+3.355531692504883
+open files
+162160.0
+map field
+mapped
+save output
+finished day 1041
+3.276592493057251
+open files
+162240.0
+map field
+mapped
+save output
+finished day 1042
+3.8818323612213135
+open files
+162320.0
+map field
+mapped
+save output
+finished day 1043
+5.8096394538879395
+open files
+162400.0
+map field
+mapped
+save output
+finished day 1044
+2.1922881603240967
+open files
+162480.0
+map field
+mapped
+save output
+finished day 1045
+6.63592267036438
+open files
+162560.0
+map field
+mapped
+save output
+finished day 1046
+3.0097403526306152
+open files
+162640.0
+map field
+mapped
+save output
+finished day 1047
+8.4145827293396
+open files
+162720.0
+map field
+mapped
+save output
+finished day 1048
+3.2113308906555176
+open files
+162800.0
+map field
+mapped
+save output
+finished day 1049
+5.163258075714111
+open files
+162880.0
+map field
+mapped
+save output
+finished day 1050
+4.919133186340332
+open files
+162960.0
+map field
+mapped
+save output
+finished day 1051
+4.336389541625977
+open files
+163040.0
+map field
+mapped
+save output
+finished day 1052
+4.321208477020264
+open files
+163120.0
+map field
+mapped
+save output
+finished day 1053
+5.094474792480469
+open files
+163200.0
+map field
+mapped
+save output
+finished day 1054
+4.604344844818115
+open files
+163280.0
+map field
+mapped
+save output
+finished day 1055
+16.420645475387573
+open files
+163360.0
+map field
+mapped
+save output
+finished day 1056
+7.9015233516693115
+open files
+163440.0
+map field
+mapped
+save output
+finished day 1057
+6.21761155128479
+open files
+163520.0
+map field
+mapped
+save output
+finished day 1058
+31.64592409133911
+open files
+163600.0
+map field
+mapped
+save output
+finished day 1059
+10.944753646850586
+open files
+163680.0
+map field
+mapped
+save output
+finished day 1060
+9.255175352096558
+open files
+163760.0
+map field
+mapped
+save output
+finished day 1061
+2.394598960876465
+open files
+163840.0
+map field
+mapped
+save output
+finished day 1062
+5.748842716217041
+open files
+163920.0
+map field
+mapped
+save output
+finished day 1063
+4.1249048709869385
+open files
+164000.0
+map field
+mapped
+save output
+finished day 1064
+4.799880743026733
+open files
+164080.0
+map field
+mapped
+save output
+finished day 1065
+4.8578102588653564
+open files
+164160.0
+map field
+mapped
+save output
+finished day 1066
+2.3776161670684814
+open files
+164240.0
+map field
+mapped
+save output
+finished day 1067
+2.8171069622039795
+open files
+164320.0
+map field
+mapped
+save output
+finished day 1068
+2.7142183780670166
+open files
+164400.0
+map field
+mapped
+save output
+finished day 1069
+2.159635066986084
+open files
+164480.0
+map field
+mapped
+save output
+finished day 1070
+14.322138786315918
+open files
+164560.0
+map field
+mapped
+save output
+finished day 1071
+2.520451784133911
+open files
+164640.0
+map field
+mapped
+save output
+finished day 1072
+4.212102651596069
+open files
+164720.0
+map field
+mapped
+save output
+finished day 1073
+3.415160894393921
+open files
+164800.0
+map field
+mapped
+save output
+finished day 1074
+3.1021323204040527
+open files
+164880.0
+map field
+mapped
+save output
+finished day 1075
+2.454418897628784
+open files
+164960.0
+map field
+mapped
+save output
+finished day 1076
+5.06437087059021
+open files
+165040.0
+map field
+mapped
+save output
+finished day 1077
+2.299133539199829
+open files
+165120.0
+map field
+mapped
+save output
+finished day 1078
+2.4456887245178223
+open files
+165200.0
+map field
+mapped
+save output
+finished day 1079
+2.702329397201538
+open files
+165280.0
+map field
+mapped
+save output
+finished day 1080
+3.203573226928711
+open files
+165360.0
+map field
+mapped
+save output
+finished day 1081
+2.434964895248413
+open files
+165440.0
+map field
+mapped
+save output
+finished day 1082
+2.290083646774292
+open files
+165520.0
+map field
+mapped
+save output
+finished day 1083
+2.5308754444122314
+open files
+165600.0
+map field
+mapped
+save output
+finished day 1084
+2.9170191287994385
+open files
+165680.0
+map field
+mapped
+save output
+finished day 1085
+2.5286641120910645
+open files
+165760.0
+map field
+mapped
+save output
+finished day 1086
+2.1448960304260254
+open files
+165840.0
+map field
+mapped
+save output
+finished day 1087
+2.3920063972473145
+open files
+165920.0
+map field
+mapped
+save output
+finished day 1088
+2.6104071140289307
+open files
+166000.0
+map field
+mapped
+save output
+finished day 1089
+2.257678508758545
+open files
+166080.0
+map field
+mapped
+save output
+finished day 1090
+4.53778600692749
+open files
+166160.0
+map field
+mapped
+save output
+finished day 1091
+2.1434168815612793
+open files
+166240.0
+map field
+mapped
+save output
+finished day 1092
+2.7789223194122314
+open files
+166320.0
+map field
+mapped
+save output
+finished day 1093
+2.990518569946289
+open files
+166400.0
+map field
+mapped
+save output
+finished day 1094
+3.056419849395752
+open files
+166480.0
+map field
+mapped
+save output
+finished day 1095
+3.2915947437286377
+open files
+166560.0
+map field
+mapped
+save output
+finished day 1096
+3.5639472007751465
+open files
+166640.0
+map field
+mapped
+save output
+finished day 1097
+2.197598934173584
+open files
+166720.0
+map field
+mapped
+save output
+finished day 1098
+1.9934659004211426
+open files
+166800.0
+map field
+mapped
+save output
+finished day 1099
+2.478569269180298
+open files
+166880.0
+map field
+mapped
+save output
+finished day 1100
+2.576552391052246
+open files
+166960.0
+map field
+mapped
+save output
+finished day 1101
+5.033159017562866
+open files
+167040.0
+map field
+mapped
+save output
+finished day 1102
+2.6954033374786377
+open files
+167120.0
+map field
+mapped
+save output
+finished day 1103
+2.112910747528076
+open files
+167200.0
+map field
+mapped
+save output
+finished day 1104
+2.3112566471099854
+open files
+167280.0
+map field
+mapped
+save output
+finished day 1105
+2.629729986190796
+open files
+167360.0
+map field
+mapped
+save output
+finished day 1106
+2.7536988258361816
+open files
+167440.0
+map field
+mapped
+save output
+finished day 1107
+3.166414976119995
+open files
+167520.0
+map field
+mapped
+save output
+finished day 1108
+3.972662925720215
+open files
+167600.0
+map field
+mapped
+save output
+finished day 1109
+2.31716251373291
+open files
+167680.0
+map field
+mapped
+save output
+finished day 1110
+2.4600672721862793
+open files
+167760.0
+map field
+mapped
+save output
+finished day 1111
+2.5476930141448975
+open files
+167840.0
+map field
+mapped
+save output
+finished day 1112
+3.2005627155303955
+open files
+167920.0
+map field
+mapped
+save output
+finished day 1113
+4.552631378173828
+open files
+168000.0
+map field
+mapped
+save output
+finished day 1114
+2.9941184520721436
+open files
+168080.0
+map field
+mapped
+save output
+finished day 1115
+2.1273558139801025
+open files
+168160.0
+map field
+mapped
+save output
+finished day 1116
+2.702070713043213
+open files
+168240.0
+map field
+mapped
+save output
+finished day 1117
+2.444200277328491
+open files
+168320.0
+map field
+mapped
+save output
+finished day 1118
+2.2795937061309814
+open files
+168400.0
+map field
+mapped
+save output
+finished day 1119
+2.299165964126587
+open files
+168480.0
+map field
+mapped
+save output
+finished day 1120
+2.950870990753174
+open files
+168560.0
+map field
+mapped
+save output
+finished day 1121
+2.726562738418579
+open files
+168640.0
+map field
+mapped
+save output
+finished day 1122
+2.1478958129882812
+open files
+168720.0
+map field
+mapped
+save output
+finished day 1123
+2.3625495433807373
+open files
+168800.0
+map field
+mapped
+save output
+finished day 1124
+2.2927017211914062
+open files
+168880.0
+map field
+mapped
+save output
+finished day 1125
+2.130953788757324
+open files
+168960.0
+map field
+mapped
+save output
+finished day 1126
+2.2476415634155273
+open files
+169040.0
+map field
+mapped
+save output
+finished day 1127
+2.914046287536621
+open files
+169120.0
+map field
+mapped
+save output
+finished day 1128
+5.140139579772949
+open files
+169200.0
+map field
+mapped
+save output
+finished day 1129
+3.6584463119506836
+open files
+169280.0
+map field
+mapped
+save output
+finished day 1130
+2.6708104610443115
+open files
+169360.0
+map field
+mapped
+save output
+finished day 1131
+2.613755464553833
+open files
+169440.0
+map field
+mapped
+save output
+finished day 1132
+6.39777135848999
+open files
+169520.0
+map field
+mapped
+save output
+finished day 1133
+2.2138419151306152
+open files
+169600.0
+map field
+mapped
+save output
+finished day 1134
+3.4567370414733887
+open files
+169680.0
+map field
+mapped
+save output
+finished day 1135
+4.4447808265686035
+open files
+169760.0
+map field
+mapped
+save output
+finished day 1136
+2.129958391189575
+open files
+169840.0
+map field
+mapped
+save output
+finished day 1137
+4.099026441574097
+open files
+169920.0
+map field
+mapped
+save output
+finished day 1138
+3.706615924835205
+open files
+170000.0
+map field
+mapped
+save output
+finished day 1139
+2.1037204265594482
+open files
+170080.0
+map field
+mapped
+save output
+finished day 1140
+2.1432554721832275
+open files
+170160.0
+map field
+mapped
+save output
+finished day 1141
+3.1560769081115723
+open files
+170240.0
+map field
+mapped
+save output
+finished day 1142
+2.2030296325683594
+open files
+170320.0
+map field
+mapped
+save output
+finished day 1143
+4.2203733921051025
+open files
+170400.0
+map field
+mapped
+save output
+finished day 1144
+2.832260847091675
+open files
+170480.0
+map field
+mapped
+save output
+finished day 1145
+2.331090211868286
+open files
+170560.0
+map field
+mapped
+save output
+finished day 1146
+3.0931155681610107
+open files
+170640.0
+map field
+mapped
+save output
+finished day 1147
+2.5010366439819336
+open files
+170720.0
+map field
+mapped
+save output
+finished day 1148
+2.229480504989624
+open files
+170800.0
+map field
+mapped
+save output
+finished day 1149
+2.3854000568389893
+open files
+170880.0
+map field
+mapped
+save output
+finished day 1150
+2.3401758670806885
+open files
+170960.0
+map field
+mapped
+save output
+finished day 1151
+4.50119161605835
+open files
+171040.0
+map field
+mapped
+save output
+finished day 1152
+2.110295534133911
+open files
+171120.0
+map field
+mapped
+save output
+finished day 1153
+2.4993979930877686
+open files
+171200.0
+map field
+mapped
+save output
+finished day 1154
+3.457113742828369
+open files
+171280.0
+map field
+mapped
+save output
+finished day 1155
+5.37024188041687
+open files
+171360.0
+map field
+mapped
+save output
+finished day 1156
+2.537605047225952
+open files
+171440.0
+map field
+mapped
+save output
+finished day 1157
+2.9985880851745605
+open files
+171520.0
+map field
+mapped
+save output
+finished day 1158
+2.8176045417785645
+open files
+171600.0
+map field
+mapped
+save output
+finished day 1159
+2.8143110275268555
+open files
+171680.0
+map field
+mapped
+save output
+finished day 1160
+3.337390184402466
+open files
+171760.0
+map field
+mapped
+save output
+finished day 1161
+2.187981367111206
+open files
+171840.0
+map field
+mapped
+save output
+finished day 1162
+3.251938581466675
+open files
+171920.0
+map field
+mapped
+save output
+finished day 1163
+2.8915369510650635
+open files
+172000.0
+map field
+mapped
+save output
+finished day 1164
+2.427081346511841
+open files
+172080.0
+map field
+mapped
+save output
+finished day 1165
+2.1079137325286865
+open files
+172160.0
+map field
+mapped
+save output
+finished day 1166
+3.868677854537964
+open files
+172240.0
+map field
+mapped
+save output
+finished day 1167
+2.1276421546936035
+open files
+172320.0
+map field
+mapped
+save output
+finished day 1168
+2.3839781284332275
+open files
+172400.0
+map field
+mapped
+save output
+finished day 1169
+3.8660449981689453
+open files
+172480.0
+map field
+mapped
+save output
+finished day 1170
+4.186672687530518
+open files
+172560.0
+map field
+mapped
+save output
+finished day 1171
+3.951326370239258
+open files
+172640.0
+map field
+mapped
+save output
+finished day 1172
+2.3650431632995605
+open files
+172720.0
+map field
+mapped
+save output
+finished day 1173
+2.9118552207946777
+open files
+172800.0
+map field
+mapped
+save output
+finished day 1174
+2.1769816875457764
+open files
+172880.0
+map field
+mapped
+save output
+finished day 1175
+2.393179416656494
+open files
+172960.0
+map field
+mapped
+save output
+finished day 1176
+2.300715446472168
+open files
+173040.0
+map field
+mapped
+save output
+finished day 1177
+2.246201515197754
+open files
+173120.0
+map field
+mapped
+save output
+finished day 1178
+2.2187936305999756
+open files
+173200.0
+map field
+mapped
+save output
+finished day 1179
+2.2436885833740234
+open files
+173280.0
+map field
+mapped
+save output
+finished day 1180
+2.1076786518096924
+open files
+173360.0
+map field
+mapped
+save output
+finished day 1181
+2.228698968887329
+open files
+173440.0
+map field
+mapped
+save output
+finished day 1182
+2.289273500442505
+open files
+173520.0
+map field
+mapped
+save output
+finished day 1183
+3.264695405960083
+open files
+173600.0
+map field
+mapped
+save output
+finished day 1184
+4.172409534454346
+open files
+173680.0
+map field
+mapped
+save output
+finished day 1185
+3.6578211784362793
+open files
+173760.0
+map field
+mapped
+save output
+finished day 1186
+2.7262730598449707
+open files
+173840.0
+map field
+mapped
+save output
+finished day 1187
+2.1546287536621094
+open files
+173920.0
+map field
+mapped
+save output
+finished day 1188
+2.4465599060058594
+open files
+174000.0
+map field
+mapped
+save output
+finished day 1189
+2.3706817626953125
+open files
+174080.0
+map field
+mapped
+save output
+finished day 1190
+2.196739435195923
+open files
+174160.0
+map field
+mapped
+save output
+finished day 1191
+2.287558078765869
+open files
+174240.0
+map field
+mapped
+save output
+finished day 1192
+2.4761383533477783
+open files
+174320.0
+map field
+mapped
+save output
+finished day 1193
+2.1598150730133057
+open files
+174400.0
+map field
+mapped
+save output
+finished day 1194
+2.6526083946228027
+open files
+174480.0
+map field
+mapped
+save output
+finished day 1195
+2.7150566577911377
+open files
+174560.0
+map field
+mapped
+save output
+finished day 1196
+2.0693140029907227
+open files
+174640.0
+map field
+mapped
+save output
+finished day 1197
+3.0559065341949463
+open files
+174720.0
+map field
+mapped
+save output
+finished day 1198
+2.3515682220458984
+open files
+174800.0
+map field
+mapped
+save output
+finished day 1199
+3.3148398399353027
+open files
+174880.0
+map field
+mapped
+save output
+finished day 1200
+2.3779475688934326
+open files
+174960.0
+map field
+mapped
+save output
+finished day 1201
+2.876375913619995
+open files
+175040.0
+map field
+mapped
+save output
+finished day 1202
+6.019550561904907
+open files
+175120.0
+map field
+mapped
+save output
+finished day 1203
+4.299716472625732
+open files
+175200.0
+map field
+mapped
+save output
+finished day 1204
+2.434807062149048
+open files
+175280.0
+map field
+mapped
+save output
+finished day 1205
+2.558779716491699
+open files
+175360.0
+map field
+mapped
+save output
+finished day 1206
+3.0018725395202637
+open files
+175440.0
+map field
+mapped
+save output
+finished day 1207
+5.607576370239258
+open files
+175520.0
+map field
+mapped
+save output
+finished day 1208
+2.481346607208252
+open files
+175600.0
+map field
+mapped
+save output
+finished day 1209
+2.3852474689483643
+open files
+175680.0
+map field
+mapped
+save output
+finished day 1210
+2.387448787689209
+open files
+175760.0
+map field
+mapped
+save output
+finished day 1211
+2.875852584838867
+open files
+175840.0
+map field
+mapped
+save output
+finished day 1212
+2.3863983154296875
+open files
+175920.0
+map field
+mapped
+save output
+finished day 1213
+4.227074861526489
+open files
+176000.0
+map field
+mapped
+save output
+finished day 1214
+2.666491746902466
+open files
+176080.0
+map field
+mapped
+save output
+finished day 1215
+2.4052536487579346
+open files
+176160.0
+map field
+mapped
+save output
+finished day 1216
+2.420928478240967
+open files
+176240.0
+map field
+mapped
+save output
+finished day 1217
+2.0741183757781982
+open files
+176320.0
+map field
+mapped
+save output
+finished day 1218
+2.649585247039795
+open files
+176400.0
+map field
+mapped
+save output
+finished day 1219
+20.101289749145508
+open files
+176480.0
+map field
+mapped
+save output
+finished day 1220
+2.6333093643188477
+open files
+176560.0
+map field
+mapped
+save output
+finished day 1221
+2.1625425815582275
+open files
+176640.0
+map field
+mapped
+save output
+finished day 1222
+2.545861005783081
+open files
+176720.0
+map field
+mapped
+save output
+finished day 1223
+3.5766496658325195
+open files
+176800.0
+map field
+mapped
+save output
+finished day 1224
+2.167933464050293
+open files
+176880.0
+map field
+mapped
+save output
+finished day 1225
+2.345388889312744
+open files
+176960.0
+map field
+mapped
+save output
+finished day 1226
+3.208401679992676
+open files
+177040.0
+map field
+mapped
+save output
+finished day 1227
+8.510677099227905
+open files
+177120.0
+map field
+mapped
+save output
+finished day 1228
+2.3700411319732666
+open files
+177200.0
+map field
+mapped
+save output
+finished day 1229
+3.2286386489868164
+open files
+177280.0
+map field
+mapped
+save output
+finished day 1230
+2.144216775894165
+open files
+177360.0
+map field
+mapped
+save output
+finished day 1231
+2.278918743133545
+open files
+177440.0
+map field
+mapped
+save output
+finished day 1232
+2.2046589851379395
+open files
+177520.0
+map field
+mapped
+save output
+finished day 1233
+2.374082326889038
+open files
+177600.0
+map field
+mapped
+save output
+finished day 1234
+2.5152459144592285
+open files
+177680.0
+map field
+mapped
+save output
+finished day 1235
+2.6404008865356445
+open files
+177760.0
+map field
+mapped
+save output
+finished day 1236
+2.519364833831787
+open files
+177840.0
+map field
+mapped
+save output
+finished day 1237
+2.5197842121124268
+open files
+177920.0
+map field
+mapped
+save output
+finished day 1238
+2.0865259170532227
+open files
+178000.0
+map field
+mapped
+save output
+finished day 1239
+2.632737636566162
+open files
+178080.0
+map field
+mapped
+save output
+finished day 1240
+4.198700904846191
+open files
+178160.0
+map field
+mapped
+save output
+finished day 1241
+3.604588031768799
+open files
+178240.0
+map field
+mapped
+save output
+finished day 1242
+3.4338924884796143
+open files
+178320.0
+map field
+mapped
+save output
+finished day 1243
+2.2809057235717773
+open files
+178400.0
+map field
+mapped
+save output
+finished day 1244
+2.219820976257324
+open files
+178480.0
+map field
+mapped
+save output
+finished day 1245
+2.17018461227417
+open files
+178560.0
+map field
+mapped
+save output
+finished day 1246
+2.245131492614746
+open files
+178640.0
+map field
+mapped
+save output
+finished day 1247
+34.918112993240356
+open files
+178720.0
+map field
+mapped
+save output
+finished day 1248
+4.061662197113037
+open files
+178800.0
+map field
+mapped
+save output
+finished day 1249
+2.784961223602295
+open files
+178880.0
+map field
+mapped
+save output
+finished day 1250
+4.332067012786865
+open files
+178960.0
+map field
+mapped
+save output
+finished day 1251
+2.845109701156616
+open files
+179040.0
+map field
+mapped
+save output
+finished day 1252
+2.3042566776275635
+open files
+179120.0
+map field
+mapped
+save output
+finished day 1253
+2.3050076961517334
+open files
+179200.0
+map field
+mapped
+save output
+finished day 1254
+2.500574827194214
+open files
+179280.0
+map field
+mapped
+save output
+finished day 1255
+2.9860239028930664
+open files
+179360.0
+map field
+mapped
+save output
+finished day 1256
+2.822430372238159
+open files
+179440.0
+map field
+mapped
+save output
+finished day 1257
+4.44237494468689
+open files
+179520.0
+map field
+mapped
+save output
+finished day 1258
+2.5375816822052
+open files
+179600.0
+map field
+mapped
+save output
+finished day 1259
+2.256225109100342
+open files
+179680.0
+map field
+mapped
+save output
+finished day 1260
+2.140277862548828
+open files
+179760.0
+map field
+mapped
+save output
+finished day 1261
+2.2605345249176025
+open files
+179840.0
+map field
+mapped
+save output
+finished day 1262
+2.11492919921875
+open files
+179920.0
+map field
+mapped
+save output
+finished day 1263
+4.014560222625732
+open files
+180000.0
+map field
+mapped
+save output
+finished day 1264
+8.880438089370728
+open files
+180080.0
+map field
+mapped
+save output
+finished day 1265
+2.9625463485717773
+open files
+180160.0
+map field
+mapped
+save output
+finished day 1266
+2.657360315322876
+open files
+180240.0
+map field
+mapped
+save output
+finished day 1267
+2.2871108055114746
+open files
+180320.0
+map field
+mapped
+save output
+finished day 1268
+3.1670477390289307
+open files
+180400.0
+map field
+mapped
+save output
+finished day 1269
+2.4267327785491943
+open files
+180480.0
+map field
+mapped
+save output
+finished day 1270
+2.3925487995147705
+open files
+180560.0
+map field
+mapped
+save output
+finished day 1271
+2.1569817066192627
+open files
+180640.0
+map field
+mapped
+save output
+finished day 1272
+2.5407168865203857
+open files
+180720.0
+map field
+mapped
+save output
+finished day 1273
+2.89760422706604
+open files
+180800.0
+map field
+mapped
+save output
+finished day 1274
+2.9641873836517334
+open files
+180880.0
+map field
+mapped
+save output
+finished day 1275
+3.569042444229126
+open files
+180960.0
+map field
+mapped
+save output
+finished day 1276
+2.8922746181488037
+open files
+181040.0
+map field
+mapped
+save output
+finished day 1277
+2.668252944946289
+open files
+181120.0
+map field
+mapped
+save output
+finished day 1278
+2.399794578552246
+open files
+181200.0
+map field
+mapped
+save output
+finished day 1279
+6.27001166343689
+open files
+181280.0
+map field
+mapped
+save output
+finished day 1280
+2.803757429122925
+open files
+181360.0
+map field
+mapped
+save output
+finished day 1281
+2.194526195526123
+open files
+181440.0
+map field
+mapped
+save output
+finished day 1282
+2.7477495670318604
+open files
+181520.0
+map field
+mapped
+save output
+finished day 1283
+3.8839948177337646
+open files
+181600.0
+map field
+mapped
+save output
+finished day 1284
+6.034929275512695
+open files
+181680.0
+map field
+mapped
+save output
+finished day 1285
+2.5354528427124023
+open files
+181760.0
+map field
+mapped
+save output
+finished day 1286
+2.1190385818481445
+open files
+181840.0
+map field
+mapped
+save output
+finished day 1287
+3.0610058307647705
+open files
+181920.0
+map field
+mapped
+save output
+finished day 1288
+2.0940964221954346
+open files
+182000.0
+map field
+mapped
+save output
+finished day 1289
+2.4159111976623535
+open files
+182080.0
+map field
+mapped
+save output
+finished day 1290
+2.937513828277588
+open files
+182160.0
+map field
+mapped
+save output
+finished day 1291
+2.7740683555603027
+open files
+182240.0
+map field
+mapped
+save output
+finished day 1292
+2.281414270401001
+open files
+182320.0
+map field
+mapped
+save output
+finished day 1293
+2.0133490562438965
+open files
+182400.0
+map field
+mapped
+save output
+finished day 1294
+2.408167839050293
+open files
+182480.0
+map field
+mapped
+save output
+finished day 1295
+2.0507988929748535
+open files
+182560.0
+map field
+mapped
+save output
+finished day 1296
+2.170264720916748
+open files
+182640.0
+map field
+mapped
+save output
+finished day 1297
+2.687385320663452
+open files
+182720.0
+map field
+mapped
+save output
+finished day 1298
+2.8032236099243164
+open files
+182800.0
+map field
+mapped
+save output
+finished day 1299
+2.33301043510437
+open files
+182880.0
+map field
+mapped
+save output
+finished day 1300
+4.175874948501587
+open files
+182960.0
+map field
+mapped
+save output
+finished day 1301
+2.075762987136841
+open files
+183040.0
+map field
+mapped
+save output
+finished day 1302
+2.264735460281372
+open files
+183120.0
+map field
+mapped
+save output
+finished day 1303
+2.697495937347412
+open files
+183200.0
+map field
+mapped
+save output
+finished day 1304
+2.7600841522216797
+open files
+183280.0
+map field
+mapped
+save output
+finished day 1305
+2.383406400680542
+open files
+183360.0
+map field
+mapped
+save output
+finished day 1306
+2.261805772781372
+open files
+183440.0
+map field
+mapped
+save output
+finished day 1307
+7.438823699951172
+open files
+183520.0
+map field
+mapped
+save output
+finished day 1308
+2.8946826457977295
+open files
+183600.0
+map field
+mapped
+save output
+finished day 1309
+2.3681304454803467
+open files
+183680.0
+map field
+mapped
+save output
+finished day 1310
+2.017760753631592
+open files
+183760.0
+map field
+mapped
+save output
+finished day 1311
+2.212043046951294
+open files
+183840.0
+map field
+mapped
+save output
+finished day 1312
+4.561373710632324
+open files
+183920.0
+map field
+mapped
+save output
+finished day 1313
+2.1269493103027344
+open files
+184000.0
+map field
+mapped
+save output
+finished day 1314
+2.333240509033203
+open files
+184080.0
+map field
+mapped
+save output
+finished day 1315
+2.385312080383301
+open files
+184160.0
+map field
+mapped
+save output
+finished day 1316
+2.8235902786254883
+open files
+184240.0
+map field
+mapped
+save output
+finished day 1317
+4.165637493133545
+open files
+184320.0
+map field
+mapped
+save output
+finished day 1318
+2.0994865894317627
+open files
+184400.0
+map field
+mapped
+save output
+finished day 1319
+2.574470043182373
+open files
+184480.0
+map field
+mapped
+save output
+finished day 1320
+2.881405830383301
+open files
+184560.0
+map field
+mapped
+save output
+finished day 1321
+7.911475658416748
+open files
+184640.0
+map field
+mapped
+save output
+finished day 1322
+2.6432368755340576
+open files
+184720.0
+map field
+mapped
+save output
+finished day 1323
+2.8143410682678223
+open files
+184800.0
+map field
+mapped
+save output
+finished day 1324
+2.363210439682007
+open files
+184880.0
+map field
+mapped
+save output
+finished day 1325
+2.6699094772338867
+open files
+184960.0
+map field
+mapped
+save output
+finished day 1326
+4.800459861755371
+open files
+185040.0
+map field
+mapped
+save output
+finished day 1327
+2.4914448261260986
+open files
+185120.0
+map field
+mapped
+save output
+finished day 1328
+2.641777276992798
+open files
+185200.0
+map field
+mapped
+save output
+finished day 1329
+8.687110662460327
+open files
+185280.0
+map field
+mapped
+save output
+finished day 1330
+2.41100811958313
+open files
+185360.0
+map field
+mapped
+save output
+finished day 1331
+2.4044880867004395
+open files
+185440.0
+map field
+mapped
+save output
+finished day 1332
+2.1351351737976074
+open files
+185520.0
+map field
+mapped
+save output
+finished day 1333
+2.224646806716919
+open files
+185600.0
+map field
+mapped
+save output
+finished day 1334
+2.1367664337158203
+open files
+185680.0
+map field
+mapped
+save output
+finished day 1335
+2.114783525466919
+open files
+185760.0
+map field
+mapped
+save output
+finished day 1336
+2.335690498352051
+open files
+185840.0
+map field
+mapped
+save output
+finished day 1337
+3.672581911087036
+open files
+185920.0
+map field
+mapped
+save output
+finished day 1338
+2.266791582107544
+open files
+186000.0
+map field
+mapped
+save output
+finished day 1339
+2.9099104404449463
+open files
+186080.0
+map field
+mapped
+save output
+finished day 1340
+2.2307159900665283
+open files
+186160.0
+map field
+mapped
+save output
+finished day 1341
+2.2346532344818115
+open files
+186240.0
+map field
+mapped
+save output
+finished day 1342
+2.358595371246338
+open files
+186320.0
+map field
+mapped
+save output
+finished day 1343
+2.3680360317230225
+open files
+186400.0
+map field
+mapped
+save output
+finished day 1344
+2.159003496170044
+open files
+186480.0
+map field
+mapped
+save output
+finished day 1345
+2.3502442836761475
+open files
+186560.0
+map field
+mapped
+save output
+finished day 1346
+2.1184194087982178
+open files
+186640.0
+map field
+mapped
+save output
+finished day 1347
+2.069079637527466
+open files
+186720.0
+map field
+mapped
+save output
+finished day 1348
+2.061264753341675
+open files
+186800.0
+map field
+mapped
+save output
+finished day 1349
+2.325108051300049
+open files
+186880.0
+map field
+mapped
+save output
+finished day 1350
+2.5953097343444824
+open files
+186960.0
+map field
+mapped
+save output
+finished day 1351
+2.097088575363159
+open files
+187040.0
+map field
+mapped
+save output
+finished day 1352
+3.4544906616210938
+open files
+187120.0
+map field
+mapped
+save output
+finished day 1353
+2.047987937927246
+open files
+187200.0
+map field
+mapped
+save output
+finished day 1354
+2.5996124744415283
+open files
+187280.0
+map field
+mapped
+save output
+finished day 1355
+2.175142288208008
+open files
+187360.0
+map field
+mapped
+save output
+finished day 1356
+16.056886911392212
+open files
+187440.0
+map field
+mapped
+save output
+finished day 1357
+2.2455012798309326
+open files
+187520.0
+map field
+mapped
+save output
+finished day 1358
+2.552990436553955
+open files
+187600.0
+map field
+mapped
+save output
+finished day 1359
+2.2060797214508057
+open files
+187680.0
+map field
+mapped
+save output
+finished day 1360
+3.154094934463501
+open files
+187760.0
+map field
+mapped
+save output
+finished day 1361
+2.6383559703826904
+open files
+187840.0
+map field
+mapped
+save output
+finished day 1362
+2.727322578430176
+open files
+187920.0
+map field
+mapped
+save output
+finished day 1363
+2.3376383781433105
+open files
+188000.0
+map field
+mapped
+save output
+finished day 1364
+4.268460035324097
+open files
+188080.0
+map field
+mapped
+save output
+finished day 1365
+2.9936225414276123
+open files
+188160.0
+map field
+mapped
+save output
+finished day 1366
+3.589878559112549
+open files
+188240.0
+map field
+mapped
+save output
+finished day 1367
+2.9131126403808594
+open files
+188320.0
+map field
+mapped
+save output
+finished day 1368
+2.6901886463165283
+open files
+188400.0
+map field
+mapped
+save output
+finished day 1369
+2.4983344078063965
+open files
+188480.0
+map field
+mapped
+save output
+finished day 1370
+2.205751657485962
+open files
+188560.0
+map field
+mapped
+save output
+finished day 1371
+4.246884346008301
+open files
+188640.0
+map field
+mapped
+save output
+finished day 1372
+2.8609519004821777
+open files
+188720.0
+map field
+mapped
+save output
+finished day 1373
+2.4187095165252686
+open files
+188800.0
+map field
+mapped
+save output
+finished day 1374
+2.873836040496826
+open files
+188880.0
+map field
+mapped
+save output
+finished day 1375
+3.5925893783569336
+open files
+188960.0
+map field
+mapped
+save output
+finished day 1376
+3.581298589706421
+open files
+189040.0
+map field
+mapped
+save output
+finished day 1377
+11.48889708518982
+open files
+189120.0
+map field
+mapped
+save output
+finished day 1378
+2.4552505016326904
+open files
+189200.0
+map field
+mapped
+save output
+finished day 1379
+2.7800211906433105
+open files
+189280.0
+map field
+mapped
+save output
+finished day 1380
+2.5050015449523926
+open files
+189360.0
+map field
+mapped
+save output
+finished day 1381
+2.57722806930542
+open files
+189440.0
+map field
+mapped
+save output
+finished day 1382
+2.0362300872802734
+open files
+189520.0
+map field
+mapped
+save output
+finished day 1383
+2.3040711879730225
+open files
+189600.0
+map field
+mapped
+save output
+finished day 1384
+2.182042121887207
+open files
+189680.0
+map field
+mapped
+save output
+finished day 1385
+2.1424593925476074
+open files
+189760.0
+map field
+mapped
+save output
+finished day 1386
+2.9498937129974365
+open files
+189840.0
+map field
+mapped
+save output
+finished day 1387
+2.332521677017212
+open files
+189920.0
+map field
+mapped
+save output
+finished day 1388
+2.118140459060669
+open files
+190000.0
+map field
+mapped
+save output
+finished day 1389
+2.1920621395111084
+open files
+190080.0
+map field
+mapped
+save output
+finished day 1390
+2.6622462272644043
+open files
+190160.0
+map field
+mapped
+save output
+finished day 1391
+2.17545747756958
+open files
+190240.0
+map field
+mapped
+save output
+finished day 1392
+2.978916883468628
+open files
+190320.0
+map field
+mapped
+save output
+finished day 1393
+5.928718328475952
+open files
+190400.0
+map field
+mapped
+save output
+finished day 1394
+3.5450940132141113
+open files
+190480.0
+map field
+mapped
+save output
+finished day 1395
+3.9060215950012207
+open files
+190560.0
+map field
+mapped
+save output
+finished day 1396
+3.239323854446411
+open files
+190640.0
+map field
+mapped
+save output
+finished day 1397
+2.1384921073913574
+open files
+190720.0
+map field
+mapped
+save output
+finished day 1398
+2.596275568008423
+open files
+190800.0
+map field
+mapped
+save output
+finished day 1399
+2.256298065185547
+open files
+190880.0
+map field
+mapped
+save output
+finished day 1400
+3.0155837535858154
+open files
+190960.0
+map field
+mapped
+save output
+finished day 1401
+2.5933594703674316
+open files
+191040.0
+map field
+mapped
+save output
+finished day 1402
+2.9777565002441406
+open files
+191120.0
+map field
+mapped
+save output
+finished day 1403
+9.448681831359863
+open files
+191200.0
+map field
+mapped
+save output
+finished day 1404
+2.6968319416046143
+open files
+191280.0
+map field
+mapped
+save output
+finished day 1405
+2.951117992401123
+open files
+191360.0
+map field
+mapped
+save output
+finished day 1406
+5.683944463729858
+open files
+191440.0
+map field
+mapped
+save output
+finished day 1407
+2.947371006011963
+open files
+191520.0
+map field
+mapped
+save output
+finished day 1408
+2.623852491378784
+open files
+191600.0
+map field
+mapped
+save output
+finished day 1409
+2.224501848220825
+open files
+191680.0
+map field
+mapped
+save output
+finished day 1410
+2.2425026893615723
+open files
+191760.0
+map field
+mapped
+save output
+finished day 1411
+3.2504844665527344
+open files
+191840.0
+map field
+mapped
+save output
+finished day 1412
+2.270853281021118
+open files
+191920.0
+map field
+mapped
+save output
+finished day 1413
+3.1454274654388428
+open files
+192000.0
+map field
+mapped
+save output
+finished day 1414
+2.6876957416534424
+open files
+192080.0
+map field
+mapped
+save output
+finished day 1415
+6.367063283920288
+open files
+192160.0
+map field
+mapped
+save output
+finished day 1416
+3.6183366775512695
+open files
+192240.0
+map field
+mapped
+save output
+finished day 1417
+9.079704761505127
+open files
+192320.0
+map field
+mapped
+save output
+finished day 1418
+3.764220952987671
+open files
+192400.0
+map field
+mapped
+save output
+finished day 1419
+2.491790533065796
+open files
+192480.0
+map field
+mapped
+save output
+finished day 1420
+2.4516191482543945
+open files
+192560.0
+map field
+mapped
+save output
+finished day 1421
+2.713495969772339
+open files
+192640.0
+map field
+mapped
+save output
+finished day 1422
+2.429063320159912
+open files
+192720.0
+map field
+mapped
+save output
+finished day 1423
+2.435152292251587
+open files
+192800.0
+map field
+mapped
+save output
+finished day 1424
+2.5845048427581787
+open files
+192880.0
+map field
+mapped
+save output
+finished day 1425
+5.082801580429077
+open files
+192960.0
+map field
+mapped
+save output
+finished day 1426
+3.820312738418579
+open files
+193040.0
+map field
+mapped
+save output
+finished day 1427
+2.7286839485168457
+open files
+193120.0
+map field
+mapped
+save output
+finished day 1428
+2.7782561779022217
+open files
+193200.0
+map field
+mapped
+save output
+finished day 1429
+2.6076881885528564
+open files
+193280.0
+map field
+mapped
+save output
+finished day 1430
+2.52465558052063
+open files
+193360.0
+map field
+mapped
+save output
+finished day 1431
+2.7353403568267822
+open files
+193440.0
+map field
+mapped
+save output
+finished day 1432
+2.2597217559814453
+open files
+193520.0
+map field
+mapped
+save output
+finished day 1433
+2.5367980003356934
+open files
+193600.0
+map field
+mapped
+save output
+finished day 1434
+9.57598066329956
+open files
+193680.0
+map field
+mapped
+save output
+finished day 1435
+3.2833573818206787
+open files
+193760.0
+map field
+mapped
+save output
+finished day 1436
+2.528759241104126
+open files
+193840.0
+map field
+mapped
+save output
+finished day 1437
+2.456491708755493
+open files
+193920.0
+map field
+mapped
+save output
+finished day 1438
+2.2439374923706055
+open files
+194000.0
+map field
+mapped
+save output
+finished day 1439
+2.378814220428467
+open files
+194080.0
+map field
+mapped
+save output
+finished day 1440
+2.265049934387207
+open files
+194160.0
+map field
+mapped
+save output
+finished day 1441
+2.431629180908203
+open files
+194240.0
+map field
+mapped
+save output
+finished day 1442
+2.4639203548431396
+open files
+194320.0
+map field
+mapped
+save output
+finished day 1443
+2.2668442726135254
+open files
+194400.0
+map field
+mapped
+save output
+finished day 1444
+2.095337390899658
+open files
+194480.0
+map field
+mapped
+save output
+finished day 1445
+3.106611490249634
+open files
+194560.0
+map field
+mapped
+save output
+finished day 1446
+3.1802053451538086
+open files
+194640.0
+map field
+mapped
+save output
+finished day 1447
+2.706132411956787
+open files
+194720.0
+map field
+mapped
+save output
+finished day 1448
+2.30725359916687
+open files
+194800.0
+map field
+mapped
+save output
+finished day 1449
+3.1076056957244873
+open files
+194880.0
+map field
+mapped
+save output
+finished day 1450
+4.408520221710205
+open files
+194960.0
+map field
+mapped
+save output
+finished day 1451
+3.4645533561706543
+open files
+195040.0
+map field
+mapped
+save output
+finished day 1452
+3.5182394981384277
+open files
+195120.0
+map field
+mapped
+save output
+finished day 1453
+2.552980422973633
+open files
+195200.0
+map field
+mapped
+save output
+finished day 1454
+2.4749250411987305
+open files
+195280.0
+map field
+mapped
+save output
+finished day 1455
+2.1396219730377197
+open files
+195360.0
+map field
+mapped
+save output
+finished day 1456
+2.1226308345794678
+open files
+195440.0
+map field
+mapped
+save output
+finished day 1457
+3.158447027206421
+open files
+195520.0
+map field
+mapped
+save output
+finished day 1458
+3.386906623840332
+open files
+195600.0
+map field
+mapped
+save output
+finished day 1459
+3.214447259902954
+open files
+195680.0
+map field
+mapped
+save output
+finished day 1460
+4.892583608627319
+open files
+195760.0
+map field
+mapped
+save output
+finished day 1461
+4.790175437927246
+open files
+195840.0
+map field
+mapped
+save output
+finished day 1462
+3.698610305786133
+open files
+195920.0
+map field
+mapped
+save output
+finished day 1463
+3.0473673343658447
+open files
+196000.0
+map field
+mapped
+save output
+finished day 1464
+2.1911420822143555
+open files
+196080.0
+map field
+mapped
+save output
+finished day 1465
+2.087977647781372
+open files
+196160.0
+map field
+mapped
+save output
+finished day 1466
+2.9246644973754883
+open files
+196240.0
+map field
+mapped
+save output
+finished day 1467
+3.0890567302703857
+open files
+196320.0
+map field
+mapped
+save output
+finished day 1468
+2.099548101425171
+open files
+196400.0
+map field
+mapped
+save output
+finished day 1469
+2.8169808387756348
+open files
+196480.0
+map field
+mapped
+save output
+finished day 1470
+2.8396692276000977
+open files
+196560.0
+map field
+mapped
+save output
+finished day 1471
+2.4442195892333984
+open files
+196640.0
+map field
+mapped
+save output
+finished day 1472
+2.4845762252807617
+open files
+196720.0
+map field
+mapped
+save output
+finished day 1473
+2.490185499191284
+open files
+196800.0
+map field
+mapped
+save output
+finished day 1474
+2.141484260559082
+open files
+196880.0
+map field
+mapped
+save output
+finished day 1475
+3.1705408096313477
+open files
+196960.0
+map field
+mapped
+save output
+finished day 1476
+2.820894718170166
+open files
+197040.0
+map field
+mapped
+save output
+finished day 1477
+2.081848382949829
+open files
+197120.0
+map field
+mapped
+save output
+finished day 1478
+2.4748611450195312
+open files
+197200.0
+map field
+mapped
+save output
+finished day 1479
+2.7833731174468994
+open files
+197280.0
+map field
+mapped
+save output
+finished day 1480
+2.8389339447021484
+open files
+197360.0
+map field
+mapped
+save output
+finished day 1481
+2.4423069953918457
+open files
+197440.0
+map field
+mapped
+save output
+finished day 1482
+2.5024895668029785
+open files
+197520.0
+map field
+mapped
+save output
+finished day 1483
+3.847831964492798
+open files
+197600.0
+map field
+mapped
+save output
+finished day 1484
+2.2584471702575684
+open files
+197680.0
+map field
+mapped
+save output
+finished day 1485
+2.1892027854919434
+open files
+197760.0
+map field
+mapped
+save output
+finished day 1486
+2.494539260864258
+open files
+197840.0
+map field
+mapped
+save output
+finished day 1487
+3.1370437145233154
+open files
+197920.0
+map field
+mapped
+save output
+finished day 1488
+2.4809744358062744
+open files
+198000.0
+map field
+mapped
+save output
+finished day 1489
+2.143193483352661
+open files
+198080.0
+map field
+mapped
+save output
+finished day 1490
+2.090832233428955
+open files
+198160.0
+map field
+mapped
+save output
+finished day 1491
+2.9431211948394775
+open files
+198240.0
+map field
+mapped
+save output
+finished day 1492
+2.837639093399048
+open files
+198320.0
+map field
+mapped
+save output
+finished day 1493
+3.1480162143707275
+open files
+198400.0
+map field
+mapped
+save output
+finished day 1494
+2.848681926727295
+open files
+198480.0
+map field
+mapped
+save output
+finished day 1495
+2.217773199081421
+open files
+198560.0
+map field
+mapped
+save output
+finished day 1496
+3.7759597301483154
+open files
+198640.0
+map field
+mapped
+save output
+finished day 1497
+2.3428239822387695
+open files
+198720.0
+map field
+mapped
+save output
+finished day 1498
+2.421372890472412
+open files
+198800.0
+map field
+mapped
+save output
+finished day 1499
+2.4792778491973877
+open files
+198880.0
+map field
+mapped
+save output
+finished day 1500
+2.737830638885498
+open files
+198960.0
+map field
+mapped
+save output
+finished day 1501
+2.1322438716888428
+open files
+199040.0
+map field
+mapped
+save output
+finished day 1502
+2.184359073638916
+open files
+199120.0
+map field
+mapped
+save output
+finished day 1503
+2.423976182937622
+open files
+199200.0
+map field
+mapped
+save output
+finished day 1504
+2.213965654373169
+open files
+199280.0
+map field
+mapped
+save output
+finished day 1505
+2.6916935443878174
+open files
+199360.0
+map field
+mapped
+save output
+finished day 1506
+2.223982334136963
+open files
+199440.0
+map field
+mapped
+save output
+finished day 1507
+2.8359880447387695
+open files
+199520.0
+map field
+mapped
+save output
+finished day 1508
+2.364853858947754
+open files
+199600.0
+map field
+mapped
+save output
+finished day 1509
+3.481062889099121
+open files
+199680.0
+map field
+mapped
+save output
+finished day 1510
+2.0312857627868652
+open files
+199760.0
+map field
+mapped
+save output
+finished day 1511
+3.272305965423584
+open files
+199840.0
+map field
+mapped
+save output
+finished day 1512
+1.9490487575531006
+open files
+199920.0
+map field
+mapped
+save output
+finished day 1513
+2.332469940185547
+open files
+200000.0
+map field
+mapped
+save output
+finished day 1514
+4.679445505142212
+open files
+200080.0
+map field
+mapped
+save output
+finished day 1515
+3.4948060512542725
+open files
+200160.0
+map field
+mapped
+save output
+finished day 1516
+2.3032517433166504
+open files
+200240.0
+map field
+mapped
+save output
+finished day 1517
+2.98551869392395
+open files
+200320.0
+map field
+mapped
+save output
+finished day 1518
+2.7290894985198975
+open files
+200400.0
+map field
+mapped
+save output
+finished day 1519
+2.0199170112609863
+open files
+200480.0
+map field
+mapped
+save output
+finished day 1520
+2.276543378829956
+open files
+200560.0
+map field
+mapped
+save output
+finished day 1521
+2.4419121742248535
+open files
+200640.0
+map field
+mapped
+save output
+finished day 1522
+3.263380765914917
+open files
+200720.0
+map field
+mapped
+save output
+finished day 1523
+3.000992774963379
+open files
+200800.0
+map field
+mapped
+save output
+finished day 1524
+2.8446383476257324
+open files
+200880.0
+map field
+mapped
+save output
+finished day 1525
+3.954458475112915
+open files
+200960.0
+map field
+mapped
+save output
+finished day 1526
+2.3165340423583984
+open files
+201040.0
+map field
+mapped
+save output
+finished day 1527
+3.1006245613098145
+open files
+201120.0
+map field
+mapped
+save output
+finished day 1528
+2.4658401012420654
+open files
+201200.0
+map field
+mapped
+save output
+finished day 1529
+4.005680799484253
+open files
+201280.0
+map field
+mapped
+save output
+finished day 1530
+3.3520774841308594
+open files
+201360.0
+map field
+mapped
+save output
+finished day 1531
+2.774103879928589
+open files
+201440.0
+map field
+mapped
+save output
+finished day 1532
+3.083192825317383
+open files
+201520.0
+map field
+mapped
+save output
+finished day 1533
+5.7971107959747314
+open files
+201600.0
+map field
+mapped
+save output
+finished day 1534
+2.4713656902313232
+open files
+201680.0
+map field
+mapped
+save output
+finished day 1535
+2.742581844329834
+open files
+201760.0
+map field
+mapped
+save output
+finished day 1536
+2.9269373416900635
+open files
+201840.0
+map field
+mapped
+save output
+finished day 1537
+2.491915464401245
+open files
+201920.0
+map field
+mapped
+save output
+finished day 1538
+2.4288742542266846
+open files
+202000.0
+map field
+mapped
+save output
+finished day 1539
+2.730675458908081
+open files
+202080.0
+=>> PBS: job killed: walltime 7228 exceeded limit 7200
+
+____________________________________________________________________
+Job Resource Usage Summary for 12277723.pbspl1.nas.nasa.gov
+
+    CPU Time Used            : 00:39:56
+    Real Memory Used         : 1365828kb
+    Walltime Used            : 02:00:38
+    Exit Status              : 271
+
+    Number of CPUs Requested : 16
+    Walltime Requested       : 02:00:00
+
+    Execution Queue          : devel
+    Charged To               : s1353
+
+    Job Stopped              : Thu Dec  2 14:17:17 2021
+____________________________________________________________________

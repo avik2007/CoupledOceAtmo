@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # you can use the schedule_file as suggested in HECC support
     client = Client('127.0.0.1:8786')
     #client = Client(scheduler_file='/sched.json')
-    #from MIT_xr_cwt_dateloc_fol import MIT_xr_date_location_fol
+    from MIT_xr_cwt_dateloc_fol import MIT_xr_date_location_fol
     print('Hector script has been loaded')
     print('Output directory is going to be an input parameter')
     

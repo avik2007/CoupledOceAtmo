@@ -1,0 +1,38 @@
+Job 12268247.pbspl1.nas.nasa.gov started on Wed Dec 01 16:24:58 PST 2021
+The job requested the following resources:
+    ncpus=16
+    place=scatter:excl
+    walltime=02:00:00
+
+PBS set the following environment variables:
+        FORT_BUFFERED = 1
+                   TZ = PST8PDT
+
+On r147i0n2:
+creating scheduler directory
+as a script
+Hola, dask has been set up!!!
+Hector script has been loaded
+Output directory is going to be an input parameter
+Date and location has been set
+Traceback (most recent call last):
+  File "script15_multicore_3month_test_new.py", line 89, in <module>
+    MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+NameError: name 'MIT_xr_date_location_fol' is not defined
+
+____________________________________________________________________
+Job Resource Usage Summary for 12268247.pbspl1.nas.nasa.gov
+
+    CPU Time Used            : 00:00:16
+    Real Memory Used         : 326436kb
+    Walltime Used            : 00:01:19
+    Exit Status              : 1
+
+    Number of CPUs Requested : 16
+    Walltime Requested       : 02:00:00
+
+    Execution Queue          : devel
+    Charged To               : s1353
+
+    Job Stopped              : Wed Dec  1 16:26:40 2021
+____________________________________________________________________

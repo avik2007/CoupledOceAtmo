@@ -17,7 +17,7 @@ def getLevelThicknesses(Tv,P):
     return levels
 
 #calculates heights of the levels
-def getLevelHieghts(levels);
+def getLevelHeights(levels);
     height = levels
     for index in range(1,levels.levs.size):
         height += levels.shift(levs=-1*index,fill_value=0)
@@ -25,18 +25,26 @@ def getLevelHieghts(levels);
     height = xr.concat([height,zeroslayer],dim='levs')
     return height
 
-#get the thickness of a level
+#get the thickness of a level at a certain lat and lon
 def getLevelThickness(levels,timesel,latsel,lonsel,levsel):
     return levels.sel(time=timesel, lats=latsel,lons=lonsel, levs=levsel)
 
+#get the thickness of a level over a range of lats and lons
+def getLevelThicknesses(levels,timesel, levsel):
+    return levels.sel(time=timesel, levs=levsel)
+
 #get the height of a level
 def getLevelHeight(heights,timesel, latsel,lonsel,levsel):
-   return heights.sel(time=teimsel,lats=latsel,lons=lonsel,levs=levsel)
+    return heights.sel(time=teimsel,lats=latsel,lons=lonsel,levs=levsel)
+
+#get the height of a level over a range of lats and lons
+def getLevelHeights(heights,timsel,levsel):
+    return heights.sel(time=timesel, levs=levsel) 
 
 #given a height, the function will tell you what level that height is in
 def getLevel(heights, timesel,latsel,lonsel,height):
     hs = heights.sel(time=timesel, lats = latsel, lons=lonsel)
-    zdim = hs.levs.size - 1 - np.max(np.nonzero(np.where(hs > height,hs,0)))
+    zdim = xr.where(hs < height, 1, 0).sum(dim='levs')
     return zdim
 
 # return thick weighted vector 
