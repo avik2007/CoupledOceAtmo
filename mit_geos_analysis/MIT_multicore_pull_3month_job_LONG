@@ -1,8 +1,6 @@
 #!/bin/bash
-#PBS -q devel
 #PBS -l select=16:mpiprocs=1:model=bro
-#PBS -l walltime=2:00:00
-#PBS -j oe
+#PBS -l walltime=72:00:00
 #PBS -N dask_test_d
 
 #set environment
@@ -35,10 +33,10 @@ cores=`/usr/local/bin/nas_info --cores`
 #mem_avail=`grep MemTotal /proc/meminfo | awk '{print $2}'`
 #cores=$((mem_avail / mem_per))
 
-mkdir ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID}
-dask-ssh --hostfile $PBS_NODEFILE --local-directory ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID} --nthreads 1 --nprocs ${cores} --remote-python `which python` --ssh-private-key ~/.ssh/dask_id_rsa &
+mkdir /u/amondal/dask-workers-${PBS_JOBID}
+dask-ssh --hostfile $PBS_NODEFILE --local-directory /u/amondal/dask-workers-${PBS_JOBID} --nthreads 1 --nprocs ${cores} --remote-python `which python` --ssh-private-key ~/.ssh/dask_id_rsa &
 sleep 60
 python script15_multicore_3month_test_new.py
-/bin/rm -rf ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID}
+/bin/rm -rf $/u/amondal/dask-workers-${PBS_JOBID}
 
 #end of script

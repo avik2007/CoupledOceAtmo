@@ -36,7 +36,7 @@ cores=`/usr/local/bin/nas_info --cores`
 #cores=$((mem_avail / mem_per))
 
 mkdir ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID}
-dask-ssh --hostfile $PBS_NODEFILE --local-directory ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID} --nthreads 1 --nprocs ${cores} --remote-python `which python` --ssh-private-key ~/.ssh/dask_id_rsa &
+dask-ssh --hostfile $PBS_NODEFILE --local-directory ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID} --nthreads ${cores} --nprocs 1 --remote-python `which python` --ssh-private-key ~/.ssh/dask_id_rsa &
 sleep 60
 python script15_multicore_3month_test_new.py
 /bin/rm -rf ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID}

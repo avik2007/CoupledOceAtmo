@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # you can use the schedule_file as suggested in HECC support
     #client = Client(cluster)
     #client = Client(scheduler_file='/sched.json')
-    #from MIT_xr_cwt_dateloc_fol import MIT_xr_date_location_fol
+    from MIT_xr_cwt_dateloc_fol import MIT_xr_date_location_fol
     print('Hector script has been loaded')
     print('Output directory is going to be an input parameter')
     
@@ -68,8 +68,8 @@ if __name__ == "__main__":
     """
     Pick out Kuroshio and or Gulf Stream for this once Patrice gets back to you
     """
-    lat1 = 35
-    lat2 = 50
+    lat1 = 30
+    lat2 = 42
     latinc =0.04
     lon1 = -60 
     lon2 = -45
@@ -80,13 +80,13 @@ if __name__ == "__main__":
     levels=0  #### <<<<<<<====== vertical levels
     ffilter=0 ## <<== don't move
     fsize=0   ## <<==== don't mode
-    fol = '/nobackup/amondal/NCData/20211103_multicoretest_3month/'
+    fol = '/nobackup/amondal/NCData/20211103_multicoretest_3month_noland/'
     #MIT_xr_date_location_fol('KPPhbl',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
     #MIT_xr_date_location_fol('oceQnet',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
     #MIT_xr_date_location_fol('oceQsw',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
     #MIT_xr_date_location_fol('Zeta',levels,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    for level in range(6, 35):
-        MIT_xr_dateloc_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+    for level in range(25, 35):
+        MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
         MIT_xr_date_location_fol('HAdv',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
         #MIT_xr_date_location_fol('U',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
         #MIT_xr_date_location_fol('V',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
