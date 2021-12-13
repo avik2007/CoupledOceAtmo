@@ -1,0 +1,14 @@
+Exception in thread Thread-2 (async_ssh):
+Traceback (most recent call last):
+  File "/nobackup/amondal/.conda/envs/xmitgcm4/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "/nobackup/amondal/.conda/envs/xmitgcm4/lib/python3.10/threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nobackup/amondal/.conda/envs/xmitgcm4/lib/python3.10/site-packages/distributed/deploy/old_ssh.py", line 194, in async_ssh
+    channel.send(b"\x03")  # Ctrl-C
+  File "/nobackup/amondal/.conda/envs/xmitgcm4/lib/python3.10/site-packages/paramiko/channel.py", line 801, in send
+    return self._send(s, m)
+  File "/nobackup/amondal/.conda/envs/xmitgcm4/lib/python3.10/site-packages/paramiko/channel.py", line 1198, in _send
+    raise socket.error("Socket is closed")
+OSError: Socket is closed
+distributed.client - WARNING - Couldn't gather 7 keys, rescheduling {"('add-1bca48287839561653af9331f09b5777', 0, 4, 0, 0)": ('tcp://10.150.38.14:44161',), "('add-1bca48287839561653af9331f09b5777', 0, 4, 1, 0)": ('tcp://10.150.38.14:44161',), "('add-1bca48287839561653af9331f09b5777', 0, 4, 0, 1)": ('tcp://10.150.38.14:44161',), "('add-1bca48287839561653af9331f09b5777', 0, 11, 2, 1)": ('tcp://10.150.38.132:33919',), "('add-1bca48287839561653af9331f09b5777', 0, 4, 1, 1)": ('tcp://10.150.38.14:44161',), "('add-1bca48287839561653af9331f09b5777', 0, 11, 1, 1)": ('tcp://10.150.38.132:33919',), "('add-1bca48287839561653af9331f09b5777', 0, 11, 1, 0)": ('tcp://10.150.38.132:33919',)}

@@ -31,9 +31,10 @@ import pylab as plt
 if __name__ == "__main__":
     # execute only if run as a script
     print('as a script')
+    from dask_jobqueue import PBSCluster
     from dask.distributed import Client
     #client = Client(memory_limit='20GB',n_workers = 5, threads_per_worker=1)
-    client = Client(memory_limit='50GB',n_workers = 25, threads_per_worker=1)
+    client = Client('127.0.0.1:8786')
     #client
     print('Hola, dask has been set up!!!')
 
@@ -75,10 +76,10 @@ if __name__ == "__main__":
     fsize=0   ## <<==== don't mode
     fol = '/nobackup/amondal/NCData/20211116_QTprime_openocean_3month/'
     MIT_xr_date_location_fol('KPPhbl',0,ffilter,fsize,y1,m1,25,20,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    for level in range(31, 33):
+    for level in range(0,26):
         MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
         MIT_xr_date_location_fol('W',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    for level in range(26, 30):
+    for level in range(35,40):
         MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
         MIT_xr_date_location_fol('W',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
         

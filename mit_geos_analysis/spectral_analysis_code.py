@@ -70,6 +70,6 @@ def isotropize(spectra, idims, ndim):
             check = (E[fkr].sum() * kr[i] * dth)
             #print(len(check))
             ispec[index, i] = check
-    isospectra = xr.DataArray(data=ispec, dims = [ndim, 'kr'], coords = [t, kr], name='Isotropic Spectra')
+    isospectra = xr.DataArray(data=ispec, dims = [ndim, 'kr'], coords = [t, kr])
     #now you need to put it back together in a convenient xarray type form
     return isospectra

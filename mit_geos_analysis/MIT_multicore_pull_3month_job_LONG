@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -l select=16:mpiprocs=1:model=bro
+#PBS -l select=30:mpiprocs=1:model=bro
 #PBS -l walltime=72:00:00
 #PBS -N dask_test_d
 
