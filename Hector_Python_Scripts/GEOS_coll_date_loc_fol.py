@@ -1,3 +1,6 @@
+import os, glob, sys
+sys.path.append("//nobackup//amondal//Python")
+sys.path.append("//nobackup//amondal//Python//xmitgcm")
 import numpy as np
 import xarray as xr
 from xmitgcm import open_mdsdataset
