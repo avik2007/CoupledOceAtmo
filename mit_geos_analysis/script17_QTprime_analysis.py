@@ -2,12 +2,12 @@ import numpy as np
 import xarray as xr
 import dask.array as da
 import dask_ndfilters
-from xmitgcm import open_mdsdataset
 import os,glob,sys
 sys.path.append("/nobackup/amondal/Python/Hector_Python_Scripts")
+sys.path.append("/nobackup/amondal/xmitgcm/xmitgcm")
+from xmitgcm import open_mdsdataset
 import time as tm
 import xgcm
-import xmitgcm
 import warnings
 warnings.filterwarnings("ignore")
 from datetime import datetime,timedelta
@@ -31,10 +31,10 @@ import pylab as plt
 if __name__ == "__main__":
     # execute only if run as a script
     print('as a script')
-    from dask_jobqueue import PBSCluster
-    from dask.distributed import Client
+    #from dask_jobqueue import PBSCluster
+    #from dask.distributed import Client
     #client = Client(memory_limit='20GB',n_workers = 5, threads_per_worker=1)
-    client = Client('127.0.0.1:8786')
+    #client = Client('127.0.0.1:8786')
     #client
     print('Hola, dask has been set up!!!')
 
@@ -65,8 +65,8 @@ if __name__ == "__main__":
     lat1 = 30
     lat2 = 42
     latinc =0.04
-    lon1 = -65
-    lon2 = -40
+    lon1 = -60
+    lon2 = -45
     loninc = 0.04
     ##############################################################################
     print('Date and location has been set')
@@ -75,13 +75,7 @@ if __name__ == "__main__":
     ffilter=0 ## <<== don't move
     fsize=0   ## <<==== don't mode
     fol = '/nobackup/amondal/NCData/20211116_QTprime_openocean_3month/'
-    MIT_xr_date_location_fol('KPPhbl',0,ffilter,fsize,y1,m1,25,20,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    for level in range(0,26):
-        MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+    MIT_xr_date_location_fol('Theta',45,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+    for level in range(10,50,5):
+        #MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
         MIT_xr_date_location_fol('W',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    for level in range(35,40):
-        MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-        MIT_xr_date_location_fol('W',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-        
-    
-

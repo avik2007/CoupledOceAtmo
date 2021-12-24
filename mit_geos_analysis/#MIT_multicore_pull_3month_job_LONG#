@@ -1,0 +1,42 @@
+#!/bin/bash
+#PBS -l select=25:mpiprocs=1:model=ivy
+#PBS -l walltime=72:00:00
+#PBS -N qzupdate
+
+#set environment
+module use /swbuild/analytix/tools/modulefiles
+module load miniconda3/v4
+source activate tf1_14
+
+cd $PBS_O_WORKDIR
+
+source /nobackup/amondal/activate_pyenv.sh
+
+
+#clear and create directory for dask scheduler
+if [ -d dask_sch ]
+then
+    echo "removing old scheduler directory"
+    rm -r dask_sch
+    echo "creating new scheduler directory"
+    mkdir dask_sch
+else
+    echo "creating scheduler directory"
+    mkdir dask_sch
+fi
+
+# for using all the core on a socket
+cores=`/usr/local/bin/nas_info --cores`
+
+# for using N cores based on each thread needing a certain memory size (in units of Bytes)
+#mem_per=150000000
+#mem_avail=`grep MemTotal /proc/meminfo | awk '{print $2}'`
+#cores=$((mem_avail / mem_per))
+
+mkdir /u/amondal/dask-workers-${PBS_JOBID}
+dask-ssh --hostfile $PBS_NODEFILE --local-directory /u/amondal/dask-workers-${PBS_JOBID} --nthreads 1 --nprocs ${cores} --remote-python `which python` --ssh-private-key ~/.ssh/dask_id_rsa &
+sleep 60
+python script15_multicore_3month_test_new.py
+/bin/rm -rf $/u/amondal/dask-workers-${PBS_JOBID}
+
+#end of script

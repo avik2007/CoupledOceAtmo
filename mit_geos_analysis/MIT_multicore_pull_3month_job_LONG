@@ -1,7 +1,7 @@
 #!/bin/bash
-#PBS -l select=30:mpiprocs=1:model=bro
+#PBS -l select=25:mpiprocs=1:model=has
 #PBS -l walltime=72:00:00
-#PBS -N dask_test_d
+#PBS -N qzupdate
 
 #set environment
 module use /swbuild/analytix/tools/modulefiles

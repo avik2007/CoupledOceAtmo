@@ -1,6 +1,7 @@
 #!/bin/bash
-#PBS -l select=30:mpiprocs=1:model=bro
-#PBS -l walltime=72:00:00
+#PBS -q devel
+#PBS -l select=5:mpiprocs=5:model=has
+#PBS -l walltime=2:00:00
 
 
 #set environment

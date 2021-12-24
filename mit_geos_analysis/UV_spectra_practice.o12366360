@@ -1,0 +1,30 @@
+Job 12366360.pbspl1.nas.nasa.gov started on Tue Dec 21 09:16:52 PST 2021
+The job requested the following resources:
+    ncpus=5
+    place=scatter:excl
+    walltime=02:00:00
+
+PBS set the following environment variables:
+        FORT_BUFFERED = 1
+                   TZ = PST8PDT
+
+On r591i3n8:
+removing old scheduler directory
+creating new scheduler directory
+
+____________________________________________________________________
+Job Resource Usage Summary for 12366360.pbspl1.nas.nasa.gov
+
+    CPU Time Used            : 00:00:02
+    Real Memory Used         : 3944kb
+    Walltime Used            : 00:01:16
+    Exit Status              : 0
+
+    Number of CPUs Requested : 5
+    Walltime Requested       : 02:00:00
+
+    Execution Queue          : devel
+    Charged To               : s1353
+
+    Job Stopped              : Tue Dec 21 09:18:21 2021
+____________________________________________________________________

@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -l select=1:ncpus=16:model=rom_ait
+#PBS -l walltime=10:00:00
+#PBS -N qzupdate
+
+#set environment
+
+#####cd $PBS_O_WORKDIR
+
+source /nobackup/amondal/activate_pyenv.sh
+
+
+python script18_repull_3month.py
+
+
+#end of script

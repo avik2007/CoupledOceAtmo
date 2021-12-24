@@ -12,7 +12,7 @@ def getMITNCDataSet(fol, VAR, firstlevel, finallevel):
     vdirfiles =[]
     for subindex in range(0,len(vfiles)):
         vdirfiles.append(vardir+vfiles[subindex])
-    vdirset = xr.open_mfdataset(vdirfiles,chunks={'latitude':1, 'longitude':1}, concat_dim='time', parallel=True, combine='nested')
+    vdirset = xr.open_mfdataset(vdirfiles,chunks={'latitude':10, 'longitude':10}, concat_dim='time', parallel=True, combine='nested')
     print('Time combined dataset has been opened.')
     vfullset = vdirset
     print('I concatenated the first Z-layer')
