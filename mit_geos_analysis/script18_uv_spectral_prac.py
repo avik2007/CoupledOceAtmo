@@ -63,10 +63,10 @@ if __name__ == "__main__":
     """
     Pick out Kuroshio and or Gulf Stream for this once Patrice gets back to you
     """
-    lat1 = 30
+    lat1 = 24
     lat2 = 42
     latinc =0.04
-    lon1 = -64 
+    lon1 = -68 
     lon2 = -40
     loninc = 0.04
     ##############################################################################

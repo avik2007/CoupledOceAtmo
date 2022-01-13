@@ -1,4 +1,4 @@
-Bimport numpy as np
+import numpy as np
 import xarray as xr
 import dask.array as da
 import dask_ndfilters
@@ -68,11 +68,11 @@ if __name__ == "__main__":
     """
     Pick out Kuroshio and or Gulf Stream for this once Patrice gets back to you
     """
-    lat1 = 30
-    lat2 = 42
+    lat1 = 23
+    lat2 = 43
     latinc =0.04
-    lon1 = -60 
-    lon2 = -45
+    lon1 = -67 
+    lon2 = -47
     loninc = 0.04
     ##############################################################################
     print('Date and location has been set')

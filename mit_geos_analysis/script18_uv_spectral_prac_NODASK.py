@@ -63,11 +63,11 @@ if __name__ == "__main__":
     """
     Pick out Kuroshio and or Gulf Stream for this once Patrice gets back to you
     """
-    lat1 = 30
+    lat1 = 22
     lat2 = 42
     latinc =0.04
-    lon1 = -60.04 
-    lon2 = -45
+    lon1 = -62 
+    lon2 = -42
     loninc = 0.04
     ##############################################################################
     print('Date and location has been set')

@@ -50,7 +50,7 @@ if __name__ == "__main__":
     y2 = 2020
     # This is a real big view of the map for not too many times just for verification
     m1 = 3
-    m2 = 6
+    m2 = 9
     d1 = 1
     d2 = 1
     h1 = 0
@@ -62,11 +62,11 @@ if __name__ == "__main__":
     """
     Pick out Kuroshio and or Gulf Stream for this once Patrice gets back to you
     """
-    lat1 = 30
-    lat2 = 42
+    lat1 = 23
+    lat2 = 43
     latinc =0.04
-    lon1 = -60
-    lon2 = -45
+    lon1 = -67
+    lon2 = -47
     loninc = 0.04
     ##############################################################################
     print('Date and location has been set')
@@ -74,8 +74,10 @@ if __name__ == "__main__":
     levels=0  #### <<<<<<<====== vertical levels
     ffilter=0 ## <<== don't move
     fsize=0   ## <<==== don't mode
-    fol = '/nobackup/amondal/NCData/20211116_QTprime_openocean_3month/'
-    MIT_xr_date_location_fol('Theta',45,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+    fol = '/nobackup/amondal/NCData/20211116_QTprime_openocean_3month_bigger_region/'
+    #MIT_xr_date_location_fol('Theta',0,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+    
     for level in range(10,50,5):
-        #MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+        MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
         MIT_xr_date_location_fol('W',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+   
