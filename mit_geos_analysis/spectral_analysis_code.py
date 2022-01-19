@@ -81,7 +81,7 @@ def isotropize(spectra, idims, ndim):
             check = (E[fkr].sum() * kr[i] * dth)
             #print(len(check))
             ispec[index, i] = check
-    isospectra = xr.DataArray(data=ispec, dims = [ndim, 'kr'], coords = [t, kr])
+    isospectra = xr.DataArray(data=ispec, dims = [ndim, 'freq_r'], coords = [t, kr])
     #now you need to put it back together in a convenient xarray type form
     return isospectra
 
@@ -149,6 +149,17 @@ def _e1e2(navlon,navlat):
 
     return e1,e2
 
+def movingWindowAverage(xarraydata, dim, windowsize):
+    chunks = xarraydata.chunk({"xdim": 100, "ydim": 100})
+    xavg = chunks / windowsize
+    for index in range(1,windowsize):
+        if (dim =='time'):
+            xavg += chunks.shift(time=-1*index, fill_value = 0) / windowsize
+            # add other potential dimensions. xarray.shift doesn't allow us to pick dimensions in an easier way
+        else:
+            xavg += xavg
+        
+    return xavg[0:-1*windowsize]
 """
 Calculates isotropic cross spectra of quantities A and B with 3D coordinates (time, lat, lon or time, x, y)
 A - input xarray DataArray
@@ -160,6 +171,7 @@ tdim = dim that you do not isotropize over (one time coordinate)
 detrendVal = equivalent to "detrend_type" in xrft.detrend function
 fftwindow = type of window you want to use on A and B in space and time
 segmethod = either welch's method or bartlett's method
+"""
 """
 def isotropic_3d_cospectrum(A, B, reg = 'regularize',timeunit = 'hours', lengthunit = 'km', idims, tdim, detrendVal = 'linear', fftwindow = 'tukey', segmethod = 'bartlett', segnumber)
     import xrft
@@ -191,8 +203,8 @@ def isotropic_3d_cospectrum(A, B, reg = 'regularize',timeunit = 'hours', lengthu
     if ( segmethod = 'bartlett' ):
         An = Ahat_kl[tdim].size
         Bn = Bhat_kl[tdim].size
-        Ahat_kl_om = xrft.xrft.fft(Ahat_kl.chunk({'time':int(An / segnumber)}), dim = tdim, real_dim = tdim, window = fftwindow, window_correction = True, true_amplitude = True, truncate = True, chunks_to_segments=True).compute()
-        Bhat_kl_om = xrft.xrft.fft(Bhat_kl.chunk({'time':int(Bn / segnumber)}), dim = tdim, real_dim = tdim, window = fftwindow, window_correction = True, true_amplitude = True, truncate = True, chunks_to_segments=True).compute()
+        Ahat_kl_om = xrft.xrft.fft(Ahat_kl.chunk({'time':int(An / segnumber)}), dim = tdim, real_dim = tdim, window = fftwindow, window_correction = True, true_amplitude = True, chunks_to_segments=True).compute()
+        Bhat_kl_om = xrft.xrft.fft(Bhat_kl.chunk({'time':int(Bn / segnumber)}), dim = tdim, real_dim = tdim, window = fftwindow, window_correction = True, true_amplitude = True, chunks_to_segments=True).compute()
     #else: 
     # segmethod = 'welch' is under development but should become the default segmentation / window of choice
     
@@ -207,3 +219,4 @@ def isotropic_3d_cospectrum(A, B, reg = 'regularize',timeunit = 'hours', lengthu
     #6. Isotropize
     isodims = ["freq_" + d for d in idims]
     ABstar_iso = xrft.xrft.isotropize(ABstar, isodims, truncate = True)
+"""
