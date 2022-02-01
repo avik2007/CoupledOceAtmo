@@ -104,7 +104,8 @@ nt = np.around(it/(iaux),decimals=1)
 for i in range(int(nt)):
       uaux = u[:,:,i*iaux:i*iaux+iaux]
       if i == 0:
-         Eu,k,l,om = wf_spectrum.spec_est3(uaux,dx,dy,dt)      else:
+         Eu,k,l,om = wf_spectrum.spec_est3(uaux,dx,dy,dt)
+      else:
          Eua,_,_,_ = wf_spectrum.spec_est3(uaux,dx,dy,dt)
          Eu = Eu + Eua
 Eu = Eu/nt

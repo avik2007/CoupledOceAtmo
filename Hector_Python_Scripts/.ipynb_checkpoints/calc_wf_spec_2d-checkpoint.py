@@ -56,75 +56,76 @@ def calc_ispec(k,l,E):
     return kr, ispec
 #:::::::::::::::::::::::::::::::::::::::::
 
-
-
 #:::::::::::::::::::::::::::::::::::::::::
-
-"""
-Frequency-Wavenumber spectrum for a scalar quantuty
-
-$\hat{\phi}(k,l,\omega)$ = $F[phi(x,y,t)]$
-"""
-
-#:::::::::::::::::::::::::::::::::::::::::
-## Parameters 
-dx = N   # < =============== spatial interval in 'x'
-dy = M   # < =============== spatial interval in 'y'
-dt = L   # < =============== time interval 
-iaux = (20*24)       # <<<<< ======= size of the chunk to divide the time series
-                     # for instance, a 90 days long (90 x 24 hours = 2160 hours)
-                     # you might divide the series in chunks of 20-days*24-hours
-
-############################################
-## :::: array directy :::::::
-output_directory = 'something' # < =============== change
-output_name = 'something'      # < =============== change
-# load 3D array. Make sure that your matrix is in M(x,y,t) format
-filenameU = 'something'  # < =============== change
-varname = 'something'    # < =============== change
-u = h5py.File(filenameU,'r')
-u = u[varname][:,:,:]
-#u = np.swapaxes(u,0,2)
-#u = np.swapaxes(u,0,1)
+# load 3D array created from matlab script
+prnt = '/nobackup/htorresg/reg/'
+region = 'kuroshio'
+var = 'Etai'
+season = 'winter'
+data = h5py.File(prnt+var+'_'+region+'_dx2km.mat','r')
+#data = np.load(prnt+var+'_'+region+'.npz')
+u = data['eta'][:,:,:]
+u = np.swapaxes(u,0,2)
+u = np.swapaxes(u,0,1)
+del data
+print(u.shape)
 #::::::::::::::::::::::::::::::::::
-print('------- End reading --------')
 
+print('------- End reading ------')
 
-# detrend: space and time
+# ----
+# esta parte es para cortar la matris
+# a una ventana temporal especifica
+#de acuerdo a los indices en la
+# tercera dimension
+# Index:
+# winter: 2665:4825
+# summer: 7033:9217
+u = u[:,:,2665:5945]
+
 u = signal.detrend(u,axis=0,type='linear')
 u = signal.detrend(u,axis=1,type='linear')
 u = signal.detrend(u,axis=2,type='linear')
-print('------- End detrending --------')
+print('------ End detrending ---------')
 
-
-iy,ix,it=u.shape
+#print('small-matrix')
+#print(u.shape)
+#-----------------------
+# Preambule
+iy,ix,it = u.shape
+#print(it,iy,ix)
+iaux = (20*24)#(60*24*7)/10 #(7*24)
 nt = np.around(it/(iaux),decimals=1)
+print(nt)
 
 # Calclate the 3D spectrum
 for i in range(int(nt)):
       uaux = u[:,:,i*iaux:i*iaux+iaux]
       if i == 0:
-         Eu,k,l,om = wf_spectrum.spec_est3(uaux,dx,dy,dt)      else:
-         Eua,_,_,_ = wf_spectrum.spec_est3(uaux,dx,dy,dt)
+         Eu,k,l,om = wf_spectrum.spec_est3(uaux,2,2,1)
+      else:
+         Eua,_,_,_ = wf_spectrum.spec_est3(uaux,2,2,1)
          Eu = Eu + Eua
 Eu = Eu/nt
 print('------- End Spectrum --------')
-
-
 #------------------------------------
+# This part is essential, due to the
+# isotropization of the spectrum
+print(Eu.shape)
+print(om.shape)
+print(k.shape)
 # isotropic spectrum
-I = 0
+Eiso = np.empty((126,om.size))
+
+#print(np.shape(k),np.shape(l),np.shape(Eu))
+
 for i in range(om.size-1):
-    kiso,Ei = calc_ispec(k,l,Eu[:,:,i])
-    if I == 0:
-        Eiso = np.empty((len(Ei),om.size))
-    Eiso[:,i] = Ei
+    kiso,Eiso[:,i] = calc_ispec(k,l,Eu[:,:,i])
+print('------- End Isospectrum -------')
 #=====================================
-print('------- End Isotropization --------')
 
-
+#::::::::::::::::::::::
 # save
-np.savez(output_directory+output_name+'.npz',
-         Eiso=Eiso,kiso=kiso,om=om)
-print('------- End save --------')
-print('------- Finish --------')
+np.savez(prnt+'wf/'+var+'_wf_20days_'+region+'_dx2km_'+season+'.npz',
+          Eiso=Eiso,kiso=kiso,om=om)
+print('------ End save --------')

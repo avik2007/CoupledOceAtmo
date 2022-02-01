@@ -66,6 +66,8 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
     diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUX'
   elif (VAR == 'HAdv'):
     diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
+  elif (VAR == 'Qv'):
+    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
   else:
     diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/'+VAR+'/'
    
@@ -242,9 +244,26 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
       x = grid.interp(grid.interp(zeta,axis='X', to='center'), axis='Y',to='center')
       print('=== x interpolated  ==')
       print(np.nanmean(x))
-  
     elif VAR == 'W':
       x=grid.interp(ds['W'],'Z',to='center',boundary='fill').isel(k=level)
+    elif VAR == 'Qv':
+      dirow='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/W/'
+      ###
+      dsw = open_mdsdataset(dirow,
+                      grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
+                            iters=all_iters[i],geometry='llc',read_grid=True,
+                            default_dtype=np.dtype('>f4'),delta_t=delta_t,
+                            ignore_unknown_vars=True,nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                              "face": 1, "k": 1},)  
+      th = ds['Theta'].isel(k=level)
+      grid = xgcm.Grid(ds)
+      w = grid.interp(dsw['W'], 'Z', to='center', boundary='fill').isel(k=level)
+      Cp = 4.184*10**3 #J/(kg K)
+      rho = 1027.5 #kg/m**3
+      x = th*w*Cp*rho
     elif VAR == 'Eta':
       x=ds[VAR]
     elif VAR == 'KPPhbl':

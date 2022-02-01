@@ -1,12 +1,13 @@
+import os,glob,sys
 import numpy as np
 import xarray as xr
 import dask.array as da
 import dask_ndfilters
+sys.path.append("//nobackup//amondal//Python")
+sys.path.append("//nobackup//amondal//Python//xmitgcm")
 from xmitgcm import open_mdsdataset
-import os,glob,sys
 import time as tm
 import xgcm
-import xmitgcm
 import warnings
 warnings.filterwarnings("ignore")
 from datetime import datetime,timedelta
@@ -65,6 +66,8 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
     diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUX'
   elif (VAR == 'HAdv'):
     diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
+  elif (VAR == 'Qv'):
+    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
   else:
     diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/'+VAR+'/'
    
@@ -82,7 +85,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                        "i": -1,
                        "j": -1,
                        "time": 1,
-                       "face": 1, "k": 1},)
+                         "face": 1, "k": 1})
 
   grid = xgcm.Grid(ds, periodic=False, face_connections=face_connections)
   print('grid xgcm.Grid')
@@ -132,7 +135,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                        "i": -1,
                        "j": -1,
                        "time": 1,
-                       "face": 1, "k": 1}, )
+                       "face": 1, "k": 1})
     
 
     if VAR == 'V':
@@ -147,12 +150,12 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                        "i": -1,
                        "j": -1,
                        "time": 1,
-                       "face": 1, "k": 1},)
+                              "face": 1, "k": 1},)
       ds1 = open_mdsdataset(GRIDDIR, iters=1, ignore_unknown_vars=True, geometry='llc', nx=nx, chunks={
                        "i": -1,
                        "j": -1,
                        "time": 1,
-                       "face": 1, "k": 1},)
+                       "face": 1, "k": 1}, )
 
       AngleCS=ds1['CS'];AngleSN=ds1['SN'];
       print('=== interp 2d ====')
@@ -173,8 +176,8 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                        "i": -1,
                        "j": -1,
                        "time": 1,
-                       "face": 1, "k": 1},)
-      ds1 = open_mdsdataset(GRIDDIR, iters=1, ignore_unknown_vars=True, geometry='llc', nx=nx)  
+                              "face": 1, "k": 1},)
+      ds1 = open_mdsdataset(GRIDDIR, iters=1, ignore_unknown_vars=True, geometry='llc', nx=nx,)  
       AngleCS=ds1['CS'];AngleSN=ds1['SN'];
       print('=== interp 2d ====')
       UV=grid.interp_2d_vector({'X': ds['U'].isel(k=level), 'Y': dsv['V'].isel(k=level)},boundary='fill')
@@ -195,7 +198,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                        "i": -1,
                        "j": -1,
                        "time": 1,
-                       "face": 1, "k": 1},)
+                              "face": 1, "k": 1},)
       AngleCS=dsv['CS'];AngleSN=dsv['SN'];
       print('=== interp 2d ====')
       UV=grid.interp_2d_vector({'X': ds['oceTAUX'], 'Y': dsv['oceTAUY']},boundary='fill')
@@ -215,7 +218,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                        "i": -1,
                        "j": -1,
                        "time": 1,
-                       "face": 1, "k": 1},)
+                              "face": 1, "k": 1},)
       AngleCS=dsu['CS'];AngleSN=dsu['SN'];
       print('=== interp 2d ====')
       UV=grid.interp_2d_vector({'X': dsu['oceTAUX'], 'Y': ds['oceTAUY']},boundary='fill')
@@ -235,15 +238,32 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                        "i": -1,
                        "j": -1,
                        "time": 1,
-                       "face": 1, "k": 1},)
+                              "face": 1, "k": 1},)
       grid = xgcm.Grid(ds)
       zeta = (-grid.diff(ds['oceTAUX']*ds.dxC,'Y') + grid.diff(dsv['oceTAUY']*ds.dyC,'X')) / ds.rAz
       x = grid.interp(grid.interp(zeta,axis='X', to='center'), axis='Y',to='center')
       print('=== x interpolated  ==')
       print(np.nanmean(x))
-  
     elif VAR == 'W':
       x=grid.interp(ds['W'],'Z',to='center',boundary='fill').isel(k=level)
+    elif VAR == 'Qv':
+      dirow='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/W/'
+      ###
+      dsw = open_mdsdataset(dirow,
+                      grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
+                            iters=all_iters[i],geometry='llc',read_grid=True,
+                            default_dtype=np.dtype('>f4'),delta_t=delta_t,
+                            ignore_unknown_vars=True,nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                              "face": 1, "k": 1},)  
+      th = ds['Theta'].isel(k=level)
+      grid = xgcm.Grid(ds)
+      w = grid.interp(dsw['W'], 'Z', to='center', boundary='fill').isel(k=level)
+      Cp = 4.184*10**3 #J/(kg K)
+      rho = 1027.5 #kg/m**3
+      x = th*w*Cp*rho
     elif VAR == 'Eta':
       x=ds[VAR]
     elif VAR == 'KPPhbl':
@@ -279,14 +299,22 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                       grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
                             iters=all_iters[i],geometry='llc',read_grid=True,
                             default_dtype=np.dtype('>f4'),delta_t=delta_t,
-                            ignore_unknown_vars=True,nx=nx)
+                            ignore_unknown_vars=True,nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                       "face": 1, "k": 1},)
       dirov='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/V/'
       ###
       dsv = open_mdsdataset(dirov,
                       grid_dir='/nobackupp2/estrobac/geos5/MITGRID/llc2160/',
                             iters=all_iters[i],geometry='llc',read_grid=True,
                             default_dtype=np.dtype('>f4'),delta_t=delta_t,
-                            ignore_unknown_vars=True,nx=nx)
+                            ignore_unknown_vars=True,nx=nx, chunks={
+                       "i": -1,
+                       "j": -1,
+                       "time": 1,
+                              "face": 1, "k": 1},)
       dgrid = xgcm.Grid(ds)
       DxTheta = dgrid.diff(ds['Theta'].isel(k=level),axis='X',boundary='fill') / ds.dxC
       DyTheta = dgrid.diff(ds['Theta'].isel(k=level),axis='Y',boundary='fill') / ds.dyC
