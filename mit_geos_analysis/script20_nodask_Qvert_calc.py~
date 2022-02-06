@@ -24,7 +24,7 @@ if __name__ == "__main__":
     print('as a script')
     from dask_jobqueue import PBSCluster
     from dask.distributed import Client
-    client = Client('127.0.0.1:8786')
+    client = Client(127.0.0.1:8786)
     level = 25
     Qfiles = "/nobackup/amondal/NCData/20211116_QTprime_openocean_3month_bigger_region/"
     Qv = getMITNCDataSet(Qfiles, 'Qv', level,level )
@@ -39,9 +39,7 @@ if __name__ == "__main__":
     #Qvert_winavg_3days.to_netcdf(Qfiles + 'Qvert_reg_avg_' + str(level)+'.nc4',) 
     
     Q = Qvert_winavg_3days[0:720:12, 0:-1:2, 0:-1:2]#.plot(size=6, aspect=1.4)
-    print('Partitioned Q')
     mov = Movie(Q.chunk({'time':48}))
-    print('Made movie')
     movname = "/nobackup/amondal/NCData/20220118_Qprime_realspace_movies/Qvert_3dayavg_lev_" + int(level) + ".mp4"
     mov.save(moviename,parallel=True)
     print('Movie has been saved')

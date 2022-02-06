@@ -27,7 +27,7 @@ def spec_est3(A,B,d1,d2,d3):
     Bhat = np.fft.rfftn(window_s*window_t*B)
 
     cospec = (Bhat*Ahat.conjugate()).real / ((l1*l2*l3)**2) / (df1*df2*df3)
-    cospec_dens = np.fft.fftshift(cospec.copy(),axes=(0,1))
-    cospec_rms = np.sqrt((cospec_dens[1:,1:,1:-2].sum()*df1*df2*df3))
+    #cospec_dens = np.fft.fftshift(cospec.copy(),axes=(0,1))
+    #cospec_rms = np.sqrt((cospec_dens[1:,1:,1:-2].sum()*df1*df2*df3))
 
     return np.fft.fftshift(cospec.real,axes=(0,1)),f1,f2,f3,df1,df2,df3
