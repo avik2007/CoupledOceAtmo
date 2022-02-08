@@ -49,7 +49,7 @@ if __name__ == "__main__":
     y1 = 2020
     y2 = 2021
     # This is a real big view of the map for not too many times just for verification
-    m1 = 9
+    m1 = 12
     m2 = 3
     d1 = 1
     d2 = 1
@@ -76,10 +76,10 @@ if __name__ == "__main__":
     fsize=0   ## <<==== don't mode
     fol = '/nobackup/amondal/NCData/20211116_QTprime_openocean_3month_bigger_region_fall_winter/'
     MIT_xr_date_location_fol('Theta',15,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    MIT_xr_date_location_fol('W',15,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-    for level in range(28, 44, 4):
-        MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
-        MIT_xr_date_location_fol('W',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+    #MIT_xr_date_location_fol('W',15,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+    #for level in range(28, 44, 4):
+     #   MIT_xr_date_location_fol('Theta',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
+      #  MIT_xr_date_location_fol('W',level,ffilter,fsize,y1,m1,d1,h1,M1,y2,m2,d2,h2,M2,lat1,lat2,latinc,lon1,lon2,loninc,fol)
    
 
 

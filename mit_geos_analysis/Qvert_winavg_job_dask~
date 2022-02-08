@@ -1,0 +1,44 @@
+#!/bin/bash
+#PBS -q devel
+#PBS -l select=16:mpiprocs=1:model=sky_ele
+#PBS -l walltime=2:00:00
+#PBS -j oe
+#PBS -N dask_test_d
+
+#set environment
+module use /swbuild/analytix/tools/modulefiles
+module load miniconda3/v4
+source activate tf1_14
+
+cd $PBS_O_WORKDIR
+
+source /nobackup/amondal/activate_pyenv_OLD.sh
+
+
+#clear and create directory for dask scheduler
+if [ -d dask_sch ]
+then
+    echo "removing old scheduler directory"
+    rm -r dask_sch
+    echo "creating new scheduler directory"
+    mkdir dask_sch
+else
+    echo "creating scheduler directory"
+    mkdir dask_sch
+fi
+
+# for using all the core on a socket
+cores=`/usr/local/bin/nas_info --cores`
+
+# for using N cores based on each thread needing a certain memory size (in units of Bytes)
+#mem_per=150000000
+#mem_avail=`grep MemTotal /proc/meminfo | awk '{print $2}'`
+#cores=$((mem_avail / mem_per))
+
+mkdir ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID}
+dask-ssh --hostfile $PBS_NODEFILE --local-directory ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID} --nthreads 8 --nprocs 4 --remote-python `which python` --ssh-private-key ~/.ssh/dask_id_rsa &
+sleep 60
+python script20_makeQvert_movies.py
+/bin/rm -rf ${PBS_O_WORKDIR}/dask-workers-${PBS_JOBID}
+
+#end of script

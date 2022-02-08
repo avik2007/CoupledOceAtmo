@@ -81,7 +81,7 @@ def isotropize(spectra, idims, ndim):
             check = (E[fkr].sum() * kr[i] * dth)
             #print(len(check))
             ispec[index, i] = check
-    isospectra = xr.DataArray(data=ispec, dims = [ndim, 'kr'], coords = [t, kr])
+    isospectra = xr.DataArray(data=ispec, dims = [ndim, 'freq_r'], coords = [t, kr])
     #now you need to put it back together in a convenient xarray type form
     return isospectra
 
@@ -149,6 +149,20 @@ def _e1e2(navlon,navlat):
 
     return e1,e2
 
+def movingWindowAverage(xarraydata, dim, windowsize, lengthdim):
+    if (lengthdim == 'xdim' or lengthdim == 'ydim'):
+        chunks = xarraydata.chunk({"xdim": 100, "ydim": 100})
+    elif (lengthdim == 'lat' or lengthdim == 'xdim'):
+        chunks = xarraydata.chunk({"lat":100,"lon":100})
+    xavg = chunks / windowsize
+    for index in range(1,windowsize):
+        if (dim =='time'):
+            xavg += chunks.shift(time=-1*index, fill_value = 0) / windowsize
+            # add other potential dimensions. xarray.shift doesn't allow us to pick dimensions in an easier way
+        else:
+            xavg += xavg
+        
+    return xavg[0:-1*windowsize]
 """
 Calculates isotropic cross spectra of quantities A and B with 3D coordinates (time, lat, lon or time, x, y)
 A - input xarray DataArray
@@ -161,48 +175,40 @@ detrendVal = equivalent to "detrend_type" in xrft.detrend function
 fftwindow = type of window you want to use on A and B in space and time
 segmethod = either welch's method or bartlett's method
 """
-def isotropic_3d_cospectrum(A, B, reg = 'regularize',timeunit = 'hours', lengthunit = 'km', idims, tdim, detrendVal = 'linear', fftwindow = 'tukey', segmethod = 'bartlett', segnumber)
+#dev notes: segmethod is under development, I hope to do that in the near future
+def isotropic_3d_cospectrum( A,B,idims,tdim, reg='regularize',timeunit='hours',lengthunit='km',detrendVal='linear', fftwindow='tukey',segmethod='bartlett',segnumber=5):
     import xrft
     # 1. regularize the coordinates
     if ( reg == 'regularize' ):
         Areg = regularizeCoordinates(A,'linear', timeunits = timeunit, spaceunits = lengthunit)
         Breg = regularizeCoordinates(B,'linear', timeunits = timeunit, spaceunits = lengthunit)
+        rdims = ['xdim','ydim']
     else:
         Areg = A
         Breg = B
-        
+        rdims = idims
+    
     #2. detrend - for now, xarray can't handle 3D detrending
     #2a detrend in space
-    Areg_tp = xrft.detrend(Areg, dim = idims, detrend_type = detrendVal)
-    Breg_tp = xrft.detrend(Breg, dim = idims, detrend_type = detrendVal)
+    Areg_tp = xrft.detrend(Areg, dim = rdims, detrend_type = detrendVal)
+    Breg_tp = xrft.detrend(Breg, dim = rdims, detrend_type = detrendVal)
     #2b detrend in time
     Areg_tp_sp = xrft.detrend(Areg_tp, dim = tdim, detrend_type = detrendVal)
     Breg_tp_sp = xrft.detrend(Breg_tp, dim = tdim, detrend_type = detrendVal)
     
-    #3. calculate fft
-    #3a fft in space - assumes real fft and existence of a window and truncation
-    Ahat_kl = xrft.xrft.fft(Areg_tp_sp, dim = idims, real_dim = idims[0], window = fftwindow, window_correction = True, true_amplitude = True, truncate = True, )
-    Bhat_kl = xrft.xrft.fft(Breg_tp_sp, dim = idims, real_dim = idims[0], window = fftwindow, window_correction = True, true_amplitude = True, truncate = True, )
-    
-    #3b fft in time
-    if ( segnumber < 2 ):
-        segmethod = 'bartlett'
-        
-    if ( segmethod = 'bartlett' ):
-        An = Ahat_kl[tdim].size
-        Bn = Bhat_kl[tdim].size
-        Ahat_kl_om = xrft.xrft.fft(Ahat_kl.chunk({'time':int(An / segnumber)}), dim = tdim, real_dim = tdim, window = fftwindow, window_correction = True, true_amplitude = True, truncate = True, chunks_to_segments=True).compute()
-        Bhat_kl_om = xrft.xrft.fft(Bhat_kl.chunk({'time':int(Bn / segnumber)}), dim = tdim, real_dim = tdim, window = fftwindow, window_correction = True, true_amplitude = True, truncate = True, chunks_to_segments=True).compute()
-    #else: 
-    # segmethod = 'welch' is under development but should become the default segmentation / window of choice
-    
-    #4. calculate conjugate
-    Bhat_kl_om_star = xr.apply_ufunc(np.conjugate, Bhat_kl_om) #np.conjugate(Bhat_kl_om)
-    
-    #5 calculate cospectrum
-    ABstar = Ahat_kl_om * Bhat_kl_om_star
-    ABstar = xr.apply_ufunc(np.real, ABstar.mean() )
-    
-    #6. Isotropize
-    isodims = ["freq_" + d for d in idims]
-    ABstar_iso = xrft.xrft.isotropize(ABstar, isodims, truncate = True)
+    #3. Segmentation - For now, we'll leave it well alone. But it would be good to have Bartlett's or Welch's method here
+    #4. Calculate cross spectrum with xrft
+    ApBps=xrft.cross_spectrum(Areg_tp_sp, Breg_tp_sp , dim=list(Areg_tp_sp.dims), real_dim = tdim, true_amplitude=True, true_phase=True, window=fftwindow, window_correction=True) * 0.5
+    ApBps=xr.apply_ufunc(np.real, ApBps)
+    isodims = ["freq_" + d for d in rdims]
+    fdim = "freq_" + tdim
+    ApBps=ApBps.sortby(isodims)
+    # there's a factor of two difference between xrft and hector's code, I'm not sure why - potentially a spurious factor
+    # of two in xrft's fft code or something like that
+    #5. Isotropize
+   
+    #ABstar_iso = xrft.xrft.isotropize(ABstar, isodims, truncate = True) 
+    #I'm sure this could work, but Hector's matches his own code better, maybe I'll work on this later
+    ABstar_iso = isotropize(ApBps, isodims, fdim)
+    return ABstar_iso
+
