@@ -1,4 +1,4 @@
-Bimport numpy as np
+import numpy as np
 import xarray as xr
 from xmitgcm import open_mdsdataset
 import os,glob,sys
@@ -28,25 +28,27 @@ if __name__ == "__main__":
     y1 = 2020
     m1 = 3
     d1 = 1
-    h1 = 9
+    h1 = 0
     M1 = 0
-    y2 = 2020
+    y2 = 2021
     m2 = 3
-    d2 = 4
-    h2 = 9
+    d2 = 3
+    h2 = 0
     M2 = 0
-    lat1 = 34
-    lat2 = 35
-    lon1 = -65
-    lon2 = -64
+    lat1 = 23
+    lat2 = 43
+    lon1 = -67
+    lon2 = -47
     lev1 = 21
     lev2 = 72
-    pdirout='/nobackup/amondal/NCData/20211102_GEOS_first_integral/'
+    pdirout='/nobackup/amondal/NCData/20220207_GS_yearlong_heatfluxes/'
     
     from GEOS_coll_date_loc_fol import GEOS_xr_coll_date_location_fol
-    #GEOS_xr_coll_date_location_fol('TAVG15MIN', 'PBLH', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
-    GEOS_xr_coll_date_location_fol('TEMP', 'T', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
-    GEOS_xr_coll_date_location_fol('INSTPRESS', 'P', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
-    GEOS_xr_coll_date_location_fol('QV', 'QV', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
+    #GEOS_xr_coll_date_location_fol('TAVG15MIN', 'LWS', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
+    #GEOS_xr_coll_date_location_fol('TAVG15MIN', 'HFLUX', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
+    #GEOS_xr_coll_date_location_fol('TAVG15MIN', 'EFLUX', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
+    GEOS_xr_coll_date_location_fol('TAVG15MIN', 'SWGDWN', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
+    GEOS_xr_coll_date_location_fol('TAVG15MIN', 'SFCEM', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
+    GEOS_xr_coll_date_location_fol('TAVG15MIN', 'PBLH', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
     #MIT_xr needs parameter levels, but GEOS files have levels built into them
 

@@ -1,0 +1,6 @@
+mit_geos_analysis/dask-worker-space/*
+mit_geos_analysis/.ipynb_checkpoints/*
+mit_geos_analysis/nohup.out
+mit_geos_analysis/dask-workers/*
+mit_geos_analysis/__pycache__
+mit_geos_analysis/dask-workers

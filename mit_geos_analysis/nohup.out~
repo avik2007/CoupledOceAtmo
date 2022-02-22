@@ -1,0 +1,22 @@
+as as script
+/home6/amondal/.conda/envs/xmitgcm3/lib/python3.8/site-packages/distributed/node.py:160: UserWarning: Port 8787 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 35239 instead
+  warnings.warn(
+Hola
+=====================
+/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/holding/tavg_15mn_2d_flx_Mx/DYAMOND_c1440_llc2160.tavg_15mn_2d_flx_Mx.20200301_0007z.nc4
+=====================
+(8640, 1440)
+(8640, 1440)
+open files 0
+Traceback (most recent call last):
+  File "script25_GEOS_air_sea_heat_fluxes.py", line 50, in <module>
+    GEOS_xr_coll_date_location_fol('TAVG15MIN', 'SWGDWN', ffilter, fsize, y1, m1, d1, h1, M1, y2, m2, d2, h2, M2, lat1, lat2, lon1, lon2,lev1, lev2, pdirout)
+  File "/nobackup/amondal/Python/Hector_Python_Scripts/GEOS_coll_date_loc_fol.py", line 194, in GEOS_xr_coll_date_location_fol
+    ds1 = xr.open_mfdataset(flist[i])
+  File "/home6/amondal/.conda/envs/xmitgcm3/lib/python3.8/site-packages/xarray/backends/api.py", line 879, in open_mfdataset
+    raise OSError("no files to open")
+OSError: no files to open
+/home6/amondal/.conda/envs/xmitgcm3/lib/python3.8/contextlib.py:120: UserWarning: Creating scratch directories is taking a surprisingly long time. This is often due to running workers on a network file system. Consider specifying a local-directory to point workers to write scratch data to a local disk.
+  next(self.gen)
