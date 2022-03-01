@@ -91,6 +91,7 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
     h2 = 9
     M1 = 0
     M2 = 0
+    deltatime = timedelta(hours=1)
   elif (coll == 'CONST'):
     collection = collection3
     y1 = 2020
@@ -189,7 +190,7 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
   
   for i in range(0,nfiles):
 
-    print('open files '+str(i))
+    print('open files '+str(i)+'with variable '+ VAR)
 
     ds1 = xr.open_mfdataset(flist[i])
     
@@ -208,9 +209,9 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
     elif VAR=='TUFX':
       #TUFX = LHFX + SHFX - turbulent fluxes
       TMP=(ds1.LHFX+ds1.SHFX).rename(VAR)
-    elif VAR=='QNET':
+    elif VAR=='ATMQFLUX':
       #QNET = RADSRF - LHFX - SHFX : net heat flux
-      TMP=(ds1.RADSRF-ds1.LHFX-ds1.SHFX).rename(VAR)
+      TMP=(ds1.RADSRF-ds1.HFLUX-ds1.EFLUX).rename(VAR)
     elif VAR=='DTDT':
       #DTDT: tendency of air temp. Adding contributions due to dynamics (advection), friction, gravity wave drag, moist processes, shortwave radiation, and turbulent processes
       TMP= (ds1.DTDTDYN + ds1.DTDTFRI + ds1.DTDTGWD + ds1.DTDTMST + ds1.DTDTSW + ds1.DTTRB + ds1.DTDTLW).rename(VAR)
@@ -235,7 +236,8 @@ def GEOS_xr_coll_date_location_fol(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y
 
     print('save output')
 
-    output.rename(VAR).to_netcdf(pdirout+VAR+'/'+VAR+filter_str+fsize_str+'_'+date[i].strftime("%Y%m%d%H")+'.nc')
+    output.rename(VAR).to_netcdf(pdirout+VAR+'/'+VAR+filter_str+fsize_str+'_'+date[i].strftime("%Y%m%d%H%M")+'.nc')
+    #CHECKIF THIS CODE RUNS - I ADDED THE MINUTE PIECE TO THE STRFTIME BECAUSE I WASN'T CLEAR ON WHY DELTATIME WAS ALWAYS READING AS 1 DAY
 """
 def GEOS_xr_no_interp(coll, VAR,ffilter, fsize,y1, m1, d1,h1, M1, y2, m2, d2,h2, M2, lat1, lat2,  lon1, lon2, lev1, lev2, pdirout ):
   # will we have to put level in here eventually?

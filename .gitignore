@@ -4,3 +4,6 @@ mit_geos_analysis/nohup.out
 mit_geos_analysis/dask-workers/*
 mit_geos_analysis/__pycache__
 mit_geos_analysis/dask-workers
+xmitgcm
+xrft
+xmovie
