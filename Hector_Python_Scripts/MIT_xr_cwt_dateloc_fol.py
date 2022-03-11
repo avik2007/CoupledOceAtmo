@@ -62,25 +62,25 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
   
   #### don't change this part
   if (VAR == 'DxTheta'):
-    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
+    diro = '/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
   elif (VAR == 'DyTheta'):
-    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
+    diro = '/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
   elif (VAR == 'Zeta'):
-    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUX'
+    diro = '/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUX'
   elif (VAR == 'HAdv'):
-    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
+    diro = '/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta'
   elif (VAR == 'dxF' or VAR == 'dyF' or VAR == 'rAw' or VAR == 'rAs'): #basically, the grid variables
-    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta/'
+    diro = '/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/Theta/'
     gridvar = True
   else:
-    diro = '/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/'+VAR+'/'
+    diro = '/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/'+VAR+'/'
     
    
   ####
   print('Directory of files')
   print(diro)
   nx=2160
-  GRIDDIR='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/grid/'#'/nobackupp2/estrobac/geos5/MITGRID/llc2160/'
+  GRIDDIR='/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/grid/'#'/nobackupp2/estrobac/geos5/MITGRID/llc2160/'
   ####
   print('before mds')
   ds = open_mdsdataset(diro, grid_dir=GRIDDIR, iters=all_iters[0], 
@@ -145,7 +145,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
 
     if VAR == 'V':
       #### change this part
-      dirou='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/U/'
+      dirou='/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/U/'
       ####
       dsu = open_mdsdataset(dirou,
                       grid_dir=GRIDDIR,
@@ -171,7 +171,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
       print(x.shape)
     elif VAR == 'U':
       #### change this part
-      dirov='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/V/'
+      dirov='/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/V/'
       ####
       dsv = open_mdsdataset(dirov,
                       grid_dir=GRIDDIR,
@@ -193,7 +193,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
      
     elif VAR == 'oceTAUX':
       ### change this part
-      dirov='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUY/'
+      dirov='/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUY/'
       ###
       dsv = open_mdsdataset(dirov,
                       grid_dir=GRIDDIR,
@@ -213,7 +213,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
       print(np.nanmean(x))
     elif VAR == 'oceTAUY':
 	###### change this part
-      dirou='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUX/'
+      dirou='/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUX/'
 	##### 
       dsu = open_mdsdataset(dirou,
                       grid_dir=GRIDDIR,
@@ -233,7 +233,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
       print(np.nanmean(x))
     elif VAR == 'Zeta':
       ### change this part
-      dirov='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUY/'
+      dirov='/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/oceTAUY/'
       ###
       dsv = open_mdsdataset(dirov,
                       grid_dir=GRIDDIR,
@@ -280,7 +280,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
       UV=grid.interp_2d_vector({'X':DxTheta, 'Y':DyTheta},boundary='fill')
       x=(UV['X']*AngleCS-UV['Y']*AngleSN)
     elif VAR =='HAdv':
-      dirou='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/U/'
+      dirou='/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/U/'
       ####
       dsu = open_mdsdataset(dirou,
                       grid_dir=GRIDDIR,
@@ -291,7 +291,7 @@ def MIT_xr_date_location_fol(VAR, level, ffilter, fsize, y1,m1,d1,h1,M1, y2, m2,
                        "j": -1,
                        "time": 1,
                        "face": 1, "k": 1},)
-      dirov='/nobackupp11/dmenemen/DYAMOND/c1440_llc2160/mit_output/V/'
+      dirov='/nobackupp17/dmenemen/DYAMOND/c1440_llc2160/mit_output/V/'
       ###
       dsv = open_mdsdataset(dirov,
                       grid_dir=GRIDDIR,
