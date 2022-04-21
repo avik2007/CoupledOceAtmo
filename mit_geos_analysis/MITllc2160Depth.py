@@ -51,7 +51,8 @@ def getZlayerThickness(z):
     return thickness[z]
 """
 getThickWeightedVector returns a vector that acts like a probability density function weighted averages over
-the depth of a set of zlayers. It takes depth assuming that one is trying to average over that depth
+the depth of a set of zlayers. It takes depth assuming that one is trying to average over that depth. This works
+for an array where you have set depth as a function of time. 
 """
 def getThickWeightedVector(depth):
     cdir = os.getcwd()
@@ -81,3 +82,21 @@ def getThickWeightedVector(depth):
             wtv_filled = np.append(wtv, np.zeros(zdim - len(wtv)+1))
         weightedthickvector[di,:] = wtv_filled
     return weightedthickvector
+
+"""
+getSigmaField returns an array with the dimensions of the input kpphbl array plus a depth dimension - 
+sigma is a nondimensionalized depth dimension that will vary in space and time based on the value
+of kpphbl in space and time. So for example, at layer 1 (0.5 m deep), if the kpphbl value is 100,
+sigma = 0.5/100=0.005.
+"""
+def getSigmaField(Kpphbl, Nlayers):
+    layer = xr.full_like(Kpphbl, zlayerToDepth(0))
+    sigma = layer / Kpphbl
+    sigma.expand_dims(dim='depth', axis=1)
+    for i in range(1, Nlayers):
+        layer = xr.full_like(Kpphbl, zlayerToDepth(i))
+        sigma_add = layer / Kpphbl
+        sigma = xr.concat((sigma,sigma_add),dim='depth')
+    sigma = sigma.rename(r'$\sigma$')    
+    sigma = sigma.assign_coords({'depth':zlayerToDepth(np.arange(0,Nlayers))})
+    return sigma

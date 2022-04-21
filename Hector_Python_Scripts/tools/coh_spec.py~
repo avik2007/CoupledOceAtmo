@@ -1,0 +1,43 @@
+import numpy as np
+from numpy import pi
+from scipy import signal
+try:
+    import mkl
+    np.use_fastnumpy = True
+except ImportError:
+    pass
+
+class coherence(object):
+    """ A class that represents a single realization of the 
+        one-dimensional coherence of two given fields """
+    
+    def __init__(self,A,B,dt):
+        
+        self.A = A
+        self.B = B
+        self.dt = dt
+        self.n = A.size
+
+        win = np.hanning(self.n)
+        win = (self.n/(win**2).sum())*win
+
+        self.A *= win
+        self.B *= win
+
+        # test if n is even
+        if (self.n%2):
+            self.neven = False
+        else:
+            self.neven = True
+
+        # calculate frequencies
+        self.calc_freq()
+
+        # calculate coherence
+        self.calc_coh()
+
+    def calc_freq(self):
+        """ calculate array of spectral variable (frequency or
+                wavenumber) in cycles per unit of L """
+
+        

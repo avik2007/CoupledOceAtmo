@@ -1,0 +1,1 @@
+Fb = Fb/count; Fc = Fc/count; Fs = Fs/count; Fleith = Fleith/count; Fqbot=Fqbot/count; Fsd = Fsd/count; FadvNU = FadvNU/count; FadvU = FadvU/count;

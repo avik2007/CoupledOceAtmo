@@ -1,0 +1,21 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module vorticity ! in 
+    interface  ! in :vorticity
+        subroutine xi(u,v,dataout,dx,dy,raz,m,n) ! in :vorticity:vorticity.f95
+            use omp_lib
+            real(kind=8) dimension(m,n),intent(in) :: u
+            real(kind=8) dimension(m,n),intent(in),depend(m,n) :: v
+            real(kind=8) dimension(m,n),intent(out),depend(m,n) :: dataout
+            real(kind=8) dimension(m,n),intent(in),depend(m,n) :: dx
+            real(kind=8) dimension(m,n),intent(in),depend(m,n) :: dy
+            real(kind=8) dimension(m,n),intent(in),depend(m,n) :: raz
+            integer optional,intent(in),check(shape(u,0)==m),depend(u) :: m=shape(u,0)
+            integer optional,intent(in),check(shape(u,1)==n),depend(u) :: n=shape(u,1)
+        end subroutine xi
+    end interface 
+end python module vorticity
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
