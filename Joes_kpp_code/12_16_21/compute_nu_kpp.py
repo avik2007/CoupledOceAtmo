@@ -189,8 +189,7 @@ def compute_nu_kpp(U,V,rho,pot_rho_down,thknss,dxc,dyc,dxu,dyu,dxv,dyv,dxq,dyq,u
     fRi   = fRi*fRi*fRi;
 
     del dblocSm, shsq, diffus, diffus2;
-    gc.collect();
-
+    gc.collect(); 
     # diffus = viscArNr + fcon*difmcon + fRi*difm0;
     KPPviscA = np.zeros((nx,ny,nz,nt))
     maskC = ft.get_mask_from_hfac(hfacC[gx0:gxn,gy0:gyn,gz0:gzn,:]);

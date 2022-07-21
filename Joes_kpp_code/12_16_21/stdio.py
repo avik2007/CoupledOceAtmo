@@ -12,17 +12,17 @@ def rdmds(fname,iters,dims,fldname=""):
             fid = open(filename,'rb')
             f = np.fromfile(fid, dtype=np.dtype('>f4'),count=np.prod(dims))
             if (len(dims)==3):
-                field[:,:,:,t] = switch_row_column_major(f,dims);
+                field[:,:,:,t] = switch_row_column_major_Hector(f,dims);#switch_row_column_major(f,dims);
             elif (len(dims)==2):
-                field[:,:,t] = switch_row_column_major(f,dims);
+                field[:,:,t] = switch_row_column_major_Hector(f,dims);#switch_row_column_major(f,dims);
     else:
         filename = fname + '.data';
         fid = open(filename,'rb')
         f = np.fromfile(fid, dtype=np.dtype('>f4'),count=np.prod(dims))
         if (len(dims)==3):
-            field[:,:,:] = switch_row_column_major(f,dims);
+            field[:,:,:] = switch_row_column_major_Hector(f,dims);#switch_row_column_major(f,dims);#
         elif (len(dims)==2):
-            field[:,:] = switch_row_column_major(f,dims);
+            field[:,:] = switch_row_column_major_Hector(f,dims);#switch_row_column_major(f,dims);    
         else:
             field = f;
     
@@ -38,7 +38,7 @@ def read_bin(fname,dims):
     except:
         fid=open(fname,'rb');
     field = np.fromfile(fid, dtype=np.dtype('>f4'),count=np.prod(dims))
-    field = switch_row_column_major(field,dims);
+    field = switch_row_column_major_Hector(field,dims);#switch_row_column_major(field,dims);#
 
     return field;
 
@@ -161,7 +161,7 @@ def switch_row_column_major(field,dims):
                 for k in range(0,dims[2]):
                     for j in range(0,dims[1]):
                         i1 = f*dims[3]*dims[2]*dims[1]*dims[0] + t*dims[2]*dims[1]*dims[0] + k*dims[1]*dims[0] + j*dims[0]
-                        i2 = i1+dims[0];
+                        i2  = i1+dims[0];
                         Pfield[:,j,k,t,f] = field[i1:i2];
 
     elif (ndims==4):
@@ -185,6 +185,54 @@ def switch_row_column_major(field,dims):
             i2 = i1+dims[0];
             Pfield[:,j] = field[i1:i2];
 
+    elif (ndims==1):
+        Pfield = field;
+
+    elif (ndims==0):
+        Pfield = field;
+
+    else:
+        raise RuntimeError('ndims > 5 not handled!')
+
+    return Pfield;
+
+def switch_row_column_major_Hector(field,dims):
+
+    Pfield = np.zeros(dims);
+    ndims = len(dims);
+
+    if (ndims==5):
+        for f in range(0,dims[4]):
+            for t in range(0,dims[3]):
+                for k in range(0,dims[2]):
+                    for j in range(0,dims[1]):
+                        i1 = f*dims[3]*dims[2]*dims[1]*dims[0] + t*dims[2]*dims[1]*dims[0] + k*dims[1]*dims[0] + j*dims[0]
+                        i2  = i1+dims[0];
+                        Pfield[:,j,k,t,f] = field[i1:i2];
+
+    elif (ndims==4):
+        for t in range(0,dims[3]):
+            for k in range(0,dims[2]):
+                for j in range(0,dims[1]):
+                    i1 = t*dims[2]*dims[1]*dims[0] + k*dims[1]*dims[0] + j*dims[0]
+                    i2 = i1+dims[0];
+                    Pfield[:,j,k,t] = field[i1:i2];
+
+    elif (ndims==3):
+        #I'm just changing this portion because I believe it's the main thing I need to deal with. this and ndims == 2
+        for k in range(0,dims[0]):
+            for j in range(0,dims[1]):
+                i1 = k*dims[1]*dims[2] + j*dims[2]
+                i2 = i1+dims[2];
+                Pfield[k,j,:] = field[i1:i2];
+        #Pfield = np.swapaxes(Pfield, 0, 2);        
+    elif (ndims==2):
+        # as if 7.12.22, I'm not sure if this needs to be changed. but i switched 0's and 1's anyways just to check
+        for j in range(0,dims[0]):
+            i1 = j*dims[1]
+            i2 = i1+dims[1];
+            Pfield[j,:] = field[i1:i2];
+        #Pfield = np.swapaxes(Pfield, 0,1);
     elif (ndims==1):
         Pfield = field;
 

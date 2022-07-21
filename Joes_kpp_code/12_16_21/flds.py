@@ -202,27 +202,35 @@ class FldsNU:
         self.U = ft.rdmds(dataroot + 'U', iters,dims,'U');
         self.V = ft.rdmds(dataroot + 'V', iters,dims,'V');
         self.W = ft.rdmds(dataroot + 'W', iters,dims,'W');
+        #try:
+        #    self.Eta = ft.rdmds(dataroot + 'Eta',iters,dims2D,'Eta');
+        #except:
+        #    warnings.warn("Eta not found, setting to zeros...");
+        #    self.Eta = np.zeros((nx,ny,1,1));
+        
+        # Set Dims (to Hector's form, you'd have to switch these back for Joe)
+        nz = self.W.shape[0]; ny = self.W.shape[1]; nx = self.W.shape[2]; nt = self.W.shape[3];
+
         try:
-            self.Eta = ft.rdmds(dataroot + 'Eta',iters,dims2D,'Eta');
+            #self.depth = -ft.read_bin(auxroot + 'BATHY_' + str(dims[0]) + 'x' + str(dims[1]) + '_Box56', (nx,ny));
+            self.depth = -ft.read_bin(auxroot + 'BATHY_' + str(dims[0]) + 'x' + str(dims[1]) + '_CCS', (ny,nx));
         except:
-            warnings.warn("Eta not found, setting to zeros...");
-            self.Eta = np.zeros((nx,ny,1,1));
-
-        # Set Dims
-        nx = self.W.shape[0]; ny = self.W.shape[1]; nz = self.W.shape[2]; nt = self.W.shape[3];
-
-        try:
-            self.depth = -ft.read_bin(auxroot + 'BATHY_' + str(dims[0]) + 'x' + str(dims[1]) + '_Box56', (nx,ny));
-        except:
-            auxroot = auxroot + '../build/';
-            self.depth = -ft.read_bin(auxroot + 'BATHY_' + str(dims[0]) + 'x' + str(dims[1]) + '_Box56', (nx,ny));
-
+            #auxroot = auxroot + '../build/';
+            #self.depth = -ft.read_bin(auxroot + 'BATHY_' + str(dims[0]) + 'x' + str(dims[1]) + '_Box56', (nx,ny));
+            self.depth = -ft.read_bin('/nobackup/amondal/Python/Joes_kpp_code/Hector_Sub_Data/BATHY_2400x2400_CCS', (ny,nx))
+        self.S = np.swapaxes(self.S, 0, 2);
+        self.T = np.swapaxes(self.T, 0, 2);
+        self.U = np.swapaxes(self.U, 0, 2);
+        self.V = np.swapaxes(self.V, 0, 2);
+        self.W = np.swapaxes(self.W, 0, 2);
+        self.depth = np.swapaxes(self.depth, 0,1);
         print('min depth = ' + str(np.min(self.depth)) )
         print('max depth = ' + str(np.max(self.depth)) )
         self.depth = np.reshape(self.depth,(nx,ny,1,1));
         try: 
             self.thknss = ft.read_bin(auxroot + 'delR', [nz]);    
         except:
+            print('delR is missing. I\'ll try RF instead');
             Z = -ft.rdmds(auxroot + 'RF',[],[nz+1],'Z');    
             self.thknss = np.diff(Z,axis=0);
         self.thknss = np.reshape(self.thknss,(1,1,nz,1));
@@ -253,7 +261,7 @@ class FldsNU:
         self.S = self.S[0:-1,0:-1,:,:];
         self.T = self.T[0:-1,0:-1,:,:];
         self.W = self.W[0:-1,0:-1,:,:];
-        self.Eta = self.Eta[0:-1,0:-1,:];
+        #self.Eta = self.Eta[0:-1,0:-1,:];
         self.thknss = self.thknss[0:-1,0:-1,:,:];
         self.depth = self.depth[0:-1,0:-1,:];
 
@@ -271,12 +279,15 @@ class FldsNU:
     def load_mitgcm_field(self,fldname,dataroot,iters,dims):
         f = ft.rdmds(dataroot+fldname,iters,dims);
         if (len(f.shape)==4):
+            f = np.swapaxes(f,0,2);
             return f[0:self.nx,0:self.ny,:,:]
         elif (len(f.shape)==3):
+            f = np.swapaxes(f, 0,2);
             return f[0:self.nx,0:self.ny,:]
         else:
+            f = np.swapaxes(f, 0,1);
             return f[0:self.nx,0:self.ny]
-
+            
     def load_data(self,fdir,fnames):
         # load grids
         self.ugrid = ft.read_field(fdir + 'ugrid.' + fnames[0]);
