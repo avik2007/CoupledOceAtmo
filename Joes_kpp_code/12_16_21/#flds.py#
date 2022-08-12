@@ -255,10 +255,12 @@ class FldsNU:
         # Trim down to size 
         # Avik's note, 07/20/22 -- restricting the size so that the code actually runs
         # turn this into its own function
-        nix = 0; nfx = nx;
-        niy = 0; nfy = ny;
-        niz = 0; nfz = nz;
-        self.ugrid = self.ugrid[nix:nfx,niy+0:nfy-1,:];
+        nix = 0; nfx = 100;
+        niy = 0; nfy = 100;
+        niz = 0; nfz = 87;
+nix = 0; nfx = 100;
+        niy = 0; nfy = 100;
+        niz = 0; nfz = 87;        self.ugrid = self.ugrid[nix:nfx,niy+0:nfy-1,:];
         self.U = self.U[nix:nfx,niy+0:nfy-1,niz:nfz,:];
         self.vgrid = self.vgrid[nix:nfx-1,:,:];
         self.V = self.V[nix+0:nfx-1,niy:nfy,niz:nfz,:];
@@ -346,9 +348,9 @@ class FldsNU:
         # Trim down to size 
         # Avik's note, 07/20/22 -- restricting the size so that the code actually runs
         # turn this into its own function
-        nix = truncdims[0]; nfx = truncdims[1];
-        niy = truncdims[2]; nfy = truncdims[3];
-        niz = truncdims[4]; nfz = truncdims[5];
+        nix = 0; nfx = 100;
+        niy = 0; nfy = 100;
+        niz = 0; nfz = 87;
         self.ugrid = self.ugrid[nix:nfx,niy+0:nfy-1,:];
         self.U = self.U[nix:nfx,niy+0:nfy-1,niz:nfz,:];
         self.vgrid = self.vgrid[nix:nfx-1,:,:];
@@ -394,7 +396,7 @@ class FldsNU:
             return f[nix:nfx, niy:nfy, niz:nfz, :];
         elif (len(f.shape)==3):
             nix = truncdims[0]; nfx = truncdims[1]; niy = truncdims[2]; nfy = truncdims[3];
-            f = np.swapaxes(f, 0,1);
+            f = np.swapaxes(f, 0,2);
             #return f[0:self.nx,0:self.ny,:]
             return f[nix:nfx, niy:nfy, :]
         else:

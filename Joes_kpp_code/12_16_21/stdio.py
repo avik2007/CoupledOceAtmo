@@ -228,9 +228,9 @@ def switch_row_column_major_Hector(field,dims):
         #Pfield = np.swapaxes(Pfield, 0, 2);        
     elif (ndims==2):
         # as if 7.12.22, I'm not sure if this needs to be changed. but i switched 0's and 1's anyways just to check
-        for j in range(0,dims[0]):
-            i1 = j*dims[1]
-            i2 = i1+dims[1];
+        for j in range(0,dims[1]):
+            i1 = j*dims[0]
+            i2 = i1+dims[0];
             Pfield[j,:] = field[i1:i2];
         #Pfield = np.swapaxes(Pfield, 0,1);
     elif (ndims==1):

@@ -16,6 +16,7 @@ import params_500mSNAPS_joecode as p
 
 
 dims = [87, 2400,2400]; #Hector's code has 87 layers # I think switching the height might fix the switch_column_row function (7/7/22)
+truncdims = [0, 100, 0, 100, 0, 87];
 data_dir = '/nobackup/amondal/Python/Joes_kpp_code/Hector_Sub_Data/'#'/scratch/p/peltier/jskitka/runs/2km_109l/kpp_all_on/run/';
 aux_data_dir = '/nobackup/amondal/Python/Joes_kpp_code/Hector_Sub_Data/';#'/home/p/peltier/jskitka/aux_data/low_res/';
 home_dir ='/nobackup/amondal/Python/Joes_kpp_code/'#'/scratch/p/peltier/jskitka/diagnostics/kpp_all_on/';
@@ -38,10 +39,11 @@ trim_ml = 30; # in meters
 post_hann = [1,1,0]; # this is passed in but not actually used... 
 
 f = FldsNU();
-f.load_mitgcm_data(data_dir,aux_data_dir,iters,dims);
-
-KPPviscA = f.load_mitgcm_field('KPPviscA',data_dir,iters,dims);
-#KPPhbl = f.load_mitgcm_field('KPPhbl',data_dir,iters,dims[0:2]);
+f.load_mitgcm_data_trunc(data_dir,aux_data_dir,iters,dims, truncdims);
+KPPviscA = f.load_mitgcm_field_trunc('KPPviscA', data_dir, iters,dims,truncdims);#f.load_mitgcm_field('KPPviscA',data_dir,iters,dims);
+print('KPPviscA loaded');
+KPPhbl = f.load_mitgcm_field_trunc('KPPhbl',data_dir,iters,dims[0:2], truncdims[0:4]);
+print('KPPhbl loaded');
 #KPPviscA = c.loadding_3D_data(p.dirc+'KPPviscA.%010i.data'%iters[0], maxlevel, 'tracer')
 # Can we set f's KPPvisc equal to c's KPPviscA?
 

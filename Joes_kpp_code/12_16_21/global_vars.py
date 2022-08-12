@@ -22,6 +22,7 @@ leithDivOff = False;
 
 # KPP
 viscArNr = 5.6614e-4;
+diffusKzT = 5.43999988e-7;
 Riinfty = 0.6998;
 BVSQcon = -2e-5;
 difm0 = 5e-3;

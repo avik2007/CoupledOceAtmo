@@ -7,10 +7,10 @@ region = 'California_Current'
 ####################################
 #::: Files and directories ::::::###
 #prnt = '/nobackupp2/htorresg/DopplerScat/modelling/CCS/'
-chld = 'HourlyOBC/run_500m/MITgcm/run/'
-prnt = '/nobackupp17/htorresg/DopplerScat/modelling/CCS/'
-dirc = prnt+chld
-
+#chld = 'HourlyOBC/run_500m/MITgcm/run/'
+#prnt = '/nobackupp17/htorresg/DopplerScat/modelling/CCS/'
+#dirc = prnt+chld
+dirc = '/nobackup/amondal/Python/Joes_kpp_code/Hector_Sub_Data/'
 #######################################
 ######################################
 # ::::::: MITgcm information ::::::::
