@@ -42,7 +42,7 @@ f = FldsNU();
 f.load_mitgcm_data_trunc(data_dir,aux_data_dir,iters,dims, truncdims);
 KPPviscA = f.load_mitgcm_field_trunc('KPPviscA', data_dir, iters,dims,truncdims);#f.load_mitgcm_field('KPPviscA',data_dir,iters,dims);
 print('KPPviscA loaded');
-KPPhbl = f.load_mitgcm_field_trunc('KPPhbl',data_dir,iters,dims[0:2], truncdims[0:4]);
+KPPhbl = f.load_mitgcm_field_trunc('KPPhbl',data_dir,iters,dims[1:3], truncdims[0:4]);
 print('KPPhbl loaded');
 #KPPviscA = c.loadding_3D_data(p.dirc+'KPPviscA.%010i.data'%iters[0], maxlevel, 'tracer')
 # Can we set f's KPPvisc equal to c's KPPviscA?
